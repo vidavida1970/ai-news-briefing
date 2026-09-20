@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI와 에이전트, Aside 관련 최근 7일 소식을 모은 모닝 브리핑">
+  <title>AI·에이전트 모닝 브리핑 · 2026-09-21</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080a13;
+      --surface: #111526;
+      --surface-2: #171c31;
+      --text: #f4f7ff;
+      --muted: #aab3cb;
+      --cyan: #5cecff;
+      --magenta: #ff5dcc;
+      --line: rgba(92,236,255,.28);
+      --shadow: 0 0 26px rgba(92,236,255,.09), 0 0 42px rgba(255,93,204,.05);
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: radial-gradient(circle at 80% -10%, rgba(255,93,204,.16), transparent 34rem),
+                  radial-gradient(circle at -10% 24%, rgba(92,236,255,.11), transparent 30rem), var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 32px, 640px); margin: 0 auto; }
+    header { padding: 42px 0 24px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px;
+      color: var(--cyan); font-size: .76rem; font-weight: 800; letter-spacing: .13em;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--magenta)); }
+    h1 { margin: 0; max-width: 600px; font-size: clamp(2rem, 8vw, 3.25rem); line-height: 1.1; letter-spacing: -.055em; }
+    .h1-date { color: var(--cyan); font-size: .42em; letter-spacing: -.025em; white-space: nowrap; }
+    .issue-date { margin: 16px 0 0; color: var(--muted); font-size: 1rem; }
+    .issue-date strong { color: var(--text); font-size: 1.15rem; }
+    .highlight {
+      margin: 16px 0 34px; padding: 20px; border: 1px solid rgba(255,93,204,.42); border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,93,204,.12), rgba(17,21,38,.93) 55%); box-shadow: var(--shadow);
+    }
+    .highlight h2 { margin: 0 0 12px; color: #ffd4f5; font-size: 1rem; letter-spacing: .02em; }
+    .highlight ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .highlight li { color: #e8eaf4; font-size: .92rem; }
+    .spark { display: inline-block; margin-right: 8px; color: var(--magenta); }
+    .platform-section { margin: 0 0 34px; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 13px; }
+    .section-heading h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.025em; }
+    .section-heading h2::before { content: "#"; margin-right: 5px; color: var(--cyan); font-weight: 400; }
+    .count { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+    .cards { display: grid; gap: 12px; }
+    .item-card {
+      position: relative; padding: 17px 17px 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(135deg, rgba(23,28,49,.96), rgba(13,16,30,.96)); box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    }
+    .item-card::after { content: ""; position: absolute; top: 0; right: 0; width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--magenta)); opacity: .8; }
+    .card-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: var(--muted); font-size: .75rem; }
+    .platform-badge { padding: 3px 8px; border: 1px solid rgba(92,236,255,.42); border-radius: 99px; color: var(--cyan); font-size: .7rem; font-weight: 800; letter-spacing: .03em; }
+    .badge-x, .badge-threads { border-color: rgba(255,93,204,.46); color: #ff9be2; }
+    .badge-네이버블로그 { border-color: rgba(104,230,154,.48); color: #8ff0b3; }
+    .item-card h3 { margin: 0; font-size: 1.03rem; line-height: 1.4; letter-spacing: -.02em; }
+    .item-card h3 a { text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .item-card h3 a:hover, .item-card h3 a:focus-visible { color: var(--cyan); text-decoration: underline; }
+    .item-card p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 9px 0 0; color: var(--muted); font-size: .88rem; }
+    .empty-state { margin: 0; padding: 20px; border: 1px dashed rgba(170,179,203,.36); border-radius: 14px; color: var(--muted); text-align: center; font-size: .9rem; }
+    footer { margin: 44px 0 28px; padding-top: 20px; border-top: 1px solid rgba(170,179,203,.2); color: var(--muted); font-size: .78rem; text-align: center; }
+    footer strong { color: var(--text); }
+    @media (min-width: 600px) { .wrap { width: min(100% - 48px, 640px); } header { padding-top: 58px; } .item-card { padding: 19px 20px 20px; } }
+    @media (prefers-reduced-motion: no-preference) { .item-card { transition: border-color .2s ease, transform .2s ease; } .item-card:hover { transform: translateY(-2px); border-color: rgba(92,236,255,.62); } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">오늘의 브리핑</p>
+      <h1>AI·에이전트<br>모닝 브리핑 <span class="h1-date">· 2026-09-21</span></h1>
+      <p class="issue-date">발행일 <strong>2026.09.21</strong> <span aria-hidden="true">·</span> 최근 7일</p>
+    </header>
+
+    <aside class="highlight" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading">✦ 이번 호 하이라이트</h2>
+      <ul>
+          <li><span class="spark">✦</span>Aside AI 브라우저 Windows 정식 출시(9/14)—로그인 세션 기반 에이전트 브라우저가 Mac 이후 PC 대중화로 확장.</li>
+          <li><span class="spark">✦</span>Claude Code Mods 착륙 + AGENTS.md 네이티브 지원(9/14~18)—하네스 플러그인화와 크로스툴 지침 표준이 동시에 진전.</li>
+          <li><span class="spark">✦</span>네이버 블로그 주간 리포트/옵저버빌리티·보험 분석이 에이전트 ‘실행’에서 ‘가시성·책임’으로 담론을 이동.</li>
+      </ul>
+    </aside>
+
+      <section class="platform-section" aria-labelledby="heading-youtube">
+        <div class="section-heading">
+          <h2 id="heading-youtube">YouTube</h2>
+          <span class="count">7건</span>
+        </div>
+        <div class="cards">
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-14">2026.09.14</time>
+            </div>
+            <h3><a href="https://www.youtube.com/shorts/z3Ud78aKzsc" target="_blank" rel="noopener noreferrer">【Claude最新機能】AIを自分好みに改造できる新機能が登場？</a></h3>
+            <p>Claude Code의 ‘Claude Mods’(함수 훅 기반 플러그인)가 9/14 착륙 중이며, 위험 조작 차단·민감정보 마스킹 등 커스터마이징 데모를 소개한다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-14">2026.09.14</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=pTFgTftOVC0" target="_blank" rel="noopener noreferrer">CLAUDE.md vs AGENTS.md Explained: The 4 Layers of an AI Agent (Ep.1)</a></h3>
+            <p>코딩 에이전트 지침 파일 CLAUDE.md와 크로스툴 표준 AGENTS.md의 역할 차이를 4계층 구조로 설명한다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-16">2026.09.16</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=fwSkYsg66mI" target="_blank" rel="noopener noreferrer">Everything Claude Code: 286 skills and 68 subagents, now open source</a></h3>
+            <p>오픈소스 Claude Code 스킬·서브에이전트 모음(286 skills / 68 subagents)을 소개하며 에이전트 워크플로 확장을 다룬다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-17">2026.09.17</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=6oQM5Y8x7KA" target="_blank" rel="noopener noreferrer">돈을 못 벌면 진짜 죽는 AI 에이전트가 나왔다</a></h3>
+            <p>수익/생존 압력 아래 동작하는 실험적 AI 에이전트 콘셉트를 짧게 소개하는 한국어 쇼츠.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-19">2026.09.19</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=u1dW4z5Ye90" target="_blank" rel="noopener noreferrer">Claude Code 3.0 (New Mods Feature): Anthropic has SILENTLY dropped their BIGGEST NEW Feature!</a></h3>
+            <p>Anthropic Claude Code의 Mods(확장 플러그인) 기능을 상세 리뷰하며 하네스 커스터마이징이 에이전트 워크플로에 미치는 영향을 설명한다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-19">2026.09.19</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=yw8ssBR8tiY" target="_blank" rel="noopener noreferrer">Claude Code Finally Reads AGENTS.md</a></h3>
+            <p>Claude Code가 CLAUDE.md가 없을 때 AGENTS.md를 읽는 크로스툴 프로젝트 지침 지원을 설명하는 영상.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-20">2026.09.20</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=PU_xnqjmXOY" target="_blank" rel="noopener noreferrer">Claude Code finally adds AGENTS md support for cross tool compatibility</a></h3>
+            <p>멀티 코딩 에이전트 환경에서 AGENTS.md 단일 지침 파일로 호환성을 높이는 Claude Code 업데이트를 요약한다.</p>
+          </article>
+        </div>
+      </section>
+      <section class="platform-section" aria-labelledby="heading-x">
+        <div class="section-heading">
+          <h2 id="heading-x">X</h2>
+          <span class="count">3건</span>
+        </div>
+        <div class="cards">
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-09-14">2026.09.14</time>
+            </div>
+            <h3><a href="https://x.com/AsideAI/status/2099416863705055331" target="_blank" rel="noopener noreferrer">Aside for Windows is out today</a></h3>
+            <p>YC 출신 AI 브라우저 Aside가 Windows 정식 배포를 발표—로그인된 웹에서 다단계 작업을 수행하는 에이전트 브라우저가 Mac을 넘어 확장.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-09-14">2026.09.14</time>
+            </div>
+            <h3><a href="https://x.com/bcherny/status/2099551291601248485" target="_blank" rel="noopener noreferrer">Claude Mods are landing now</a></h3>
+            <p>Anthropic Claude Code 리드 Boris Cherny가 Claude Mods 착륙을 알리고, 커뮤니티 Tetris 모드 등 데모·이슈 업데이트를 공유.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-09-18">2026.09.18</time>
+            </div>
+            <h3><a href="https://x.com/trq212/status/2101009392611278961" target="_blank" rel="noopener noreferrer">We&#x27;re adding support for AGENTS.md to Claude Code</a></h3>
+            <p>Claude Code 2.1.277부터 CLAUDE.md가 없으면 AGENTS.md를 사용—크로스툴 에이전트 지침 표준 합류를 공식 발표.</p>
+          </article>
+        </div>
+      </section>
+      <section class="platform-section" aria-labelledby="heading-threads">
+        <div class="section-heading">
+          <h2 id="heading-threads">Threads</h2>
+          <span class="count">0건</span>
+        </div>
+        <div class="cards">          <p class="empty-state">이번 주 확인된 게시물 없음</p>
+        </div>
+      </section>
+      <section class="platform-section" aria-labelledby="heading-네이버블로그">
+        <div class="section-heading">
+          <h2 id="heading-네이버블로그">네이버 블로그</h2>
+          <span class="count">5건</span>
+        </div>
+        <div class="cards">
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">네이버 블로그</span>
+              <time datetime="2026-09-14">2026.09.14</time>
+            </div>
+            <h3><a href="https://blog.naver.com/digiaigenda/224409953473" target="_blank" rel="noopener noreferrer">AI가 여행을 짜주는 시대, 관광산업은 두 갈래 길에 섰다... 관광 AI의 오늘과 내일</a></h3>
+            <p>OECD APEC 관광 AI 보고서를 바탕으로 에이전틱 AI가 예약·결제까지 가져갈 때 중소 관광업체 가시성 위험을 분석.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">네이버 블로그</span>
+              <time datetime="2026-09-21">2026.09.21</time>
+            </div>
+            <h3><a href="https://blog.naver.com/gjooan/224418257831" target="_blank" rel="noopener noreferrer">AI 주간 동향 보고 ㅡFROM REALITY TO VISIBILITY 현실을 다루는 AI에서, 보이는 AI로</a></h3>
+            <p>2026-09-14~21 주간 인사이트: Anthropic R&amp;D 에이전트 측정·임베디드 평가 파트너십 등 ‘가시성/거버넌스’ 축을 정리.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">네이버 블로그</span>
+              <time datetime="2026-09-21">2026.09.21</time>
+            </div>
+            <h3><a href="https://blog.naver.com/joepaulchoi/224418257674" target="_blank" rel="noopener noreferrer">AI 보안, AI 옵저버빌리티</a></h3>
+            <p>AI 에이전트 도입과 함께 커지는 옵저버빌리티·프롬프트 인젝션 방어·비용관리 시장을 사례로 설명.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">네이버 블로그</span>
+              <time datetime="2026-09-21">2026.09.21</time>
+            </div>
+            <h3><a href="https://blog.naver.com/digiaigenda/224417865782" target="_blank" rel="noopener noreferrer">사고는 AI가 쳤는데, 계산서 받을 사람이 없다... AI 손해배상의 빈칸을 읽다</a></h3>
+            <p>RAND 보고서 등을 인용해 AI 에이전트 사고의 보험 가능성·약관 공백·한국 시사점을 분석.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">네이버 블로그</span>
+              <time datetime="2026-09-21">2026.09.21</time>
+            </div>
+            <h3><a href="https://blog.naver.com/aitechking/224418255946" target="_blank" rel="noopener noreferrer">GPT-6 Astra가 진짜 최고일까? Computer Use로 본 Claude·Gemini·Grok·Meta Muse, Gemini 4 유출까지</a></h3>
+            <p>Computer Use/브라우저 조작 관점에서 주요 프론티어 모델 에이전트 역량을 비교·정리한 기술 블로그.</p>
+          </article>
+        </div>
+      </section>
+    <footer><strong>애드 아이티</strong> · 출처 링크 포함 · 최근 7일 (2026-09-14~2026-09-21)</footer>
+  </main>
+</body>
+</html>

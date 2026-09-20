@@ -1,0 +1,123 @@
+{
+  "date": "2026-09-21",
+  "window": "2026-09-14..2026-09-21",
+  "items": [
+    {
+      "title": "【Claude最新機能】AIを自分好みに改造できる新機能が登場？",
+      "summary": "Claude Code의 ‘Claude Mods’(함수 훅 기반 플러그인)가 9/14 착륙 중이며, 위험 조작 차단·민감정보 마스킹 등 커스터마이징 데모를 소개한다.",
+      "date": "2026-09-14",
+      "url": "https://www.youtube.com/shorts/z3Ud78aKzsc",
+      "platform": "YouTube"
+    },
+    {
+      "title": "CLAUDE.md vs AGENTS.md Explained: The 4 Layers of an AI Agent (Ep.1)",
+      "summary": "코딩 에이전트 지침 파일 CLAUDE.md와 크로스툴 표준 AGENTS.md의 역할 차이를 4계층 구조로 설명한다.",
+      "date": "2026-09-14",
+      "url": "https://www.youtube.com/watch?v=pTFgTftOVC0",
+      "platform": "YouTube"
+    },
+    {
+      "title": "Everything Claude Code: 286 skills and 68 subagents, now open source",
+      "summary": "오픈소스 Claude Code 스킬·서브에이전트 모음(286 skills / 68 subagents)을 소개하며 에이전트 워크플로 확장을 다룬다.",
+      "date": "2026-09-16",
+      "url": "https://www.youtube.com/watch?v=fwSkYsg66mI",
+      "platform": "YouTube"
+    },
+    {
+      "title": "돈을 못 벌면 진짜 죽는 AI 에이전트가 나왔다",
+      "summary": "수익/생존 압력 아래 동작하는 실험적 AI 에이전트 콘셉트를 짧게 소개하는 한국어 쇼츠.",
+      "date": "2026-09-17",
+      "url": "https://www.youtube.com/watch?v=6oQM5Y8x7KA",
+      "platform": "YouTube"
+    },
+    {
+      "title": "Claude Code 3.0 (New Mods Feature): Anthropic has SILENTLY dropped their BIGGEST NEW Feature!",
+      "summary": "Anthropic Claude Code의 Mods(확장 플러그인) 기능을 상세 리뷰하며 하네스 커스터마이징이 에이전트 워크플로에 미치는 영향을 설명한다.",
+      "date": "2026-09-19",
+      "url": "https://www.youtube.com/watch?v=u1dW4z5Ye90",
+      "platform": "YouTube"
+    },
+    {
+      "title": "Claude Code Finally Reads AGENTS.md",
+      "summary": "Claude Code가 CLAUDE.md가 없을 때 AGENTS.md를 읽는 크로스툴 프로젝트 지침 지원을 설명하는 영상.",
+      "date": "2026-09-19",
+      "url": "https://www.youtube.com/watch?v=yw8ssBR8tiY",
+      "platform": "YouTube"
+    },
+    {
+      "title": "Claude Code finally adds AGENTS md support for cross tool compatibility",
+      "summary": "멀티 코딩 에이전트 환경에서 AGENTS.md 단일 지침 파일로 호환성을 높이는 Claude Code 업데이트를 요약한다.",
+      "date": "2026-09-20",
+      "url": "https://www.youtube.com/watch?v=PU_xnqjmXOY",
+      "platform": "YouTube"
+    },
+    {
+      "title": "Aside for Windows is out today",
+      "summary": "YC 출신 AI 브라우저 Aside가 Windows 정식 배포를 발표—로그인된 웹에서 다단계 작업을 수행하는 에이전트 브라우저가 Mac을 넘어 확장.",
+      "date": "2026-09-14",
+      "url": "https://x.com/AsideAI/status/2099416863705055331",
+      "platform": "X"
+    },
+    {
+      "title": "Claude Mods are landing now",
+      "summary": "Anthropic Claude Code 리드 Boris Cherny가 Claude Mods 착륙을 알리고, 커뮤니티 Tetris 모드 등 데모·이슈 업데이트를 공유.",
+      "date": "2026-09-14",
+      "url": "https://x.com/bcherny/status/2099551291601248485",
+      "platform": "X"
+    },
+    {
+      "title": "We're adding support for AGENTS.md to Claude Code",
+      "summary": "Claude Code 2.1.277부터 CLAUDE.md가 없으면 AGENTS.md를 사용—크로스툴 에이전트 지침 표준 합류를 공식 발표.",
+      "date": "2026-09-18",
+      "url": "https://x.com/trq212/status/2101009392611278961",
+      "platform": "X"
+    },
+    {
+      "title": "AI가 여행을 짜주는 시대, 관광산업은 두 갈래 길에 섰다... 관광 AI의 오늘과 내일",
+      "summary": "OECD APEC 관광 AI 보고서를 바탕으로 에이전틱 AI가 예약·결제까지 가져갈 때 중소 관광업체 가시성 위험을 분석.",
+      "date": "2026-09-14",
+      "url": "https://blog.naver.com/digiaigenda/224409953473",
+      "platform": "네이버블로그"
+    },
+    {
+      "title": "AI 주간 동향 보고 ㅡFROM REALITY TO VISIBILITY 현실을 다루는 AI에서, 보이는 AI로",
+      "summary": "2026-09-14~21 주간 인사이트: Anthropic R&D 에이전트 측정·임베디드 평가 파트너십 등 ‘가시성/거버넌스’ 축을 정리.",
+      "date": "2026-09-21",
+      "url": "https://blog.naver.com/gjooan/224418257831",
+      "platform": "네이버블로그"
+    },
+    {
+      "title": "AI 보안, AI 옵저버빌리티",
+      "summary": "AI 에이전트 도입과 함께 커지는 옵저버빌리티·프롬프트 인젝션 방어·비용관리 시장을 사례로 설명.",
+      "date": "2026-09-21",
+      "url": "https://blog.naver.com/joepaulchoi/224418257674",
+      "platform": "네이버블로그"
+    },
+    {
+      "title": "사고는 AI가 쳤는데, 계산서 받을 사람이 없다... AI 손해배상의 빈칸을 읽다",
+      "summary": "RAND 보고서 등을 인용해 AI 에이전트 사고의 보험 가능성·약관 공백·한국 시사점을 분석.",
+      "date": "2026-09-21",
+      "url": "https://blog.naver.com/digiaigenda/224417865782",
+      "platform": "네이버블로그"
+    },
+    {
+      "title": "GPT-6 Astra가 진짜 최고일까? Computer Use로 본 Claude·Gemini·Grok·Meta Muse, Gemini 4 유출까지",
+      "summary": "Computer Use/브라우저 조작 관점에서 주요 프론티어 모델 에이전트 역량을 비교·정리한 기술 블로그.",
+      "date": "2026-09-21",
+      "url": "https://blog.naver.com/aitechking/224418255946",
+      "platform": "네이버블로그"
+    }
+  ],
+  "counts": {
+    "YouTube": 7,
+    "X": 3,
+    "Threads": 0,
+    "네이버블로그": 5
+  },
+  "highlights": [
+    "Aside AI 브라우저 Windows 정식 출시(9/14)—로그인 세션 기반 에이전트 브라우저가 Mac 이후 PC 대중화로 확장.",
+    "Claude Code Mods 착륙 + AGENTS.md 네이티브 지원(9/14~18)—하네스 플러그인화와 크로스툴 지침 표준이 동시에 진전.",
+    "네이버 블로그 주간 리포트/옵저버빌리티·보험 분석이 에이전트 ‘실행’에서 ‘가시성·책임’으로 담론을 이동."
+  ],
+  "notes": "Threads: 로그인/CAPTCHA와 날짜 검증 실패로 창 내 확정 게시물 0건(9/3 Boris Cherny function hooks 등은 창 밖). 고신호 보도(네이버 플레이스·쇼핑 에이전트 9/17, Enhans Series C 9/17, 플로우×ChatGPT/Claude 9/17, 한컴 노마디안 9/14, Stanford virtual biotech 9/17)는 주로 언론·공식 보도자료에 있어 4플랫폼 원문 링크로는 수집하지 않음(중복·비플랫폼 제외 규칙). X 직접 fetch는 403이었으나 fxtwitter API로 텍스트·일시를 검증함. YouTube는 uploadDate 메타로 창 필터링; ‘무료 토큰’류 저신호 영상은 제외."
+}
