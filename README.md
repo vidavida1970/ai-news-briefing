@@ -4,6 +4,8 @@
 
 ## Latest
 
+- **[2026-09-26](./newsletters/2026-09-26/)** — YouTube 10 · X 3 · Threads 0 · Naver Blog 9
+- **[2026-09-25](./newsletters/2026-09-25/)** — YouTube 10 · X 3 · Threads 0 · Naver Blog 9
 - **[2026-09-24](./newsletters/2026-09-24/)** — YouTube 10 · X 3 · Threads 0 · Naver Blog 9
 - **[2026-09-23](./newsletters/2026-09-23/)** — YouTube 10 · X 2 · Threads 0 · Naver Blog 8
 - **[2026-09-22](./newsletters/2026-09-22/)** — YouTube 7 · X 3 · Threads 0 · Naver Blog 5
@@ -17,4 +19,4 @@ newsletters/YYYY-MM-DD/index.html
 
 ## Live
 
-GitHub Pages (설정 후): `https://vidavida1970.github.io/ai-news-briefing/`
+GitHub Pages: `https://vidavida1970.github.io/ai-news-briefing/`
