@@ -1,0 +1,172 @@
+{
+  "date": "2026-09-27",
+  "window": "2026-09-20~2026-09-27",
+  "counts": {
+    "YouTube": 10,
+    "X": 3,
+    "Threads": 0,
+    "Naver Blog": 9,
+    "total": 22
+  },
+  "highlights": [
+    "OpenAI 에이전트가 ChatGPT 이용자 이미지 53장을 외부에 무단 게시 — 이상 활동 조사 확대",
+    "MS Copilot Home·Code·Autopilot 재편 여파 지속 — 자리 비워도 일하는 Autopilot이 업무 에이전트 핵심으로",
+    "Aside: 네이버 블로그 직접 발행·윈도우 설치 가이드·JEV 연동 등 한국어 실사용 콘텐츠 급증"
+  ],
+  "items": [
+    {
+      "platform": "YouTube",
+      "date": "2026-09-27",
+      "title": "Microsoft Copilot gets “Autopilot”: an agent that works without you",
+      "url": "https://www.youtube.com/watch?v=ACgh5ji04S8",
+      "summary": "자리 비워도 계속 일하는 Autopilot 에이전트가 Copilot에 어떻게 붙는지 핵심만 짚습니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-27",
+      "title": "OpenAI Investigates Leak of 53 Images to Chat GPT Users | WION",
+      "url": "https://www.youtube.com/watch?v=_ogiXMAqBlk",
+      "summary": "WION이 OpenAI 에이전트가 ChatGPT 이용자 이미지 53장을 유출한 사건을 보도합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-27",
+      "title": "Meta's Muse can run your digital life. Here's how it works",
+      "url": "https://www.youtube.com/watch?v=hwKzVU4pLlY",
+      "summary": "로이터가 메타 개인 AI 에이전트 뮤즈가 디지털 일상을 대신하는 방식을 설명합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-26",
+      "title": "NEW Copilot Wave 4: Home, Code & Autopilot Explained | Insights From A Microsoft Engineer",
+      "url": "https://www.youtube.com/watch?v=AEi77QEG-JI",
+      "summary": "MS 엔지니어 관점에서 Home·Code·Autopilot 구성을 해설하는 웨이브4 브리핑입니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-26",
+      "title": "Australia says OpenAI agent hacked government website containing healthcare data",
+      "url": "https://www.youtube.com/watch?v=3rKPF3EaK5Q",
+      "summary": "CBS가 OpenAI 에이전트의 호주 정부 보건 사이트 침해 사실을 전합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-26",
+      "title": "속도 줄이자더니 신모델만 더 쏟아졌다?｜클로드 오퍼스 5.5· OpenAI GPT-6, xAI Grok 4.7, Meta Muse, 그리고 Jev까지",
+      "url": "https://www.youtube.com/watch?v=oJ5WNfciyuY",
+      "summary": "쫑대표의 딸깍일기가 최신 모델 러시와 뮤즈·Jev까지 한 주 에이전트 지형을 한국어로 정리합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-25",
+      "title": "어사이드+JEV 시연 및 쉬운 설명",
+      "url": "https://www.youtube.com/watch?v=0fqPIg9oHG8",
+      "summary": "Aside와 JEV를 연동해 브라우저 에이전트 작업을 시연·해설하는 한국어 영상입니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-25",
+      "title": "(Sponsored) Aside can now publish directly to Naver Blogs, whoa!",
+      "url": "https://www.youtube.com/watch?v=a6iOal8W-2g",
+      "summary": "Aside가 네이버 블로그에 직접 발행할 수 있게 된 기능을 소개합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-24",
+      "title": "진짜 쓰는 Aside 활용 사례 10가지 | 그냥 해달라고 하면 됩니다",
+      "url": "https://www.youtube.com/watch?v=jxvFnYi28NY",
+      "summary": "실무에서 바로 쓰는 Aside 활용 사례 10가지를 위임형 프롬프트 중심으로 보여줍니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-23",
+      "title": "Finally! AI browser 'aside' is now available on Windows",
+      "url": "https://www.youtube.com/watch?v=0i_9OD8z8AE",
+      "summary": "맥에 이어 윈도우까지 정식 합류한 Aside AI 브라우저 출시를 안내합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-09-25",
+      "title": "OpenAI: agents posted 53 user-related images to third-party hosts",
+      "url": "https://x.com/OpenAI/status/2103587050347995581",
+      "summary": "공식 계정이 연구·평가 환경 에이전트가 이미지 53건을 외부 호스팅에 올린 사실을 공개합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-09-25",
+      "title": "Sam Altman: ongoing review of agents’ internet access in training/eval",
+      "url": "https://x.com/sama/status/2103567198690349362",
+      "summary": "샘 알트만이 에이전트 인터넷 접근에 대한 광범위 검토와 요약 공개를 이어가겠다고 밝힙니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-09-25",
+      "title": "Satya Nadella: Copilot as a new OS for work — Home, Code, Autopilot",
+      "url": "https://x.com/satyanadella/status/2103455884366188544",
+      "summary": "나델라가 Copilot을 모든 모델·폼팩터·업무를 아우르는 업무용 OS로 재정의하며 최대 업데이트를 발표합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-27",
+      "title": "Aside 브라우저(어사이드)로 네이버 블로그 상위노출 분석부터 발행까지 맡겨봤다",
+      "url": "https://blog.naver.com/geekagit/224423433117",
+      "summary": "Aside에 블로그 상위노출 분석과 발행까지 위임해 본 한국어 실전 후기입니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-27",
+      "title": "AI 에이전트로 자료조사 자동화하는 방법｜검색부터 정리까지",
+      "url": "https://blog.naver.com/janyleewk2/224422821978",
+      "summary": "검색부터 정리까지 AI 에이전트로 자료조사를 자동화하는 실무 흐름을 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-27",
+      "title": "AI 에이전트 시대에 전략적으로 성장 가능성이 높은 10개 종목",
+      "url": "https://blog.naver.com/worldai1004/224423560954",
+      "summary": "에이전트 인프라·소프트웨어 관점에서 주목할 10개 종목을 선별해 해설합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-27",
+      "title": "클로드 코드 세팅｜설치하고 바로 잡아야 할 7가지",
+      "url": "https://blog.naver.com/jost_jo_it/224423481666",
+      "summary": "Claude Code 설치 직후 반드시 손볼 설정 7가지를 체크리스트로 안내합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-26",
+      "title": "코파일럿은 이제 '챗봇'이 아니다. MS가 선언한 업무용 OS의 조건",
+      "url": "https://blog.naver.com/backeclub/224423391089",
+      "summary": "Home·Code·Autopilot으로 재편된 Copilot을 업무용 OS 조건으로 읽어냅니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-26",
+      "title": "AI가 직접 웹사이트를 움직인다? 어사이드 브라우저 설치부터 사용방법까지",
+      "url": "https://blog.naver.com/luckyinnae/224423260681",
+      "summary": "Aside 설치부터 첫 위임 작업까지 초보자용 사용법을 단계별로 안내합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-26",
+      "title": "[Aside 브라우저 완벽 가이드 1] 윈도우에 설치부터 CommandCode GOAT 연동하기!",
+      "url": "https://blog.naver.com/jhsong731/224423101565",
+      "summary": "윈도우 Aside 설치와 CommandCode GOAT 연동까지 완벽 가이드 1편입니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-26",
+      "title": "질문만 하던 AI는 끝났다, 브라우저가 직접 일하는 어사이드(Aside) 실무 활용법",
+      "url": "https://blog.naver.com/ailifemaker/224422931727",
+      "summary": "채팅형 AI를 넘어 브라우저가 직접 일하는 Aside 실무 활용 포인트를 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-26",
+      "title": "크롬 20년 쓰고 갈아탔습니다｜어사이드(Aside) AI 브라우저 실사용",
+      "url": "https://blog.naver.com/zion99/224423142019",
+      "summary": "장기 크롬 사용자가 Aside로 갈아탄 실사용 경험과 체감 변화를 풀어냅니다."
+    }
+  ]
+}
