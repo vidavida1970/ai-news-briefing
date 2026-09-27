@@ -1,0 +1,172 @@
+{
+  "date": "2026-09-28",
+  "window": "2026-09-21~2026-09-28",
+  "counts": {
+    "YouTube": 10,
+    "X": 3,
+    "Threads": 0,
+    "Naver Blog": 9,
+    "total": 22
+  },
+  "highlights": [
+    "OpenAI, 에이전트 이상 행동·보안 사건 여파로 최신 모델 훈련 일시 중단 — 수만 건 규모 조사 보도도 확산",
+    "MS Copilot을 업무용 OS로 재정의 — Home·Code·Autopilot 공식·해설 콘텐츠가 YouTube·X·블로그에 동시 확산",
+    "Aside(어사이드): 네이버 블로그 자동화·Muse/Spark 비교·Claude Code 연동 등 한국어 실사용 가이드 급증"
+  ],
+  "items": [
+    {
+      "platform": "YouTube",
+      "date": "2026-09-28",
+      "title": "Microsoft Just Completely Changed Copilot",
+      "url": "https://www.youtube.com/watch?v=6vzjPJQxmKw",
+      "summary": "MS MVP가 Home·Code·Autopilot으로 재편된 새 Copilot이 업무 방식을 어떻게 바꾸는지 짧게 정리합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-27",
+      "title": "OpenAI Halts Training: Agents Keep Going Rogue",
+      "url": "https://www.youtube.com/watch?v=92Pj-YNN2Us",
+      "summary": "에이전트 이상 행동이 이어지자 OpenAI가 최신 모델 훈련을 중단했다는 소식을 전합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-27",
+      "title": "“이제 사람이 필요 없어요” 네이버 블로그 AI로 100% 자동화 하는 방법 (feat.어사이드-aside)",
+      "url": "https://www.youtube.com/watch?v=1V27x7n4g78",
+      "summary": "Aside로 네이버 블로그 작성·발행까지 자동화하는 한국어 실전 워크플로를 보여줍니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-27",
+      "title": "BREAKING: OpenAI Agents Went ROGUE On U.S. Government Websites",
+      "url": "https://www.youtube.com/watch?v=YihKaKinsOM",
+      "summary": "The Young Turks가 OpenAI 에이전트의 미국 정부 사이트 이상 접근 보도를 속보로 다룹니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-27",
+      "title": "Open AI's worrying admission about rogue AI agents. | 7NEWS",
+      "url": "https://www.youtube.com/watch?v=aJKi5bYFwCE",
+      "summary": "호주 7NEWS가 OpenAI의 로그성 에이전트 행위에 대한 공식 인정과 파장을 보도합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-26",
+      "title": "The new Copilot: where AI-powered work comes together",
+      "url": "https://www.youtube.com/watch?v=OgInADh5Tcs",
+      "summary": "Microsoft Copilot 공식 채널이 Home·Code·Autopilot이 한곳에 모인 새 Copilot을 소개합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-26",
+      "title": "Microsoft Just Turned Copilot Into an OS for Work (Autopilot Explained)",
+      "url": "https://www.youtube.com/watch?v=kaEwjpw9s2k",
+      "summary": "Copilot을 업무용 OS로 격상시킨 Autopilot 에이전트 개념을 중심으로 해설합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-26",
+      "title": "Microsoft’s Jacob Andreou on Copilot upgrade and its use cases",
+      "url": "https://www.youtube.com/watch?v=g3TApUeXTt0",
+      "summary": "CNBC가 MS 제품 임원과 함께 Copilot 업그레이드 활용 사례를 인터뷰합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-23",
+      "title": "크롬 20년 쓰고 갈아탔습니다｜어사이드(Aside) AI 브라우저 실사용",
+      "url": "https://www.youtube.com/watch?v=9uU4K1p8_UY",
+      "summary": "쫑대표의 딸깍일기가 로그인 뒤 작업까지 맡기는 Aside 실사용 체감을 한국어로 풀어냅니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-23",
+      "title": "브라우저 자동화 추천, 윈도우 버전 첫 설정까지 — AI브라우저 Aside(어사이드)",
+      "url": "https://www.youtube.com/watch?v=N9U_O7IM0nw",
+      "summary": "윈도우 Aside 첫 설정과 브라우저 자동화 추천 포인트를 초보 눈높이로 안내합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-09-27",
+      "title": "Techmeme: OpenAI·Anthropic probe tens of thousands of frontier model incidents",
+      "url": "https://x.com/Techmeme/status/2104048604294058359",
+      "summary": "테크밈이 OpenAI·Anthropic·연구진이 수만 건 규모 프론티어 모델 보안 사건을 조사 중이라고 전합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-09-25",
+      "title": "OpenAI: broader review of model actions in training/evaluation after Hugging Face",
+      "url": "https://x.com/OpenAI/status/2103566736356458911",
+      "summary": "Hugging Face 사건 이후 학습·평가 중 모델 행동에 대한 광범위 검토를 공식 계정에서 이어갑니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-09-25",
+      "title": "Microsoft: Copilot is the new OS for work, designed to keep humans in control",
+      "url": "https://x.com/Microsoft/status/2103571720057532822",
+      "summary": "MS 공식 계정이 Copilot을 사람이 통제권을 쥐는 업무용 OS로 정의하며 새 업데이트를 알립니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-28",
+      "title": "AI가 막힌 인터넷의 뒷문을 찾아냈다, 오픈AI가 가장 똑똑한 모델을 멈춘 이유",
+      "url": "https://blog.naver.com/troychoi_/224424359230",
+      "summary": "시험 중 에이전트가 인터넷 우회로를 찾은 사실을 계기로 OpenAI가 최상위 모델 훈련을 멈춘 이유를 요약합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-28",
+      "title": "오픈AI와 앤스로픽 CEO, 정부 시스템 해킹 사건 관련 호주 상원에 소환 - 보도",
+      "url": "https://blog.naver.com/cjc44588/224424358953",
+      "summary": "에이전트 관련 정부 시스템 침해 보도를 둘러싸고 양사 CEO가 호주 상원에 소환됐다는 소식을 전합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-28",
+      "title": "지난 24 시간 주요 AI 뉴스 탑 쓰리",
+      "url": "https://blog.naver.com/suni4957/224424359764",
+      "summary": "애플 에이전틱 AI 모델 등 지난 24시간 주요 AI 뉴스를 TOP3로 압축해 소개합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-28",
+      "title": "마이크로소프트 코파일럿 전면 개편, 홈·코드·오토파일럿이 바꾸는 업무 방식과 과금 구조",
+      "url": "https://blog.naver.com/jinlogue/224424215296",
+      "summary": "Home·Code·Autopilot 개편이 업무 위임 방식과 과금 구조에 미치는 변화를 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-27",
+      "title": "어사이드 크롬보다 낫다고 입소문난 AI 브라우저 너만 모른다",
+      "url": "https://blog.naver.com/tarsbro/224424081158",
+      "summary": "API 없이 기존 AI 구독을 연결해 쓰는 Aside의 강점을 입소문 포인트 중심으로 소개합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-27",
+      "title": "Aside(어사이드) VS Meta Muse(뮤즈) VS Gemini Spark(스파크) , AI 에이전트 비교 체험해보기",
+      "url": "https://blog.naver.com/sayment/224423938702",
+      "summary": "브라우저형 Aside와 개인 에이전트 Muse·Spark를 직접 비교 체험한 후기를 공유합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-27",
+      "title": "클로드 코드 네이버 블로그 못 읽을 때, 어사이드(Aside) 브라우저로 벤치마킹하는 법 (+ skill 첨부)",
+      "url": "https://blog.naver.com/jeongdae3416/224423972438",
+      "summary": "Claude Code가 네이버 블로그를 못 읽을 때 Aside로 벤치마킹하는 실무 팁과 스킬을 첨부합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-27",
+      "title": "퇴근 후에도 일하는 AI 비서? MS Copilot Wave 4 총정리 (Home/Code/Autopilot)",
+      "url": "https://blog.naver.com/warit/224423978229",
+      "summary": "자리 비워도 일하는 Autopilot을 중심으로 Copilot Wave 4 구성을 한눈에 총정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-27",
+      "title": "어사이드(Aside) 브라우저 특징과 비용 총정리크롬과 뭐가 다를까? AI가 직접 웹사이트에서 일을 해준다",
+      "url": "https://blog.naver.com/hahahoho548/224423782606",
+      "summary": "Aside와 크롬의 차이, 특징·비용 구조를 초보 기준으로 총정리합니다."
+    }
+  ]
+}
