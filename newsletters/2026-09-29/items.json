@@ -1,0 +1,172 @@
+{
+  "date": "2026-09-29",
+  "window": "2026-09-22~2026-09-29",
+  "counts": {
+    "YouTube": 10,
+    "X": 3,
+    "Threads": 0,
+    "Naver Blog": 9,
+    "total": 22
+  },
+  "highlights": [
+    "Anthropic, Claude Sonnet 5.5 공개 — 속도 30%+·비용 최대 30%↓ 강조, X·한국어 블로그에 즉시 확산",
+    "NVIDIA Open Agent Safety Platform(OpenShell·Sentry) — 에이전트 보안을 ‘멈춤’이 아닌 런타임 공학 문제로 재정의",
+    "Aside(어사이드): Playwright MCP 비교·Claude 연동 데이터 수집·블로그 초안 자동화 등 한국어 실전 가이드 계속 증가"
+  ],
+  "items": [
+    {
+      "platform": "YouTube",
+      "date": "2026-09-28",
+      "title": "How to Use the NEW Agent Builder in Microsoft Copilot - Build an AI Agent in Minutes (2026)",
+      "url": "https://www.youtube.com/watch?v=knOhSmOkqMM",
+      "summary": "Mike Tholfsen이 Copilot 새 Agent Builder로 업무용 AI 에이전트를 몇 분 만에 만드는 방법을 시연합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-28",
+      "title": "Microsoft Just Changed Copilot. Here's What You Need to Know",
+      "url": "https://www.youtube.com/watch?v=gh8gs2eSc0c",
+      "summary": "Lisa Crosbie가 Home·Code·Autopilot으로 재편된 새 Copilot의 핵심 변화를 정리합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-28",
+      "title": "클릭이 필요한 업무를 이 AI 브라우저에게 맡겨보았습니다.",
+      "url": "https://www.youtube.com/watch?v=87VQY7jYhYA",
+      "summary": "로사장 김다솔이 클릭·입력 반복 업무를 Aside AI 브라우저에 맡겨 본 실사용 후기를 공유합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-27",
+      "title": "AI 몰라도 됩니다: Aside 설치부터 자동화 세팅까지",
+      "url": "https://www.youtube.com/watch?v=Erz8N_yUTuU",
+      "summary": "실전압축 AI 방현이 Aside 설치부터 퇴근 후 반복 업무 자동화 세팅까지를 초보 기준으로 안내합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-27",
+      "title": "“이제 사람이 필요 없어요” 네이버 블로그 AI로 100% 자동화 하는 방법 (feat.어사이드-aside)",
+      "url": "https://www.youtube.com/watch?v=1V27x7n4g78",
+      "summary": "Aside로 네이버 블로그 작성·발행까지 자동화하는 한국어 실전 워크플로를 보여줍니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-27",
+      "title": "OpenAI Halts Training: Agents Keep Going Rogue",
+      "url": "https://www.youtube.com/watch?v=92Pj-YNN2Us",
+      "summary": "에이전트 이상 행동이 이어지자 OpenAI가 최신 모델 훈련을 중단했다는 소식을 전합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-26",
+      "title": "Open AI's worrying admission about rogue AI agents. | 7NEWS",
+      "url": "https://www.youtube.com/watch?v=aJKi5bYFwCE",
+      "summary": "호주 7NEWS가 OpenAI의 로그성 에이전트 행위에 대한 공식 인정과 파장을 보도합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-26",
+      "title": "Microsoft Copilot gets “Autopilot”: an agent that works without you",
+      "url": "https://www.youtube.com/watch?v=ACgh5ji04S8",
+      "summary": "자리 비워도 일하는 Autopilot 에이전트가 Copilot에 어떻게 들어가는지 짧게 해설합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-25",
+      "title": "The new Copilot: where AI-powered work comes together",
+      "url": "https://www.youtube.com/watch?v=OgInADh5Tcs",
+      "summary": "Microsoft Copilot 공식 채널이 Home·Code·Autopilot이 한곳에 모인 새 Copilot을 소개합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-25",
+      "title": "Aside(어사이드)에서 AI 무료로 쓰는 법 (로컬 모델 x)",
+      "url": "https://www.youtube.com/watch?v=TymIqHu5_lw",
+      "summary": "서퍼스가 로컬 모델 없이 Aside에서 AI를 무료로 연결해 쓰는 방법을 안내합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-09-29",
+      "title": "Claude: Introducing Claude Sonnet 5.5 — 30%+ faster, up to 30% less cost",
+      "url": "https://x.com/claudeai/status/2104633115620823187",
+      "summary": "Anthropic 공식 계정이 Claude Sonnet 5.5를 공개하며 속도·비용 개선을 강조합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-09-29",
+      "title": "Techmeme: Manus debuts Manus 2.0 AI agent and Cue personal-agent app",
+      "url": "https://x.com/Techmeme/status/2104647665292394869",
+      "summary": "테크밈이 Manus 2.0 에이전트와 이메일·전화·지갑·PC를 갖춘 Cue 개인 에이전트 앱 출시를 전합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-09-28",
+      "title": "Jensen Huang: NVIDIA Open Agent Safety Platform with OpenShell and Sentry",
+      "url": "https://x.com/JensenHuang/status/2104499465055023424",
+      "summary": "젠슨 황이 100+ 파트너와 함께 OpenShell·Sentry 기반 오픈 에이전트 세이프티 플랫폼을 소개합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-29",
+      "title": "초보자를 위한 AI 브라우저 자동화 비교: Playwright MCP와 어사이드 실무 활용 안내",
+      "url": "https://blog.naver.com/maris-mico-ai/224425060977",
+      "summary": "Playwright MCP와 Aside를 초보 실무 관점에서 비교하며 AI 브라우저 자동화 선택 기준을 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-29",
+      "title": "클로드(Claude) AI vs 어사이드(Aside) AI 비교: 요금제별 5시간·주간 리셋 주기 및 콘텐츠 제작 토큰 소모량 완벽 가이드",
+      "url": "https://blog.naver.com/cleaningroom/224425231875",
+      "summary": "Claude와 Aside의 요금·리셋 주기·콘텐츠 제작 토큰 소모를 표로 비교한 실사용 가이드입니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-29",
+      "title": "마이크로소프트가 AI 비서를 ‘직원’으로 바꾼다…Copilot Autopilot이 바꿀 회사 일",
+      "url": "https://blog.naver.com/goodlife1st-/224425426830",
+      "summary": "Copilot Autopilot이 단순 Q&A를 넘어 회사 일을 맡는 ‘직원’처럼 작동하는 변화를 해설합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-29",
+      "title": "오픈AI, 3개월 새 두 번째 훈련 중단…트럼프-아모데이 백악관 첫 회동까지",
+      "url": "https://blog.naver.com/lensinvestment/224425475412",
+      "summary": "최상위 모델 훈련·도구 사용 재중단 소식과 트럼프–아모데이 백악관 회동 맥락을 함께 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-29",
+      "title": "엔비디아 ‘오픈 에이전트 세이프티 플랫폼’: AI 에이전트를 위한 이중 보안",
+      "url": "https://blog.naver.com/futuretechinsights/224425208562",
+      "summary": "에이전트가 도구를 호출하며 일할 때 필요한 이중 보안 관점에서 NVIDIA 플랫폼을 설명합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-29",
+      "title": "클로드 소넷 오퍼스 차이, Sonnet 5.5 벤치마크와 같이 쓰는 법",
+      "url": "https://blog.naver.com/namjoop2/224425448549",
+      "summary": "Sonnet 5.5와 Opus 차이를 벤치마크 기준으로 보고, 실무에서 같이 쓰는 법을 제안합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-29",
+      "title": "OpenAI, 챗GPT 음성에 에이전트 결합…자비스로 가는 길은 열렸지만 아직 말 한마디로 끝나진 않음",
+      "url": "https://blog.naver.com/apple-hong/224425376789",
+      "summary": "음성으로 이메일·캘린더·브라우저 다단계 작업을 시키는 ChatGPT 에이전트 결합의 가능성과 한계를 짚습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-28",
+      "title": "Aside 데이터 자동 수집 올인원 매뉴얼 | 무료 AI 브라우저에 내 Claude 연결해 공공데이터·상권·공매·은행·쿠팡·홈택스 자료 모으기",
+      "url": "https://blog.naver.com/aimbetter/224425046984",
+      "summary": "Aside에 Claude를 연결해 공공·상권·공매 등 로그인 웹 데이터를 모으는 올인원 매뉴얼입니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-09-28",
+      "title": "[어사이드 AI]Aside AI로 블로그 초안 자동화 직접 해보니｜사용법부터 권한·보안까지",
+      "url": "https://blog.naver.com/ccajs/224425017645",
+      "summary": "Aside로 블로그 초안을 자동화해 본 사용법과 권한·보안 체크포인트를 실습 관점으로 정리합니다."
+    }
+  ]
+}
