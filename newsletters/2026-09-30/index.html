@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI와 에이전트, Aside 관련 최근 7일 소식을 모은 모닝 브리핑">
+  <title>AI·에이전트 모닝 브리핑 · 2026-09-30</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080a13;
+      --surface: #111526;
+      --surface-2: #171c31;
+      --text: #f4f7ff;
+      --muted: #aab3cb;
+      --cyan: #5cecff;
+      --magenta: #ff5dcc;
+      --line: rgba(92,236,255,.28);
+      --shadow: 0 0 26px rgba(92,236,255,.09), 0 0 42px rgba(255,93,204,.05);
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: radial-gradient(circle at 80% -10%, rgba(255,93,204,.16), transparent 34rem),
+                  radial-gradient(circle at -10% 24%, rgba(92,236,255,.11), transparent 30rem), var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 32px, 640px); margin: 0 auto; }
+    header { padding: 42px 0 24px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px;
+      color: var(--cyan); font-size: .76rem; font-weight: 800; letter-spacing: .13em;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--magenta)); }
+    h1 { margin: 0; max-width: 600px; font-size: clamp(2rem, 8vw, 3.25rem); line-height: 1.1; letter-spacing: -.055em; }
+    .h1-date { color: var(--cyan); font-size: .42em; letter-spacing: -.025em; white-space: nowrap; }
+    .issue-date { margin: 16px 0 0; color: var(--muted); font-size: 1rem; }
+    .issue-date strong { color: var(--text); font-size: 1.15rem; }
+    .highlight {
+      margin: 16px 0 34px; padding: 20px; border: 1px solid rgba(255,93,204,.42); border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,93,204,.12), rgba(17,21,38,.93) 55%); box-shadow: var(--shadow);
+    }
+    .highlight h2 { margin: 0 0 12px; color: #ffd4f5; font-size: 1rem; letter-spacing: .02em; }
+    .highlight ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .highlight li { color: #e8eaf4; font-size: .92rem; }
+    .spark { display: inline-block; margin-right: 8px; color: var(--magenta); }
+    .platform-section { margin: 0 0 34px; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 13px; }
+    .section-heading h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.025em; }
+    .section-heading h2::before { content: "#"; margin-right: 5px; color: var(--cyan); font-weight: 400; }
+    .count { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+    .cards { display: grid; gap: 12px; }
+    .item-card {
+      position: relative; padding: 17px 17px 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(135deg, rgba(23,28,49,.96), rgba(13,16,30,.96)); box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    }
+    .item-card::after { content: ""; position: absolute; top: 0; right: 0; width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--magenta)); opacity: .8; }
+    .card-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: var(--muted); font-size: .75rem; }
+    .platform-badge { padding: 3px 8px; border: 1px solid rgba(92,236,255,.42); border-radius: 99px; color: var(--cyan); font-size: .7rem; font-weight: 800; letter-spacing: .03em; }
+    .badge-x, .badge-threads { border-color: rgba(255,93,204,.46); color: #ff9be2; }
+    .badge-네이버블로그 { border-color: rgba(104,230,154,.48); color: #8ff0b3; }
+    .item-card h3 { margin: 0; font-size: 1.03rem; line-height: 1.4; letter-spacing: -.02em; }
+    .item-card h3 a { text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .item-card h3 a:hover, .item-card h3 a:focus-visible { color: var(--cyan); text-decoration: underline; }
+    .item-card p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 9px 0 0; color: var(--muted); font-size: .88rem; }
+    .empty-state { margin: 0; padding: 20px; border: 1px dashed rgba(170,179,203,.36); border-radius: 14px; color: var(--muted); text-align: center; font-size: .9rem; }
+    footer { margin: 44px 0 28px; padding-top: 20px; border-top: 1px solid rgba(170,179,203,.2); color: var(--muted); font-size: .78rem; text-align: center; }
+    footer strong { color: var(--text); }
+    @media (min-width: 600px) { .wrap { width: min(100% - 48px, 640px); } header { padding-top: 58px; } .item-card { padding: 19px 20px 20px; } }
+    @media (prefers-reduced-motion: no-preference) { .item-card { transition: border-color .2s ease, transform .2s ease; } .item-card:hover { transform: translateY(-2px); border-color: rgba(92,236,255,.62); } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">오늘의 브리핑</p>
+      <h1>AI·에이전트<br>모닝 브리핑 <span class="h1-date">· 2026-09-30</span></h1>
+      <p class="issue-date">발행일 <strong>2026.09.30</strong> <span aria-hidden="true">·</span> 최근 7일</p>
+    </header>
+
+    <aside class="highlight" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading">✦ 이번 호 하이라이트</h2>
+      <ul>
+          <li><span class="spark">✦</span>OpenAI DevDay, 상시 가동 AI 에이전트 Dots(닷츠) 공개 — GPT-6 Astra·전용 클라우드 PC로 Meta Muse에 대응</li>
+          <li><span class="spark">✦</span>Claude Sonnet 5.5, GitHub Copilot 등으로 확산 — 속도 30%+·비용↓ 메시지가 한국어 블로그·개발 영상으로 이어짐</li>
+          <li><span class="spark">✦</span>Aside(어사이드): 시장조사·상품 소싱·설치·로그인 웹 업무 등 한국어 실전 가이드가 연일 추가</li>
+      </ul>
+    </aside>
+
+      <section class="platform-section" aria-labelledby="heading-YouTube">
+        <div class="section-heading">
+          <h2 id="heading-YouTube">YouTube</h2>
+          <span class="count">10건</span>
+        </div>
+        <div class="cards">
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-30">2026.09.30</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=V_1Vn2WfpEY" target="_blank" rel="noopener noreferrer">I Tested OpenAI&#x27;s New Personal Assistant Agent: DOTS</a></h3>
+            <p>OpenAI가 DevDay에서 공개한 상시 가동 개인 에이전트 Dots를 직접 써보며 기능을 점검합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-30">2026.09.30</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=Fls_onRviPM" target="_blank" rel="noopener noreferrer">OpenAI DevDay 2026 Keynote (FULL)</a></h3>
+            <p>샘 알트먼 키노트를 포함해 DevDay 2026 전체 발표를 풀버전으로 담았습니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-29">2026.09.29</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=U-vprHa62mI" target="_blank" rel="noopener noreferrer">OpenAI&#x27;s agents just got faces: meet &quot;Dots&quot; #shorts</a></h3>
+            <p>얼굴(아바타)을 얻은 OpenAI 에이전트 Dots의 핵심 콘셉트를 숏폼으로 요약합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-29">2026.09.29</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=3yeFp8-5rnE" target="_blank" rel="noopener noreferrer">어사이드(Aside) 브라우저에 시장 조사를 통째로 맡겨봤습니다｜챗GPT와 비교</a></h3>
+            <p>시장 조사 업무를 Aside에 맡기고 ChatGPT와 결과·워크플로를 비교한 한국어 실습입니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-29">2026.09.29</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=Gr72KMOwxWc" target="_blank" rel="noopener noreferrer">Claude Sonnet 5.5 Just Hit GitHub Copilot</a></h3>
+            <p>Anthropic Claude Sonnet 5.5가 GitHub Copilot에 들어온 변화와 개발 워크플로 영향을 전합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-29">2026.09.29</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=AxHx1oreFtE" target="_blank" rel="noopener noreferrer">Agent Builder vs Copilot Studio | Which One Should You Use?</a></h3>
+            <p>Microsoft Copilot의 Agent Builder와 Copilot Studio 중 어디에 에이전트를 만들면 좋은지 비교합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-28">2026.09.28</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=87VQY7jYhYA" target="_blank" rel="noopener noreferrer">클릭이 필요한 업무를 이 AI 브라우저에게 맡겨보았습니다.</a></h3>
+            <p>로사장 김다솔이 클릭·입력 반복 업무를 Aside AI 브라우저에 맡겨 본 실사용 후기를 공유합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-28">2026.09.28</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=Erz8N_yUTuU" target="_blank" rel="noopener noreferrer">AI 몰라도 됩니다: Aside 설치부터 자동화 세팅까지</a></h3>
+            <p>실전압축 AI 방현이 Aside 설치부터 퇴근 후 반복 업무 자동화 세팅까지를 초보 기준으로 안내합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-28">2026.09.28</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=C1Y_R8nDUPI" target="_blank" rel="noopener noreferrer">AI stopped at Login required? How browser-based Aside finishes the job</a></h3>
+            <p>로그인 장벽에서 멈추는 일반 AI와 달리, 브라우저형 Aside가 로그인된 웹 업무를 끝까지 하는 방식을 설명합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-09-28">2026.09.28</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=knOhSmOkqMM" target="_blank" rel="noopener noreferrer">How to Use the NEW Agent Builder in Microsoft Copilot - Build an AI Agent in Minutes (2026)</a></h3>
+            <p>Mike Tholfsen이 Copilot 새 Agent Builder로 업무용 AI 에이전트를 몇 분 만에 만드는 방법을 시연합니다.</p>
+          </article>
+        </div>
+      </section>
+      <section class="platform-section" aria-labelledby="heading-X">
+        <div class="section-heading">
+          <h2 id="heading-X">X</h2>
+          <span class="count">3건</span>
+        </div>
+        <div class="cards">
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-09-29">2026.09.29</time>
+            </div>
+            <h3><a href="https://x.com/openai/status/2104984504133918973" target="_blank" rel="noopener noreferrer">OpenAI: Introducing dots, powered by GPT-6 Astra — always-on agents</a></h3>
+            <p>OpenAI 공식 계정이 GPT-6 Astra 기반 상시 가동 에이전트 Dots를 공개한다고 발표합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-09-29">2026.09.29</time>
+            </div>
+            <h3><a href="https://x.com/sama/status/2104995014208258235" target="_blank" rel="noopener noreferrer">Sam Altman: Dots are here — AI that works 24/7 for you</a></h3>
+            <p>샘 알트먼이 Dots 출시를 알리며 24시간 일하는 AI로 시간과 집중을 되찾는다고 소개합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-09-29">2026.09.29</time>
+            </div>
+            <h3><a href="https://x.com/Techmeme/status/2104983583157092514" target="_blank" rel="noopener noreferrer">Techmeme: OpenAI announces Dots, always-on agents powered by GPT-6 Astra</a></h3>
+            <p>테크밈이 Bloomberg를 인용해 ChatGPT Pro 대상 Dots(전용 클라우드 컴퓨터) 발표를 헤드라인으로 전합니다.</p>
+          </article>
+        </div>
+      </section>
+      <section class="platform-section" aria-labelledby="heading-Threads">
+        <div class="section-heading">
+          <h2 id="heading-Threads">Threads</h2>
+          <span class="count">0건</span>
+        </div>
+        <div class="cards">
+<p class="empty-state">이번 수집에서는 공개 Threads 게시물을 확보하지 못했습니다.<br>Instagram/Threads 로그인 벽으로 공개 게시물 수집이 어렵습니다.</p>
+        </div>
+      </section>
+      <section class="platform-section" aria-labelledby="heading-Naver-Blog">
+        <div class="section-heading">
+          <h2 id="heading-Naver-Blog">Naver Blog</h2>
+          <span class="count">9건</span>
+        </div>
+        <div class="cards">
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-09-30">2026.09.30</time>
+            </div>
+            <h3><a href="https://blog.naver.com/jlbrandon/224426563876" target="_blank" rel="noopener noreferrer">Claude Sonnet 5.5 공개…30% 더 빠르고 작업 비용 최대 30% 절감?</a></h3>
+            <p>Anthropic Claude Sonnet 5.5의 속도·비용 개선 포인트를 짧게 정리한 한국어 요약입니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-09-30">2026.09.30</time>
+            </div>
+            <h3><a href="https://blog.naver.com/blu2sky7/224426015348" target="_blank" rel="noopener noreferrer">클로드 &quot;Sonnet 5.5&quot; 전격 출시! 가격과 속도, Opus 5.5 비교 총정리</a></h3>
+            <p>Sonnet 5.5와 Opus 계열을 가격·속도 기준으로 비교해 언제 어떤 모델을 쓸지 정리합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-09-30">2026.09.30</time>
+            </div>
+            <h3><a href="https://blog.naver.com/jinlogue/224426358926" target="_blank" rel="noopener noreferrer">마이크로소프트 Copilot 전면 개편, 이제는 질문에 답하는 AI가 아니라 상시 작동하는 업무 에이전트</a></h3>
+            <p>Copilot이 Q&amp;A를 넘어 상시 작동하는 업무 에이전트로 바뀌는 개편 방향을 해설합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-09-30">2026.09.30</time>
+            </div>
+            <h3><a href="https://blog.naver.com/muhan_ss/224426366871" target="_blank" rel="noopener noreferrer">Aside 브라우저 설치 방법｜크롬 가져오기부터 ChatGPT 연결까지 직접 해봤습니다</a></h3>
+            <p>Aside 설치, 크롬 데이터 가져오기, ChatGPT 연결까지 초보 기준으로 따라 한 설치기입니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-09-30">2026.09.30</time>
+            </div>
+            <h3><a href="https://blog.naver.com/hannyit/224426582902" target="_blank" rel="noopener noreferrer">앤트로픽 AI 에이전트 위험 경고, 사고 나면 누가 책임질까</a></h3>
+            <p>Anthropic이 경고한 AI 에이전트 위험과 사고 책임 소재를 둘러싼 쟁점을 짚습니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-09-30">2026.09.30</time>
+            </div>
+            <h3><a href="https://blog.naver.com/apple-hong/224426615682" target="_blank" rel="noopener noreferrer">🤖 OpenAI 에이전트, 6월 호주 정부 사이트도 털었다…몇 달 전 사고들이 계속 나오고 있음</a></h3>
+            <p>OpenAI 에이전트의 호주 정부 사이트 침입 등 뒤늦게 드러나는 이상 행동 사례를 모읍니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-09-29">2026.09.29</time>
+            </div>
+            <h3><a href="https://blog.naver.com/alfeidfl/224425801207" target="_blank" rel="noopener noreferrer">AI 어사이드에 상품 소싱을 맡겨 봤더니, 직원이 한 명 생긴 기분이었어요</a></h3>
+            <p>상품 소싱 업무를 Aside에 위임해 본 체감 후기와 ‘직원 한 명’ 같은 생산성 변화를 나눕니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-09-29">2026.09.29</time>
+            </div>
+            <h3><a href="https://blog.naver.com/tdr2006/224425705407" target="_blank" rel="noopener noreferrer">AI에게 맡겼는데 &#x27;로그인이 필요합니다&#x27;? 브라우저형 어사이드가 끝까지 하는 법</a></h3>
+            <p>로그인 벽에서 멈추는 AI와 달리 브라우저형 Aside가 로그인 웹 작업을 이어가는 이유를 설명합니다.</p>
+          </article>
+          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-09-29">2026.09.29</time>
+            </div>
+            <h3><a href="https://blog.naver.com/yeonjisaem/224425760209" target="_blank" rel="noopener noreferrer">AI 브라우저 Aside 사용법 | 크롬 대신 써도 될까요? 직접 정리해봤어요</a></h3>
+            <p>Aside 사용법을 정리하고 일상 브라우저를 크롬에서 바꿀지 실사용 기준으로 판단합니다.</p>
+          </article>
+        </div>
+      </section>
+
+    <footer>
+      <p>수집 창구 <strong>2026-09-23 ~ 2026-09-30</strong> · YouTube 10 · X 3 · Threads 0 · Naver Blog 9 · 총 22건</p>
+      <p>애드 아이티 모닝 브리핑 · <a href="https://vidavida1970.github.io/ai-news-briefing/">아카이브</a></p>
+    </footer>
+  </main>
+</body>
+</html>
