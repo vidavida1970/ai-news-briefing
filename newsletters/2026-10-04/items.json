@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-04",
+  "window": "2026-09-28~2026-10-04",
+  "counts": {
+    "YouTube": 10,
+    "X": 3,
+    "Threads": 0,
+    "Naver Blog": 9,
+    "total": 22
+  },
+  "highlights": [
+    "Dots vs Muse: DevDay 이후 비교·실사용·해자 논쟁 영상이 쏟아지고, 네이버에도 상시형 에이전트 해설이 빠르게 쌓임",
+    "Gemini 4 Argon: ‘왜 지금 Argon만?’ 공개 전략 해설과 벤치·숏폼이 이어지며 모델 경쟁 담론이 이틀째 이어짐",
+    "Aside(어사이드): 설치·맥/윈도우·CLI·초보 자동화 가이드가 새로 올라 브라우저 에이전트 진입 장벽을 낮춤"
+  ],
+  "items": [
+    {
+      "platform": "YouTube",
+      "date": "2026-10-03",
+      "title": "구글이 Gemini4를 바로 공개하지 않은 이유",
+      "url": "https://www.youtube.com/watch?v=UCs-hBBLXjo",
+      "summary": "Gemini 4를 한꺼번에 풀지 않고 Argon부터 내놓은 구글의 공개 전략과 그 배경을 짧게 해설합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-03",
+      "title": "NEW Gemini 4 Argon is Scary Good!",
+      "url": "https://www.youtube.com/watch?v=pmni2FmQUCo",
+      "summary": "Gemini 4 Argon의 초기 체감 성능을 보여 주며, 왜 ‘무섭다’는 반응이 나오는지 시연 중심으로 전합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-03",
+      "title": "Gemini 4 Argon explained in 5min..",
+      "url": "https://www.youtube.com/watch?v=1ZbNgx6Gscw",
+      "summary": "Gemini 4 Argon의 포지션·강점을 5분 안에 압축해 설명하는 숏폼형 해설입니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-03",
+      "title": "Meta Muse vs Instinct vs OpenAI Dots: Do AI Agents Have Any Moat?",
+      "url": "https://www.youtube.com/watch?v=fAb3YAwHYPI",
+      "summary": "Muse·Instinct·Dots를 나란히 놓고, 상시 에이전트에 해자가 있는지 경쟁 구도로 따져 봅니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-03",
+      "title": "Don't Pick the Wrong One (Grok Bot vs Muse vs Dots)",
+      "url": "https://www.youtube.com/watch?v=CLiH1xFMqWI",
+      "summary": "Grok Bot·Muse·Dots 중 무엇을 고를지, 용도별로 잘못 고르기 쉬운 지점을 정리합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-03",
+      "title": "OpenAI 개발자가 직접 보여주는 dots 사용 사례｜전화로 맡기는 출장 준비와 고객 피드백",
+      "url": "https://www.youtube.com/watch?v=3rPLRoMi60I",
+      "summary": "OpenAI 측 사례로, 전화로 출장 준비·고객 피드백까지 맡기는 dots 실사용 장면을 보여 줍니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-03",
+      "title": "HUGE Fable 5.5 LEAK + First Preview, Gemini 4 Argon, Claude Code Update, FREE Model, & More",
+      "url": "https://www.youtube.com/watch?v=N3REfH4N9Dg",
+      "summary": "Fable 5.5 루머·Gemini 4 Argon·Claude Code 업데이트까지 한 주의 모델 소식을 묶어 전합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-02",
+      "title": "OpenAI Just Released Dots (An Insanely Easy AI Agent)",
+      "url": "https://www.youtube.com/watch?v=-fzbEP_sOjk",
+      "summary": "Dots를 과장 없이 설치부터 실제 작업까지 돌려 보며, 상시 에이전트의 난이도와 한계를 리뷰합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-29",
+      "title": "클로드 코드 브라우저 자동화 — 어사이드 CLI 사용법 | AI브라우저 Aside",
+      "url": "https://www.youtube.com/watch?v=taBSbKL24Ng",
+      "summary": "Claude Code와 Aside CLI를 연결해 로그인된 브라우저로 자동화를 거는 한국어 실전 가이드입니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-09-29",
+      "title": "아직도 직접 하세요? AI 초보도 쓰는 Aside 자동화",
+      "url": "https://www.youtube.com/watch?v=Erz8N_yUTuU",
+      "summary": "초보 눈높이로 Aside 자동화를 따라 하며, 반복 웹 업무를 브라우저 에이전트에 맡기는 법을 보여 줍니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-04",
+      "title": "Techmeme: OpenAI DevDay 2026 — ChatGPT as a place to discover and launch software",
+      "url": "https://x.com/Techmeme/status/2106401607684616345",
+      "summary": "DevDay 2026 발표가 ChatGPT를 소프트웨어 발견·실행 허브로 키워 앱스토어형 생태계를 흔들 수 있다고 요약합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-04",
+      "title": "Miles Brundage: Regret over “iterative deployment” after OpenAI safety critique",
+      "url": "https://x.com/miles_brundage/status/2106407893889339842",
+      "summary": "OpenAI 안전 문화 논쟁 속에서, GPT-3 시절 ‘점진적 배포’ 프레임이 더는 통하지 않는다고 반성합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-03",
+      "title": "kimmonismus: Ex-OpenAI safety lead David Robinson on sprint culture",
+      "url": "https://x.com/kimmonismus/status/2106376281763856664",
+      "summary": "12개 모델 론칭 안전을 맡았던 David Robinson이 스프린트 문화가 안전 팀을 압박했다고 지적한 글을 소개합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-04",
+      "title": "OpenAI Dots Meta Muse 비교: 상시형 개인 AI 에이전트 특징과 사용법",
+      "url": "https://blog.naver.com/dyrash/224430724673",
+      "summary": "Dots와 Muse의 클라우드 VM·브라우징 구조 차이를 비교하며, 상시형 개인 에이전트 사용법을 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-04",
+      "title": "AI 에이전트란 무엇인가? 챗봇 차이부터 작동 원리 총정리",
+      "url": "https://blog.naver.com/dyrash/224430693026",
+      "summary": "챗봇과 에이전트의 차이를 작동 원리부터 풀어, 지금 쏟아지는 Dots·Muse 뉴스를 읽는 기초를 제공합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-04",
+      "title": "GPT 사용량 반토막, 500달러 요금제와 dots가 만회할까요?",
+      "url": "https://blog.naver.com/zerohch0/224430758446",
+      "summary": "ChatGPT 사용량 이슈 속에서 Ultra/고가 요금제와 dots가 체감 가치를 되돌릴 수 있는지 따져 봅니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-03",
+      "title": "아직도 크롬 쓰세요? AI 브라우저 Aside 설치부터 사용방법까지",
+      "url": "https://blog.naver.com/itemcurator/224430248915",
+      "summary": "Aside 설치부터 기본 사용까지, 크롬 대신 AI 브라우저로 넘어가는 입문 경로를 안내합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-03",
+      "title": "Aside 브라우저 설치법과 맥북·윈도우 기초 사용법 가이드",
+      "url": "https://blog.naver.com/dyrash/224430301729",
+      "summary": "맥·윈도우 각각 Aside 설치와 기초 조작을 단계별로 안내하는 실사용 가이드입니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-03",
+      "title": "Gemini 4 Argon 공개｜지금 쓸 수 있나, API 가격은?",
+      "url": "https://blog.naver.com/sin4woo/224430118686",
+      "summary": "Gemini 4 Argon 이용 가능 여부와 API 가격을 중심으로 공개 직후 확인 포인트를 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-03",
+      "title": "챗GPT dots란? AI 비서가 하는 일과 사용 전 확인할 점",
+      "url": "https://blog.naver.com/aibeyondhypelab/224429969489",
+      "summary": "dots가 실제로 맡길 수 있는 일과 켜기 전에 확인할 권한·요금·리스크를 짧게 짚습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-03",
+      "title": "클로드 Fable 5.5 루머 정리: 출시설은 어디까지 사실일까?",
+      "url": "https://blog.naver.com/aibeyondhypelab/224430253619",
+      "summary": "Claude Fable 5.5 관련 루머·프리뷰 소식을 모아, 확인된 것과 추측을 구분합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-02",
+      "title": "[AI 에이전트 3파전 2편] Muse·dots·그록봇이 한국에 오면? 네이버·쿠팡·카카오의 성벽과 이마트 등 후발 유통사의 기회",
+      "url": "https://blog.naver.com/aimbetter/224429611899",
+      "summary": "Muse·dots·Grok Bot의 한국 상륙 시 네이버·쿠팡·카카오 등 플랫폼 방어선과 후발 유통 기회를 분석합니다."
+    }
+  ],
+  "threads_reason": "Threads search returns Instagram/Threads login wall; no public posts collectible this run"
+}
