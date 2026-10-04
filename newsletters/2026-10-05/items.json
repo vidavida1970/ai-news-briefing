@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-05",
+  "window": "2026-09-29~2026-10-05",
+  "counts": {
+    "YouTube": 10,
+    "X": 4,
+    "Threads": 0,
+    "Naver Blog": 9,
+    "total": 23
+  },
+  "highlights": [
+    "Meta Muse 명암: 지인마다 ‘인물 페이지’를 만든다는 시스템 프롬프트(Wired) 논란과 22일 500만 다운로드·오픈소스 가젯 공개가 동시에 쏟아짐",
+    "‘AI’에서 ‘SI’로: 백악관 Super Intelligence Force 출범, SpaceXSI 개명, 10월 9일 Gemini 무료 티어 축소까지 정책·요금 지형이 크게 흔들림",
+    "Aside(어사이드): 소상공인 소싱 프롬프트·Gemini 무료 API 연동·블로그 자동화·메일 100통 정리까지 실전 활용 사례가 넓어짐"
+  ],
+  "items": [
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "ChatGPT Dots Finally Clicked When I Learned This",
+      "url": "https://www.youtube.com/watch?v=9RYDaLnB6ec",
+      "summary": "자체 클라우드 컴퓨터·브라우저·메모리를 갖춘 상시형 비서 Dots를 언제 어떻게 맡겨야 효과가 나는지 실사용 관점으로 짚습니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "Former OpenAI safety leader QUITS, warns company's culture is 'BROKEN'",
+      "url": "https://www.youtube.com/watch?v=TpQIPqoYLCc",
+      "summary": "OpenAI 안전 보고서를 맡던 David Robinson의 사임과 ‘문화가 망가졌다’는 경고를 Fox 방송이 법률 전문가 해설과 함께 다룹니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "진짜 개인화된 AI 에이전트 뮤즈 사용기_ 3분만에 실사 영상 만들어줌. 5분만에 메일 정리 끝. 아직 한국 정식 서비스 안됨. 개인 정보 위험. 하지만.. 너무 좋네요.",
+      "url": "https://www.youtube.com/watch?v=sWoqD_xJT0g",
+      "summary": "이임복이 Meta Muse로 영상 제작·메일 정리를 직접 해 보며, 국내 미출시·개인정보 위험에도 체감 효용이 크다고 전합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "IT뉴스 - Gemini 4 Argon, DevDay, Tavus 영상 튜링테스트 통과, Eleven V4, ideogram 4.5, Kling 4.0 등",
+      "url": "https://www.youtube.com/watch?v=yBd2IW12zYc",
+      "summary": "조코딩이 Gemini 4 Argon·DevDay부터 Tavus·ElevenLabs V4·Kling 4.0까지 한 주 IT·AI 뉴스를 라이브로 정리합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "자는 동안 일하는 AI 에이전트, 이렇게 쓰면 돈이 녹습니다 | 또 미친 업뎃 OpenAI Dots | 챗GPT 활용법",
+      "url": "https://www.youtube.com/watch?v=XPw_U2Iy3Qs",
+      "summary": "Dots에 일을 맡겼다가 몇 시간 만에 100달러가 사라진 경험을 바탕으로, 토큰 비용을 아끼는 사용법을 알려 줍니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "Gemini 4, GPT 6.1, Dots, Claude Sonnet 5.5, Ideogram 4.5, Flux 3: AI NEWS",
+      "url": "https://www.youtube.com/watch?v=lHmZoRHMZyM",
+      "summary": "Gemini 4 Argon·GPT-6.1 Sol·Dots·Claude Sonnet 5.5·Flux 3 등 이번 주 쏟아진 모델·도구 발표를 한 번에 훑습니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "검색만 하는 브라우저에서 이제는 혼자 일하는 브라우저로! Aside 어사이드 브라우저 스터디!",
+      "url": "https://www.youtube.com/watch?v=-F1teM6uX1I",
+      "summary": "Aside로 자료 조사·정보 정리·콘텐츠 작성·반복 업무까지 맡기는 법을 스터디 형식으로 함께 따라 해 봅니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "Should You Pay $100 A Month For OpenAI's Dots When Meta's Muse Has A Free Version?",
+      "url": "https://www.youtube.com/watch?v=lnB4Zckx_34",
+      "summary": "Nate B Jones가 Dots·Space·GPT-6.1 Sol이 덜어 주는 일과 Pro 요금을 따져, 무료 Muse 대비 월 100달러 가치가 있는지 판단합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-03",
+      "title": "AI 에이전트 최종승자 결국 여기입니다.",
+      "url": "https://www.youtube.com/watch?v=UnZF4mvPjMY",
+      "summary": "김단테가 Muse·Dots로 불붙은 에이전트 경쟁에서 결국 누가 승자가 될지 투자자 시각으로 분석합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-02",
+      "title": "메일 100통, AI가 정리하면?",
+      "url": "https://www.youtube.com/watch?v=a-muHcF2zp0",
+      "summary": "어사이드랩이 Aside 에이전트에 메일 100통 정리를 맡겨, 브라우저 에이전트의 실제 처리 능력을 실험합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-05",
+      "title": "Techmeme: Wired — Meta Muse builds “a page for every person in the user's life”",
+      "url": "https://x.com/Techmeme/status/2106829348401791195",
+      "summary": "추출된 시스템 프롬프트를 보면 Muse가 사용자 주변 인물마다 사실·이력·관계 개선 팁을 담은 페이지를 만든다는 Wired 보도를 전합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-05",
+      "title": "Techmeme: Musk says SpaceXAI will be renamed SpaceXSI",
+      "url": "https://x.com/Techmeme/status/2106805492286927107",
+      "summary": "‘인공지능’ 대신 ‘초지능(SI)’을 쓰자는 트럼프 행정부 기조에 맞춰 머스크가 SpaceXAI를 SpaceXSI로 바꾸겠다고 답했다는 Reuters 소식입니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-04",
+      "title": "The White House: Announcing the Super Intelligence Force (SIF)",
+      "url": "https://x.com/WhiteHouse/status/2106731532694028310",
+      "summary": "백악관이 연방정부 차원의 초지능 주도권 확보를 조율할 ‘Super Intelligence Force’ 출범을 공식 발표했습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-04",
+      "title": "Techmeme: Brian Chesky on Airbnb's agent-to-agent plans",
+      "url": "https://x.com/Techmeme/status/2106595572279099903",
+      "summary": "브라이언 체스키가 에이전트 간 거래, 챗봇이 여행 커머스에서 실패하는 이유, AI 네이티브 OS의 필요성을 TechCrunch 인터뷰에서 밝힙니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-05",
+      "title": "AI뉴스 One Pick | 앤트로픽 클로드 코드, AI 작업 감시하는 보조 에이전트 기능 추가",
+      "url": "https://blog.naver.com/c3lee2/224431600725",
+      "summary": "Claude Code에 메인 에이전트 작업을 감시해 놓치기 쉬운 점을 알려 주는 ‘You should know’ 보조 에이전트 플러그인이 추가된 소식을 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-05",
+      "title": "공짜 AI가 줄어들고 안전 경고는 커진다, 이번 주 일하는 방식을 바꿀 AI 소식 네 가지",
+      "url": "https://blog.naver.com/troychoi_/224431599433",
+      "summary": "Gemini 무료 티어 축소, OpenAI 안전 연구자 퇴사, Meta 수학 난제 성과 등 이번 주 업무 방식을 바꿀 AI 소식 네 가지를 묶었습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-05",
+      "title": "(1편) 어사이드(Aside) AI 브라우저 프롬프트 : 소상공인 시장조사 및 상품 소싱 활용법",
+      "url": "https://blog.naver.com/maris-mico-ai/224430282097",
+      "summary": "도매꾹·1688 가격 비교 등 스마트스토어 운영자의 시장조사·소싱을 Aside 프롬프트로 자동화하는 방법을 소개합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-05",
+      "title": "메타 뮤즈 가젯 오픈소스 공개, AI 에이전트 기기 직접 만드는 코드",
+      "url": "https://blog.naver.com/goooooks/224431583688",
+      "summary": "ESP32·리눅스 기기용 SDK로 직접 만든 하드웨어에서 Muse를 호출할 수 있게 한 오픈소스 ‘Muse Gadgets’ 구성을 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-05",
+      "title": "22일 만에 500만 다운로드, 메타의 AI 에이전트 '뮤즈'｜기업분석 포함",
+      "url": "https://blog.naver.com/marketnote365/224431546190",
+      "summary": "출시 22일 만에 500만 다운로드를 넘긴 행동형 에이전트 Muse의 구조와 메타 기업 관점의 의미를 분석합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-04",
+      "title": "ASIDE로 블로그 글쓰기 자동화하기, 초보자도 따라 하는 방법",
+      "url": "https://blog.naver.com/wizfit/224431406415",
+      "summary": "검색·글 정리·이미지 준비·네이버 블로그 편집까지 Aside 하나로 이어 가는 초보자용 블로그 자동화 흐름을 안내합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-04",
+      "title": "클로드 소네트 5.5 출시, 토큰 단가 그대로 작업 비용을 줄인 방법",
+      "url": "https://blog.naver.com/tailf/224431313583",
+      "summary": "토큰 단가는 그대로 두고 더 적은 단계로 일을 끝내 작업당 비용을 최대 30% 줄였다는 Claude Sonnet 5.5의 효율 개선을 짚습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-04",
+      "title": "제미나이 무료 10월 9일부터 바뀐다면? Pro 쓰던 일은 미리 끝내세요",
+      "url": "https://blog.naver.com/hag2s/224431244073",
+      "summary": "10월 9일부터 Gemini 무료 사용자는 Flash-Lite만 쓰게 되는 변경 사항과 Plus·Pro 요금제별 대응법을 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-04",
+      "title": "Aside(어사이드) 브라우저에 Google Gemini 무료 티어 연동하기",
+      "url": "https://blog.naver.com/dosuser/224431225377",
+      "summary": "구독형 Gemini 대신 Google AI Studio 무료 API 키를 발급해 Aside에 연결, 비용 없이 Gemini 모델을 쓰는 방법을 안내합니다."
+    }
+  ]
+}
