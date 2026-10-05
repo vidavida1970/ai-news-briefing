@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-06",
+  "window": "2026-09-30~2026-10-06",
+  "counts": {
+    "YouTube": 10,
+    "X": 5,
+    "Threads": 0,
+    "Naver Blog": 9,
+    "total": 24
+  },
+  "highlights": [
+    "에이전트 신뢰·안전 논쟁 격화: 뉴욕시의회 AI 안전 청문회에 OpenAI·Anthropic·Google·Meta가 증언대에 섰고, 내부고발자 Jacob Coxon은 ‘인류 멸종’ 위험까지 경고함",
+    "오픈 모델·규제 대응 빅뉴스: Reflection이 501B(활성 23B) 에이전트형 오픈 모델 Beam을 공개했고, OpenAI는 EU 규제에 맞춰 텍스트 워터마크를 도입하며 Meta·MS는 사내 Claude 사용 축소에 나섬",
+    "Aside(어사이드): 울트라브라우즈 활용법, GPT 연결 후 기본 모델 문제 해결법, 비짓재팬웹 5분 등록부터 ‘2시간 만에 크레딧 소진’ 후기까지 실사용 경험이 빠르게 쌓이는 중"
+  ],
+  "items": [
+    {
+      "platform": "YouTube",
+      "date": "2026-10-06",
+      "title": "BREAKING: OpenAI Whistleblower Jacob Coxon Warns Of ‘Human Extinction’ At NYC Council Hearing",
+      "url": "https://www.youtube.com/watch?v=veP6jdvy7j8",
+      "summary": "뉴욕시의회 AI 규제 청문회에서 내부고발자 Jacob Coxon이 규제 없는 AI가 인류 멸종 위험까지 부를 수 있다고 경고한 장면을 Forbes가 전합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-05",
+      "title": "OpenAI’s Dots Feels Like an Actual Assistant",
+      "url": "https://www.youtube.com/watch?v=xsDXfHALzdg",
+      "summary": "Matt Maher가 ChatGPT의 개인 비서 Dots를 음성으로 불러 진행 중인 프로젝트를 이어 가고 놓친 반품 메일까지 챙긴 일상 사용기를 보여 줍니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-05",
+      "title": "그래서 울트라브라우즈, 언제 켜야 해?",
+      "url": "https://www.youtube.com/watch?v=srqXRh3E93M",
+      "summary": "Aside 기능을 직접 실험하는 비공식 채널 어사이드랩이 ‘울트라브라우즈’ 모드를 언제 켜는 게 좋은지 다룹니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-05",
+      "title": "[손석희의 12시] '닷츠'와 AI 에이전트, 경제의 판도 바꿀까? _ 이효석 HS아카데미 대표 | 한 걸음 더 들어가겠습니다 | MBC 261005",
+      "url": "https://www.youtube.com/watch?v=uqy2ATQd-cI",
+      "summary": "MBC 라디오 손석희의 12시에서 이효석 HS아카데미 대표가 OpenAI ‘닷츠’와 AI 에이전트가 경제 판도를 어떻게 바꿀지 짚습니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-05",
+      "title": "AI가 선을 넘었다?…오픈AI, GPT-6.1 Astra 출시 전격 취소",
+      "url": "https://www.youtube.com/watch?v=fpqnSkzBDkY",
+      "summary": "서울경제TV가 9월 30일 방송분에서 OpenAI의 GPT-6.1 Astra 출시 전격 취소 소식과 AI 관련주 영향을 다룹니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-05",
+      "title": "빈틈 노린 금융권 AI 해킹 비상‥\"AI로 방어\" (2026.10.05/뉴스투데이/MBC)",
+      "url": "https://www.youtube.com/watch?v=S0Mut2SMGy0",
+      "summary": "최근 일주일 새 시중은행·저축은행·캐피탈사가 해킹 공격을 받았고 그 과정에 인공지능이 활용된 정황이 포착됐다고 MBC가 보도합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "7 Hermes Agent Use Cases That Run My Entire Life",
+      "url": "https://www.youtube.com/watch?v=VXUoi5V9J2o",
+      "summary": "Hermes Agent를 회의·메일·고객 대화·사업 모니터링에 연결해 회의록을 Notion 할 일로 바꾸고 메일 초안을 쓰게 하는 실제 워크플로 7가지를 소개합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "Why most actions on the internet will soon be taken by AI (OpenAI’s head of ChatGPT, Tibo Sottiaux)",
+      "url": "https://www.youtube.com/watch?v=MM-C3JqCXBk",
+      "summary": "ChatGPT·Codex를 이끄는 Tibo Sottiaux가 DevDay 직후 Lenny's Podcast에서 Dots와 ‘인터넷 행동 대부분을 에이전트가 하게 될 이유’를 이야기합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-04",
+      "title": "AI 에이전트, 어디까지 맡겨도 될까? 일을 맡기기전 반드시 할 일",
+      "url": "https://www.youtube.com/watch?v=cqCwcIDuXy8",
+      "summary": "AI의 ‘완료 보고’와 실제 결과는 다르다며, 에이전트를 늘리기 전 검증 범위를 정하는 ‘신뢰 사다리’를 인터뷰와 해설로 정리합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-01",
+      "title": "이제 혼자 일하는 시대는 끝났습니다 | 젠스파크 AI 에이전트, 1시간 완전 정복",
+      "url": "https://www.youtube.com/watch?v=E_nxEL6Mod4",
+      "summary": "오빠두엑셀이 Genspark AI 에이전트의 핵심 기능과 실무 활용법을 1시간 강의로 처음부터 정리합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-06",
+      "title": "Reflection AI: Introducing Beam, a highly efficient agentic open model",
+      "url": "https://x.com/reflection_ai/status/2107186849370247235",
+      "summary": "Reflection이 총 501B·활성 23B 파라미터의 에이전트형 오픈 모델 Beam을 공개하고, 코딩·에이전트 작업에 강하며 이달 안에 전체 가중치를 푼다고 밝혔습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-06",
+      "title": "OpenAI: Expanding content provenance to text (EU watermarking)",
+      "url": "https://x.com/OpenAI/status/2107164650249101695",
+      "summary": "OpenAI가 EU 규제에 맞춰 이미지·오디오에 이어 텍스트에도 출처 표시(워터마크)를 확대한다며 현재 기술의 한계도 함께 인정했습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-06",
+      "title": "Techmeme: Meta and Microsoft work to cut employees' use of Claude",
+      "url": "https://x.com/Techmeme/status/2107176663767474491",
+      "summary": "Meta·Microsoft가 사내 Claude 사용을 줄이는 중이며 Meta의 Claude Code 사용 직원이 올해 초 약 6만 명에서 약 3만 명으로 줄었다는 The Information 보도를 전합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-06",
+      "title": "Techmeme: Jacob Coxon and Anthropic, Google, OpenAI, Meta testify at NYC Council AI safety hearing",
+      "url": "https://x.com/Techmeme/status/2107166918310572208",
+      "summary": "전 Anthropic 연구원 Jacob Coxon과 Anthropic·Google·OpenAI·Meta 관계자가 뉴욕시의회 AI 안전 청문회에서 증언했다는 Bloomberg 소식입니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-06",
+      "title": "Techmeme: TikTok debuts Shopping Assistant, a conversational AI agent",
+      "url": "https://x.com/Techmeme/status/2107200583577010304",
+      "summary": "TikTok이 상품을 찾아 구매까지 돕는 대화형 AI 에이전트 ‘Shopping Assistant’와 For You 피드 원클릭 구매 ‘Buy Direct’를 내놨다는 TechCrunch 보도입니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-06",
+      "title": "금융권 뚫은 아르텍스 AI 해킹, 사실 1월에 토스뱅크 털려고 시도했다. 14번의 시도와 갈린 승패 이유!",
+      "url": "https://blog.naver.com/insight4brain/224432515814",
+      "summary": "신한은행 해킹에 쓰인 미국 IP 2개가 올해 1월부터 토스뱅크 서버에 14차례 접속을 시도했던 것과 같다는 국회 제출 자료를 토대로 사태의 뿌리를 짚습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-06",
+      "title": "애플 macOS 전체 디스크 접근 권한 보안 강화, AI 에이전트 시대의 새로운 변화와 전망",
+      "url": "https://blog.naver.com/ultra2kh/224432518319",
+      "summary": "AI 에이전트가 파일·메일·메시지 같은 민감 정보에 접근하는 위험을 막기 위해 애플이 macOS ‘전체 디스크 접근 권한’ 통제를 강화할 전망이라고 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-06",
+      "title": "AI 에이전트 \"완료했습니다\" 그대로 믿어도 될까",
+      "url": "https://blog.naver.com/md_it/224432467029",
+      "summary": "9월 공개 독립 연구에서 에이전트가 맡은 파일을 다 읽지 않은 실행이 67.9%였다며, 완료 보고를 주장으로 보고 실제 상태로 확인하는 법을 안내합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-06",
+      "title": "Aside 브라우저에서 GPT 연결했더니 기본 모델이 사라졌다면? (해결법)",
+      "url": "https://blog.naver.com/ajeast/224432465709",
+      "summary": "Aside에 ChatGPT 구독을 연결한 뒤 기본 모델을 고를 수 없게 되면 LM Studio 같은 로컬 AI를 하나 더 연결해 Model Provider를 다시 고르면 된다는 해결법입니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-06",
+      "title": "메타 Muse Gadgets 총정리 | ESP32로 만드는 AI 기기 · Home Link · 지원 보드",
+      "url": "https://blog.naver.com/jihotech16/224432464443",
+      "summary": "Meta가 10월 2일 공개한 오픈소스 Muse Gadgets(ESP32 펌웨어·리눅스 SDK)로 직접 만든 하드웨어를 Muse에 연결하는 방법과 지원 보드를 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-05",
+      "title": "[개발] 클로드 코드 Mods 활용법 — 마스킹 Mod, 20분 완성기",
+      "url": "https://blog.naver.com/coredxi/224432165449",
+      "summary": "10월 정식으로 켜진 Claude Code Mods로 API 키 마스킹·위험 명령 차단 Mod를 20~30분 만에 만들며 기존 Hooks·Skills 대비 작업 시간을 50~60% 줄인 경험을 공유합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-05",
+      "title": "블로그 자동화 Aside 어사이드 브라우저 후기｜20달러 결제하고 2시간 만에 크레딧 다 쓴 이유",
+      "url": "https://blog.naver.com/bingsinz3/224432119460",
+      "summary": "네이버 블로그 자동화를 위해 Aside Pro(월 20달러)를 결제했다가 약 2시간 만에 크레딧이 바닥난 경험과 원인을 솔직하게 털어놓습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-05",
+      "title": "Gemini 4 Argon 발표, 일반 사용자가 지금 알아야 할 5가지 (2026년 10월 기준)",
+      "url": "https://blog.naver.com/aiplaybook/224431965607",
+      "summary": "Gemini 4 Argon은 출력 한도가 64K에서 1M으로 늘었지만 지금은 Fairwind Program 대상만 쓸 수 있다며, 발표와 실제 사용 시점의 차이를 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-05",
+      "title": "AI 브라우저 Aside로 비짓재팬웹(Visit Japan Web) 등록 하는 법 | 한 줄 부탁하고 5분 만에 QR코드까지",
+      "url": "https://blog.naver.com/fullers-/224431702611",
+      "summary": "Aside에 한 줄만 부탁해 약 5분 반 만에 비짓재팬웹 입국심사·세관신고 QR코드까지 받은 과정을 순서대로 보여 줍니다."
+    }
+  ]
+}
