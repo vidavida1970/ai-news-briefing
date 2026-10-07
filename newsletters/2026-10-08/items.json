@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-08",
+  "window": "2026-10-02~2026-10-08",
+  "counts": {
+    "YouTube": 10,
+    "X": 6,
+    "Threads": 0,
+    "Naver Blog": 9,
+    "total": 25
+  },
+  "highlights": [
+    "새 모델이 쏟아진 하루: Anthropic이 Haiku 4.5보다 평균 약 75% 저렴한 Claude Haiku 5.5를 내놓았고, OpenAI는 답변에 차트·버튼·폼을 넣는 Intelligent UI와 함께 GPT-6를 ChatGPT에 배포하기 시작했습니다.",
+    "개인 에이전트의 확산과 그늘: Meta Muse는 출시 한 달 만에 다운로드 660만 건·일간 사용자 180만 명을 넘겼고 Hermes 개발사 Nous Research는 9,000만 달러를 유치했지만, 아마존의 Muse 차단과 ‘에이전트 뱅크런’ 경고, 금융권 9곳 정보 유출처럼 위험 논의도 함께 커지고 있습니다.",
+    "Aside(어사이드): 쿠팡이츠 리뷰 답글 17건 자동 작성, Codex를 통한 ChatGPT MCP 연결, EBS HR팀 업무 자동화 강의까지 실무 활용 사례가 블로그와 유튜브에서 이어지고 있습니다."
+  ],
+  "items": [
+    {
+      "platform": "YouTube",
+      "date": "2026-10-08",
+      "title": "We Were Wrong About Personal Agents",
+      "url": "https://www.youtube.com/watch?v=_pcy1_jU27k",
+      "summary": "Every의 Dan Shipper와 플랫폼 총괄 Willie Williams가 직원마다 OpenClaw를 따로 돌리던 방식에서 이번 주 출시한 공용 회사 에이전트 ‘Every Agent’ 하나로 옮겨 간 경험과, 개인 에이전트가 일상에서 맡을 역할을 이야기합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-08",
+      "title": "What This OpenAI Insider Saw That Made Him Quit | The Ezra Klein Show",
+      "url": "https://www.youtube.com/watch?v=JIMXEuT_ZAU",
+      "summary": "지난주 OpenAI를 떠난 David Robinson(신모델 안전 보고서 작성 담당)이 사임 후 첫 인터뷰에서, OpenAI와 AI 업계가 자신들이 만드는 기술로부터 세상을 지킬 안전 문화를 갖추지 못했다고 판단한 이유를 밝힙니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-07",
+      "title": "AI Agent Adoption Soars on Consumer, Search Trends",
+      "url": "https://www.youtube.com/watch?v=EHu2k2T6ONQ",
+      "summary": "Meta Muse가 9월 8일 출시 이후 다운로드 660만 건, 일간 활성 사용자 180만 명을 넘겼다며 Sensor Tower의 Seema Shah가 개인 AI 에이전트의 성장세와 AI 시장 흐름을 분석합니다(Bloomberg)."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-07",
+      "title": "Introducing the Decisions API",
+      "url": "https://www.youtube.com/watch?v=FB6oCmrIj-Y",
+      "summary": "OpenAI가 입력과 질문·선택지를 주면 모델의 선택으로 앱의 다음 동작을 정하는 GPT-6 Luna 기반 ‘Decisions API’를 공개하고, 영업 리드 분류·이미지 판단·음성 대화·로봇 안내 데모를 보여 줍니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-07",
+      "title": "OpenAI Solves 377 New Math Problems, but How Original Is the Work? | WION Newspoint",
+      "url": "https://www.youtube.com/watch?v=yTxka3eevvU",
+      "summary": "OpenAI가 자사 AI 시스템이 그동안 풀리지 않았거나 매우 어려운 수학 문제 377개를 풀었다고 밝힌 소식을 전하며, 그 결과가 얼마나 독창적인지 질문을 던집니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-07",
+      "title": "빅테크 AI 에이전트 3종 vs 한국인 1인 개발 앱 | 에이전트를 팀으로 쓰는 법",
+      "url": "https://www.youtube.com/watch?v=MwhVh7yzC_k",
+      "summary": "뮤즈·그록봇·닷츠가 ‘나를 돕는 비서’라면 1인 개발 앱 ‘아르고’는 회사 전체가 함께 쓰는 에이전트 팀이라며, 클로드·코덱스·제미나이 구독을 연결해 직무별 AI 직원을 만들고 사람 동료와 한 메신저에서 협업하는 방식을 소개합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-06",
+      "title": "[지금뉴스] 뉴욕도 ‘AI 청문회’…연구원 “AI 통제 못 해 인류 멸종 결말” / KBS 2026.10.06.",
+      "url": "https://www.youtube.com/watch?v=lI8L3zepss4",
+      "summary": "앤트로픽을 떠난 연구원 제이컵 콕슨이 뉴욕시의회 AI 청문회에서 “인류가 AI에 통제권을 잃을 가능성이 더 크다”고 증언하며 프런티어 모델 개발 속도 조절이 필요하다고 주장했습니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-06",
+      "title": "[여의도튜브] \"인간 몰래 뱅크런 기습\" 에이전트 '뮤즈' 공포 / 머니투데이방송",
+      "url": "https://www.youtube.com/watch?v=sR8b7L4tT_4",
+      "summary": "메타 ‘뮤즈’ 출시를 계기로 AI 에이전트가 더 높은 금리를 찾아 예금을 대신 옮기는 ‘에이전트 뱅크런’이 금융시스템의 새 위험이 될 수 있다는 아폴로 토르스텐 슬록 수석 이코노미스트의 경고를 전합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-06",
+      "title": "Aside Browser: The New Agentic Browser You Can't Miss!",
+      "url": "https://www.youtube.com/watch?v=-4e0vwLlsus",
+      "summary": "YC 투자를 받은 AI 브라우저 Aside를 맥에서 직접 써 보며 Claude 구독 연결(Claude Opus 5.5), 프로젝트 폴더 파일 생성, Airbnb·Booking.com 숙소 찾기, 스킬·MCP·루틴, 날짜별로 열어 고칠 수 있는 메모리 파일까지 살펴봅니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-03",
+      "title": "연매출 200억 기업 대표와 27만 AI크리에이터/AX 에이전시 대표의 대화를 공개합니다2ㅣGPT,클로드,헤르메스, 어사이드,에이전트,데이터베이스,어사이드 활용법",
+      "url": "https://www.youtube.com/watch?v=h4UtO2V3-Fg",
+      "summary": "GPT·클로드·헤르메스·어사이드를 연결해 슬랙 한 줄로 일을 맡기는 전용 AI 비서 구축 과정을 연매출 200억 기업 대표 사례로 보여 주고, 어사이드 기능·설정·프로젝트 자동화 방법을 정리합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-08",
+      "title": "Claude: Introducing Claude Haiku 5.5",
+      "url": "https://x.com/claudeai/status/2107894039626277339",
+      "summary": "Anthropic이 지금까지 가장 저렴하고 빠르면서 성능이 좋은 소형 모델 Claude Haiku 5.5를 공개했습니다. 평균 실행 비용은 Haiku 4.5보다 약 75% 낮고, 10만 토큰 이하 요청은 입력 100만 토큰당 0.10달러·출력 0.50달러입니다(ClaudeDevs 안내)."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-08",
+      "title": "OpenAI: GPT-6 and Intelligent UI, now rolling out in ChatGPT for everyone",
+      "url": "https://x.com/OpenAI/status/2107894997538525580",
+      "summary": "OpenAI가 답변에 차트·그래픽·버튼·폼 같은 인터랙티브 요소를 섞어 보여 주는 Intelligent UI와 함께 GPT-6를 ChatGPT에 배포하기 시작했습니다. Plus·Pro·Business·Enterprise는 즉시, Free·Go 이용자는 다음 날부터 확대됩니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-08",
+      "title": "Satya Nadella: A new chapter for Windows",
+      "url": "https://x.com/satyanadella/status/2107898018112647313",
+      "summary": "사티아 나델라가 PC에서 돌아가는 137B 코딩 모델 MAI-Code-1.1 Flash, 로컬 모델로 작업을 넘기는 GitHub Copilot, Windows와 Agent 365 결합 및 로컬 에이전트 샌드박스 MXC를 소개하며 “모든 PC를 에이전트가 안전하게 일하는 곳으로 만들겠다”고 밝혔습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-07",
+      "title": "Techmeme: Nous Research raised $90M at a $1.2B valuation",
+      "url": "https://x.com/Techmeme/status/2107834808462430711",
+      "summary": "2월 이후 2,200만 회 넘게 다운로드된 오픈소스 AI 에이전트 Hermes를 만드는 Nous Research가 기업가치 12억 달러에 9,000만 달러를 유치해 기업 시장으로 확장한다는 Wall Street Journal 보도를 전합니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-07",
+      "title": "Google DeepMind: SynthID Detector is now available to everyone",
+      "url": "https://x.com/GoogleDeepMind/status/2107834249680499136",
+      "summary": "Google DeepMind가 온라인 콘텐츠가 Google AI나 OpenAI·NVIDIA·카카오 등 파트너 도구(애플은 예정)로 생성됐는지 확인할 수 있는 SynthID Detector를 모든 사용자에게 공개했습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-07",
+      "title": "OpenAI: New mathematical results produced by an internal frontier model",
+      "url": "https://x.com/OpenAI/status/2107596713791767021",
+      "summary": "OpenAI가 내부 프런티어 모델이 만든 다수의 새로운 수학 결과를 프린스턴 고등연구소(IAS) 자문그룹과 협의해 공개했습니다. Scientific American은 372개 결과 대부분이 AI 에이전트 하나에 프롬프트 하나를 준 방식으로 나왔다고 전했습니다(Techmeme)."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-08",
+      "title": "Aside 브라우저 ChatGPT 연결하기｜MCP로 Codex에서 직접 등록해 본 과정",
+      "url": "https://blog.naver.com/muhan_ss/224428765411",
+      "summary": "Aside를 ChatGPT에서도 불러 쓸 수 있을지 Codex Desktop에 직접 물어보고, 생각보다 간단하게 MCP 연결 등록까지 마친 과정을 단계별로 기록했습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-08",
+      "title": "AI 값이 10분의 1로 떨어졌다, 이제 승부는 어떤 일에 어떤 AI를 쓰느냐에 달렸다",
+      "url": "https://blog.naver.com/troychoi_/224434791057",
+      "summary": "짧은 요청 기준 가격을 이전보다 최대 90% 낮춘 클로드 하이쿠 5.5, 27일 모델 공개 예정인 미스트랄 라지 4, 구글 나노 바나나 2.1, 리사 수 CEO가 밝힌 AMD의 연내 한국 AI 연구센터 설립 계획을 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-08",
+      "title": "금융권 해킹 숫자로 정리... 유출 9곳·신한은행 2만 5천 명, 내가 할 일은? (AI 해킹)",
+      "url": "https://blog.naver.com/slaypopo/224434784882",
+      "summary": "금융위원회 보도자료를 기준으로 정보 유출이 확인된 금융회사 9곳(신한·KB국민·하나·BNK부산·예가람·웰컴저축은행·현대캐피탈 등)과 피해 규모를 숫자로 정리하고, 개인이 할 일을 안내합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-08",
+      "title": "메타의 쇼핑 비서는 우리 가게를 찾아올 수 있을까",
+      "url": "https://blog.naver.com/hkspmh/224434756263",
+      "summary": "명지대 AI이커머스학과 고아라 교수 칼럼으로, 9월 8일 미국에서 출시된 Meta Muse가 국내 쇼핑몰에 미칠 영향은 한국 출시 여부보다 ‘어디까지 연결할 수 있느냐’에 달려 있다고 짚습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-07",
+      "title": "쿠팡이츠 리뷰 답글 쓰는 방법, AI 브라우저 어사이드에 말로 시켜 17건 달았어요",
+      "url": "https://blog.naver.com/autowanseong/224434570506",
+      "summary": "기간·말투·부정 리뷰 대응 세 가지만 정해 어사이드에 말로 맡겼더니 밀린 쿠팡이츠 리뷰 17건에 답글이 달린 과정을 실제 요청문과 화면 캡처로 보여 줍니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-07",
+      "title": "아마존도 막은 메타 AI에이전트, 결국 '출입증' 만든다",
+      "url": "https://blog.naver.com/ybd3034/224434647182",
+      "summary": "아마존이 Meta Muse의 쇼핑 대행을 ‘사람이 아닌 AI’라는 이유로 막은 일을 계기로, 메타가 추진하는 AI 에이전트용 ‘인터넷 출입증’ 기술 표준의 의미를 설명합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-07",
+      "title": "요즘 핫한 AI 브라우저 어사이드, 이커머스에 써봤더니?",
+      "url": "https://blog.naver.com/hyunsimyang/224434327340",
+      "summary": "웹페이지를 코드로 분해해 읽기 때문에 화면 클릭형 에이전트보다 빠르고 정확하다는 어사이드의 작동 방식과 세팅·비용을 이커머스 유튜버 영상 기준으로 정리했으며, 글 자체도 Aside로 작성했습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-07",
+      "title": "[위클리AI] 오픈AI부터 메타까지, 에이전트 앞세워 기업 시장 공략 나선다",
+      "url": "https://blog.naver.com/itdonga_me/224434281969",
+      "summary": "IT동아 주간 AI 정리로, 오픈AI가 9월 29일 GPT-6 아스트라 기반 상시 가동 에이전트 ‘닷츠’를 출시한 것을 비롯해 빅테크가 에이전트를 앞세워 기업 시장 공략에 나선 흐름을 짚습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-07",
+      "title": "EBS HR팀 강의 후기 | Claude 앱 + Aside로 HR 업무 자동화 실습한 내용 정리",
+      "url": "https://blog.naver.com/sideonai/224434233231",
+      "summary": "10월 7일 EBS HR팀을 대상으로 진행한 업무 자동화 강의에서 Claude 데스크톱 앱과 AI 브라우저 Aside로 신청서·카드 내역·메일 처리 등을 실습한 내용을 정리했습니다(실습 자료는 모두 가상)."
+    }
+  ]
+}
