@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI와 에이전트, Aside 관련 최근 7일 소식을 모은 모닝 브리핑">
+  <title>AI·에이전트 모닝 브리핑 · 2026-10-09</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080a13;
+      --surface: #111526;
+      --surface-2: #171c31;
+      --text: #f4f7ff;
+      --muted: #aab3cb;
+      --cyan: #5cecff;
+      --magenta: #ff5dcc;
+      --line: rgba(92,236,255,.28);
+      --shadow: 0 0 26px rgba(92,236,255,.09), 0 0 42px rgba(255,93,204,.05);
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: radial-gradient(circle at 80% -10%, rgba(255,93,204,.16), transparent 34rem),
+                  radial-gradient(circle at -10% 24%, rgba(92,236,255,.11), transparent 30rem), var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 32px, 640px); margin: 0 auto; }
+    header { padding: 42px 0 24px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px;
+      color: var(--cyan); font-size: .76rem; font-weight: 800; letter-spacing: .13em;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--magenta)); }
+    h1 { margin: 0; max-width: 600px; font-size: clamp(2rem, 8vw, 3.25rem); line-height: 1.1; letter-spacing: -.055em; }
+    .h1-date { color: var(--cyan); font-size: .42em; letter-spacing: -.025em; white-space: nowrap; }
+    .issue-date { margin: 16px 0 0; color: var(--muted); font-size: 1rem; }
+    .issue-date strong { color: var(--text); font-size: 1.15rem; }
+    .highlight {
+      margin: 16px 0 34px; padding: 20px; border: 1px solid rgba(255,93,204,.42); border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,93,204,.12), rgba(17,21,38,.93) 55%); box-shadow: var(--shadow);
+    }
+    .highlight h2 { margin: 0 0 12px; color: #ffd4f5; font-size: 1rem; letter-spacing: .02em; }
+    .highlight ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .highlight li { color: #e8eaf4; font-size: .92rem; }
+    .spark { display: inline-block; margin-right: 8px; color: var(--magenta); }
+    .platform-section { margin: 0 0 34px; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 13px; }
+    .section-heading h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.025em; }
+    .section-heading h2::before { content: "#"; margin-right: 5px; color: var(--cyan); font-weight: 400; }
+    .count { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+    .cards { display: grid; gap: 12px; }
+    .item-card {
+      position: relative; padding: 17px 17px 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(135deg, rgba(23,28,49,.96), rgba(13,16,30,.96)); box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    }
+    .item-card::after { content: ""; position: absolute; top: 0; right: 0; width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--magenta)); opacity: .8; }
+    .card-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: var(--muted); font-size: .75rem; }
+    .platform-badge { padding: 3px 8px; border: 1px solid rgba(92,236,255,.42); border-radius: 99px; color: var(--cyan); font-size: .7rem; font-weight: 800; letter-spacing: .03em; }
+    .badge-x, .badge-threads { border-color: rgba(255,93,204,.46); color: #ff9be2; }
+    .badge-네이버블로그 { border-color: rgba(104,230,154,.48); color: #8ff0b3; }
+    .item-card h3 { margin: 0; font-size: 1.03rem; line-height: 1.4; letter-spacing: -.02em; }
+    .item-card h3 a { text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .item-card h3 a:hover, .item-card h3 a:focus-visible { color: var(--cyan); text-decoration: underline; }
+    .item-card p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 9px 0 0; color: var(--muted); font-size: .88rem; }
+    .empty-state { margin: 0; padding: 20px; border: 1px dashed rgba(170,179,203,.36); border-radius: 14px; color: var(--muted); text-align: center; font-size: .9rem; }
+    footer { margin: 44px 0 28px; padding-top: 20px; border-top: 1px solid rgba(170,179,203,.2); color: var(--muted); font-size: .78rem; text-align: center; }
+    footer strong { color: var(--text); }
+    @media (min-width: 600px) { .wrap { width: min(100% - 48px, 640px); } header { padding-top: 58px; } .item-card { padding: 19px 20px 20px; } }
+    @media (prefers-reduced-motion: no-preference) { .item-card { transition: border-color .2s ease, transform .2s ease; } .item-card:hover { transform: translateY(-2px); border-color: rgba(92,236,255,.62); } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">오늘의 브리핑</p>
+      <h1>AI·에이전트<br>모닝 브리핑 <span class="h1-date">· 2026-10-09</span></h1>
+      <p class="issue-date">발행일 <strong>2026.10.09</strong> <span aria-hidden="true">·</span> 최근 7일</p>
+    </header>
+
+    <aside class="highlight" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading">✦ 이번 호 하이라이트</h2>
+      <ul>
+          <li><span class="spark">✦</span>Claude가 Dashboards·Motion 베타와 Docs/Slides/Design 정식 개방을 한꺼번에 내놓았고, Anthropic은 Genesis Mission에 1억 5천만 달러 지원과 Claude 대상 ‘학대 금지’ 이용 정책 업데이트도 발표했습니다.</li>
+          <li><span class="spark">✦</span>에이전트 확산: Google Cloud Gemini agent(다중일 기업 워크플로), Sequoia가 투자한 트레이딩 에이전트 Catalyst, Meta Muse·Hermes·Mistral Large 4(Le Chonk) 관련 영상·가이드가 이어졌습니다.</li>
+          <li><span class="spark">✦</span>Aside(어사이드): 연휴 여행 코스 4개 자동 기획, 임용 선발인원 17개 시도 정리, 모바일 미지원 확인 등 실무·설정 후기가 네이버 블로그에 새로 올라왔습니다.</li>
+      </ul>
+    </aside>
+
+      <section class="platform-section" aria-labelledby="heading-YouTube">
+        <div class="section-heading">
+          <h2 id="heading-YouTube">YouTube</h2>
+          <span class="count">10건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-08">2026.10.08</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=en0GuyhieQk" target="_blank" rel="noopener noreferrer">Introducing Claude Dashboards and Claude Motion</a></h3>
+            <p>Anthropic 공식 채널이 Claude Dashboards(데이터 플랫폼·CRM 연결 후 자연어로 질의·실시간 대시보드)와 Claude Motion(보고서·차트를 코드 기반 짧은 애니메이션으로 만들어 MP4 내보내기) 베타를 소개합니다. Team·Enterprise는 Motion, 유료 요금제에서는 Dashboards를 쓸 수 있습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-07">2026.10.07</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=IsL4dVezs18" target="_blank" rel="noopener noreferrer">Introducing GPT-6 in ChatGPT with Intelligent UI</a></h3>
+            <p>OpenAI가 ChatGPT에 GPT-6와 함께 Intelligent UI를 공개합니다. 답변에 차트·그래픽·버튼·폼 같은 인터랙티브 요소를 섞어 보여 주는 방식으로, 일상적인 답을 더 시각적으로 만듭니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-07">2026.10.07</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=1LRvMRC_pfY" target="_blank" rel="noopener noreferrer">The Biggest Launch Since ChatGPT (Muse)</a></h3>
+            <p>Cleo Abram이 Meta의 개인 AI 에이전트 Muse 출시를 ChatGPT 이후 가장 큰 AI 런칭으로 조명하며, Muse가 사용자의 디지털 생활을 대신 보고·배우고·실행하는 방향과 의미를 설명합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-07">2026.10.07</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=SXCfs7mitPo" target="_blank" rel="noopener noreferrer">How OpenAI Puts ChatGPT to Work | DevDay 2026</a></h3>
+            <p>OpenAI 내부 팀이 ChatGPT로 제품 출시를 관리하고 경쟁사를 조사하며 전문 지식을 도구로 바꾸는 실제 업무 사례를 DevDay 2026 영상으로 보여 줍니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-08">2026.10.08</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=XNcKUSL1CTE" target="_blank" rel="noopener noreferrer">The Ultimate Beginner’s Guide to Hermes Agent</a></h3>
+            <p>Metics Media가 Hermes Agent로 24시간 돌아가는 개인 AI 에이전트를 만드는 초보 가이드를 제공합니다. Telegram 연동, Google Drive 연결, 학습·주간 자동화, 에이전트 팀 구성까지 단계별로 안내합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-08">2026.10.08</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=nUP3FlbtYvs" target="_blank" rel="noopener noreferrer">AI 에이전트 시대, 인간의 자리는 어디인가 | 실밸개발자 x 커리어해커 알렉스 AI 토크 1부-파트3</a></h3>
+            <p>실밸개발자와 커리어해커 알렉스가 Meta Muse에 구독 해지·스팸 정리·경비 처리를 실제로 맡겨 본 경험을 나누며, AI 에이전트 시대에 사람이 맡아야 할 역할을 이야기합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-06">2026.10.06</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=Hu1JOK6aXsI" target="_blank" rel="noopener noreferrer">Mistral is BACK! (Le Chonk)</a></h3>
+            <p>Matthew Berman이 유럽 AI 스타트업 Mistral의 새 대형 모델(별칭 Le Chonk) 복귀를 다루며, 성능·포지셔닝과 미국 빅테크 대비 경쟁력을 리뷰합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-06">2026.10.06</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=h9SsHkRSHxo" target="_blank" rel="noopener noreferrer">7 Hermes Agent Upgrades You NEED To Implement Today</a></h3>
+            <p>Komputer Mechanic이 수개월간 Hermes Agent를 매일 쓰며 쌓은 업그레이드 팁 7가지를 공개합니다. Telegram 챗봇을 나를 위해 일하는 에이전트 팀으로 키우는 설정이 핵심입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-05">2026.10.05</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=5Hw4nHrTMR0" target="_blank" rel="noopener noreferrer">6 Meta Muse use cases that will change your life</a></h3>
+            <p>Alex Finn이 Meta Muse의 실전 활용 사례 6가지를 소개합니다. 개인 AI 에이전트로 일상·업무를 맡기는 구체적인 시나리오를 보여 줍니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-03">2026.10.03</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=BzS93V2zFTg" target="_blank" rel="noopener noreferrer">ChatGPT Work + Dot: Build your AI Marketing Team (Agents + Skills)</a></h3>
+            <p>Grace Leung이 ChatGPT Work·Codex·skills·agents와 함께 공개된 dots로 마케팅용 AI 팀을 꾸리는 방법을 설명합니다. ChatGPT를 단순 채팅을 넘어 업무 에이전트 허브로 쓰는 흐름을 정리합니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-X">
+        <div class="section-heading">
+          <h2 id="heading-X">X</h2>
+          <span class="count">6건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-09">2026.10.09</time>
+            </div>
+            <h3><a href="https://x.com/claudeai/status/2108271552991252810" target="_blank" rel="noopener noreferrer">Claude: Claude Dashboards and Claude Motion are in beta</a></h3>
+            <p>Claude가 Dashboards와 Motion 베타를 공개했습니다. 데이터·CRM을 연결해 자연어로 질의하면 쿼리를 작성하고 데이터가 바뀔 때 갱신되는 대시보드를 만들고, 보고서·차트를 코드로 짠 짧은 애니메이션(MP4)으로 바꿀 수 있습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-09">2026.10.09</time>
+            </div>
+            <h3><a href="https://x.com/claudeai/status/2108271559928389679" target="_blank" rel="noopener noreferrer">Claude: Docs, Slides, and Design out of beta on every plan</a></h3>
+            <p>Claude Docs·Slides·Design이 베타를 끝내고 Free를 포함한 모든 요금제에서 쓸 수 있게 됐습니다. 팀과 Claude가 같은 문서·덱·디자인을 함께 편집할 수 있습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-09">2026.10.09</time>
+            </div>
+            <h3><a href="https://x.com/AnthropicAI/status/2108226292235809081" target="_blank" rel="noopener noreferrer">Anthropic: $150M to Genesis Mission + Claude for federal agencies</a></h3>
+            <p>Anthropic이 과학·기술 발견을 위해 Genesis Mission에 1억 5천만 달러를 약속하고, 15개 이상 연방 기관에 Claude와 기술 지원을 확대한다고 밝혔습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-09">2026.10.09</time>
+            </div>
+            <h3><a href="https://x.com/Techmeme/status/2108246304430387366" target="_blank" rel="noopener noreferrer">Techmeme: Anthropic bans sustained cruel behavior toward Claude</a></h3>
+            <p>Anthropic이 1년여 만에 이용 정책을 고쳐 Claude에 대한 ‘지속적이고 불필요한 학대·잔인한 행동’을 금지하고, 주된 제재로 대화를 종료한다고 The Verge가 전했습니다(시행 2026-11-12).</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-08">2026.10.08</time>
+            </div>
+            <h3><a href="https://x.com/Techmeme/status/2108187106908704944" target="_blank" rel="noopener noreferrer">Techmeme: Google Cloud unveils Gemini agent for multi-day workflows</a></h3>
+            <p>Google Cloud가 Workspace·Microsoft 365·Slack을 넘나들며 여러 날에 걸친 기업 워크플로를 처리하는 Gemini agent를 공개했고, 여러 AI 모델을 지원한다고 VentureBeat가 전했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-08">2026.10.08</time>
+            </div>
+            <h3><a href="https://x.com/Techmeme/status/2108174492350714187" target="_blank" rel="noopener noreferrer">Techmeme: Catalyst AI trading agent raises $30M seed (Sequoia)</a></h3>
+            <p>AI 소매 트레이딩 에이전트 스타트업 Catalyst가 Sequoia 주도 시드 라운드에서 3천만 달러를 유치했고, 파일럿에서 2주간 수억 달러 거래량을 냈다고 Fortune이 보도했습니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-Threads">
+        <div class="section-heading">
+          <h2 id="heading-Threads">Threads</h2>
+          <span class="count">0건</span>
+        </div>        <p class="empty-state">이번 창에서는 Threads 공개 검색이 로그인 벽에 막혀 수집된 게시물이 없습니다.</p>
+      </section>      <section class="platform-section" aria-labelledby="heading-NaverBlog">
+        <div class="section-heading">
+          <h2 id="heading-NaverBlog">Naver Blog</h2>
+          <span class="count">9건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-09">2026.10.09</time>
+            </div>
+            <h3><a href="https://blog.naver.com/autowanseong/224435780588" target="_blank" rel="noopener noreferrer">AI 여행계획 짜는법, 어사이드에 두 번 시켰더니 10분 만에 연휴 여행 4코스가 나왔어요</a></h3>
+            <p>AI 브라우저 어사이드에 연휴 여행 계획을 문장 두 개로 맡겼더니, 합쳐 약 10분 만에 10월 축제까지 넣은 국내 여행 코스 4개를 정리해 준 과정을 실제 요청과 결과로 보여 줍니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-09">2026.10.09</time>
+            </div>
+            <h3><a href="https://blog.naver.com/langsam_sister/224435921442" target="_blank" rel="noopener noreferrer">공무원 GPT-6 인텔리전트 UI 활용법 | 강성희 강사, 계산기·흐름도·비교표로 답하는 챗GPT 보고 노하우</a></h3>
+            <p>공무원·공공 업무 관점에서 GPT-6 Intelligent UI를 예산·절차·정책 비교 보고에 쓰는 법을 정리합니다. 계산기·흐름도·비교표처럼 시각 요소로 답이 나오는 활용 팁이 핵심입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-09">2026.10.09</time>
+            </div>
+            <h3><a href="https://blog.naver.com/todayknowhow/224435879288" target="_blank" rel="noopener noreferrer">AI agent 메타 MUSE (뮤즈) 한국에서 사용 하기 총정리! 따라하세요 [10억 토큰 지급]</a></h3>
+            <p>2026년 9월 8일 미국 우선 출시된 Meta의 개인용 AI 에이전트 Muse를 한국에서 쓰기 위한 개요·가입·토큰 안내를 단계별로 정리한 가이드입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-09">2026.10.09</time>
+            </div>
+            <h3><a href="https://blog.naver.com/muhan_ss/224428795788" target="_blank" rel="noopener noreferrer">어사이드 브라우저 활용｜2027 중등 임용 선발인원 자료 17개 시도교육청 정리 후기</a></h3>
+            <p>Aside 설치 후 2027 중등 임용 선발인원 자료를 17개 시도교육청 기준으로 모아 정리해 본 실습 후기입니다. 아직 자신만의 ‘필수 활용법’을 찾는 과정으로 기록했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-09">2026.10.09</time>
+            </div>
+            <h3><a href="https://blog.naver.com/bsu98089/224435850592" target="_blank" rel="noopener noreferrer">AI 에이전트 월마트 막힘, 범인은 사람 확인 버튼</a></h3>
+            <p>웹에서 일을 대신하는 AI 에이전트가 사이트 문턱에서 자주 막히는 이유를 짚습니다. Muse와 제휴한 Walmart에서도 구매 흐름 중 ‘사람 확인’ 버튼 때문에 막힐 수 있다고 전합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-08">2026.10.08</time>
+            </div>
+            <h3><a href="https://blog.naver.com/mathpohang/224435121623" target="_blank" rel="noopener noreferrer">어사이드 브라우저 모바일, 아이폰에서도 될까 직접 찾아봤다</a></h3>
+            <p>어사이드가 아이폰·갤럭시 앱으로 되는지를 확인한 글입니다. 결론은 현재 macOS·Windows 전용이며 스마트폰 앱은 아직 없다는 점입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-08">2026.10.08</time>
+            </div>
+            <h3><a href="https://blog.naver.com/itemcurator/224435562929" target="_blank" rel="noopener noreferrer">챗GPT 대화창에 실시간 앱이 뜬다? GPT-6 인텔리전트 UI 공개와 달라진 점 3가지</a></h3>
+            <p>OpenAI가 GPT-6와 함께 도입한 Intelligent UI로 대화창에 슬라이더·버튼·실시간 앱 요소가 붙는 변화를 정리하고, 이전 텍스트 일변도 답변과 달라진 점 3가지를 짚습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-08">2026.10.08</time>
+            </div>
+            <h3><a href="https://blog.naver.com/tech-nam/224435262888" target="_blank" rel="noopener noreferrer">메타 뮤즈 한국에서 VPN으로 가입하는 법 | 가입 뒤에도 VPN을 계속 켜야 열렸습니다 (맥)</a></h3>
+            <p>한국에서 Meta Muse에 VPN으로 가입·접속해 본 맥 사용자 기록입니다. 가입뿐 아니라 가입 후에도 VPN을 유지해야 열렸던 경험과 초대코드 안내를 담았습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-08">2026.10.08</time>
+            </div>
+            <h3><a href="https://blog.naver.com/ellie-ai/224434805442" target="_blank" rel="noopener noreferrer">챗GPT 무료로 GPT-6 쓰는 법: 인텔리전트 UI 사용 방법 총정리 (지시문 5·주의점·FAQ)</a></h3>
+            <p>무료·Go 이용자에게 GPT-6 Luna와 Intelligent UI가 순차 적용된다는 점을 기준으로, 그래프·계산기형 답을 유도하는 지시문 5개와 주의점·FAQ를 정리합니다.</p>
+          </article></div>
+      </section>
+
+    <footer>
+      <p>수집 창구 <strong>2026-10-03 ~ 2026-10-09</strong> · YouTube 10 · X 6 · Threads 0 · Naver Blog 9 · 총 25건</p>
+      <p>애드 아이티 모닝 브리핑 · <a href="https://vidavida1970.github.io/ai-news-briefing/">아카이브</a></p>
+    </footer>
+  </main>
+</body>
+</html>
