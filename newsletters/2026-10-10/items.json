@@ -1,0 +1,200 @@
+{
+  "date": "2026-10-10",
+  "window": "2026-10-03~2026-10-10",
+  "counts": {
+    "YouTube": 10,
+    "X": 7,
+    "Threads": 0,
+    "Naver Blog": 9,
+    "total": 26
+  },
+  "highlights": [
+    "에이전트 플랫폼 경쟁: 구글이 데스크톱·Workspace·모바일·CLI를 넘나드는 단일 업무 에이전트 ‘Gemini agent’를 공개했고, Claude Code Projects·Mods와 Codex composer predictions·GPT-6.1 Sol Ultrafast 등 개발 도구 업데이트가 이어졌습니다.",
+    "안전·보안 이슈: OpenAI 안전 연구원 3명 해고 공방, 안전 우려 속 Muse 출시 결정 보도, 한국 은행 해킹에 쓰인 ARTEX 에이전트의 폐쇄형 전환, Anthropic Cyber Mission 출범이 한꺼번에 나왔습니다.",
+    "Aside(어사이드): 클로드 코드+어사이드 CLI 쿠팡 검색, 홈택스 증명원 발급, 쿠팡 장바구니 쇼핑, 요금제 비교 글과 유튜브 자동화·시장 조사 강의 영상까지 실사용 후기가 크게 늘었습니다."
+  ],
+  "items": [
+    {
+      "platform": "YouTube",
+      "date": "2026-10-09",
+      "title": "Getting started with Claude Code Projects",
+      "url": "https://www.youtube.com/watch?v=omihvjf0A2k",
+      "summary": "Anthropic 공식 채널이 Claude Code의 새 Projects 기능을 소개합니다. 하나의 지속 대화 안에서 Claude가 각 작업을 병렬 스레드로 돌리며 조율하고, 스레드 조정·PR 리뷰·아티팩트 생성·루틴 예약까지 다룹니다. Pro·Max 요금제에 베타로 순차 배포 중입니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-09",
+      "title": "Inside the Gemini Agent: Desktop, Workspace, Mobile & CLI",
+      "url": "https://www.youtube.com/watch?v=xgYDSQbY9n4",
+      "summary": "Google Cloud가 Gemini at Work 2026 무대 데모 전체를 공개했습니다. 하나의 상시 Gemini 클라우드 에이전트가 데스크톱, Microsoft 365, Google Workspace, 모바일 Slack, 터미널(CLI)을 넘나들며 발표 자료·엑셀 매출 모델·설명 영상까지 하나의 목표로 만들어 냅니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-09",
+      "title": "AI News: Haiku-5.5, Visual ChatGPT, Grok's New Trick, and more!",
+      "url": "https://www.youtube.com/watch?v=NUizyuGj-kE",
+      "summary": "Matt Wolfe의 주간 AI 뉴스 정리로, Claude Haiku 5.5 출시, 시각적으로 바뀐 ChatGPT, Grok의 새 기능 등 이번 주 놓치기 쉬운 AI 소식을 한 번에 훑습니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-09",
+      "title": "메타 개발자들이 부딪힌 AI 에이전트의 진짜 한계",
+      "url": "https://www.youtube.com/watch?v=rb6c6ug1iw8",
+      "summary": "커리어해커 알렉스와 실밸개발자가 여러 에이전트를 동시에 돌릴 때 생기는 병목을 짚습니다. 문제는 AI의 실행력이 아니라 검증 맥락·관리 리소스·사용자 이해라는 점을 들어 Hindsight의 Retain·Recall·Reflect 구조와 에이전트 평가 방법을 정리합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-09",
+      "title": "요즘 미국에서 난리난 조합!! 클로드와 Aside만 있으면 유튜브 자동화 무조건 가능!!(챗GPT도 됩니다)",
+      "url": "https://www.youtube.com/watch?v=uTlh-Raeajo",
+      "summary": "소소한 AI 입문노트(소에노)가 클로드 데스크톱·코덱스 CLI와 한국산 AI 브라우저 Aside를 묶어 5만 구독 채널 운영을 자동화하는 실전 방법 3가지를 공개합니다. 로그인이 필요한 작업을 Aside로 처리하고 워크플로를 스킬로 저장해 반복 업무를 줄이는 과정입니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-09",
+      "title": "OpenAI agent does it again, solving nearly 400 math problems no human has ever solved",
+      "url": "https://www.youtube.com/watch?v=IQJT1ScDT6c",
+      "summary": "Global News가 OpenAI의 AI 에이전트가 인간이 풀지 못한 수학 문제 372개를 풀었다는 소식을 다룹니다. 수학자 Mark Daley는 AI가 인간이 이해하기 어려운 문제까지 풀게 되면서 ‘이해의 상실’이 올 수 있다고 우려합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-08",
+      "title": "금융, 커머스, 여행의 B2C AI에이전트 시장 막 올랐다 (강정수 블루닷AI 연구소장)",
+      "url": "https://www.youtube.com/watch?v=iwTmjiMTx1k",
+      "summary": "티타임즈TV에서 강정수 블루닷AI 연구소장이 국내 미출시인 메타 뮤즈를 미리 써 본 후기를 전합니다. 구독료·보험료 절감, 아침 뉴스 브리핑, 기차표 예매까지 맡긴 경험을 바탕으로 최상위 모델이 아니어도 B2C 에이전트 시장이 열릴 수 있다고 봅니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-06",
+      "title": "How much should you tell your AI agent? | The Vergecast",
+      "url": "https://www.youtube.com/watch?v=50sz9fz5-pg",
+      "summary": "The Verge의 David Pierce와 Allison Johnson이 Meta Muse, OpenAI Dots, 스타트업 Instinct 등 비서형 에이전트를 직접 써 보며, 메시지로 얼마나 많은 일을 맡길 수 있는지와 그 대가로 넘겨야 하는 정보의 균형을 이야기합니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-05",
+      "title": "검색은 이제 AI에게 맡기세요! Aside 브라우저로 시장 조사 자동화",
+      "url": "https://www.youtube.com/watch?v=WpyeD7G-RC4",
+      "summary": "바이브랩스가 ‘팀장을 위한 생성형 AI 과정’ 2교시 강의로 Aside 브라우저 설치부터 브라우저 속 에이전트에게 경쟁 병원 조사·시장 트렌드 정리·환자 후기(VOC) 수집을 맡기는 시장 조사 실습을 처음부터 끝까지 보여 줍니다."
+    },
+    {
+      "platform": "YouTube",
+      "date": "2026-10-05",
+      "title": "Mods in Claude Code: change how Claude Code works",
+      "url": "https://www.youtube.com/watch?v=yUuFvL1lK4k",
+      "summary": "Claude Code가 화면 렌더링·프롬프트 구성·툴 호출을 바꾸는 사용자 함수 ‘mods’를 지원합니다. Anthropic의 Lydia가 실시간 컨텍스트 분석, 에이전트 사이드 패널, 이메일 주소 마우스오버 표시 등 세 가지 예시를 보여 주고 하나를 처음부터 만듭니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-10",
+      "title": "OpenAI Developers: Codex composer predictions 베타",
+      "url": "https://x.com/OpenAIDevs/status/2108624138369929725",
+      "summary": "OpenAI Developers가 Pro 사용자 대상 Codex ‘composer predictions’ 베타를 공개했습니다. 대화 내용과 사용자의 말투를 바탕으로 다음 메시지를 제안해 주는 기능으로, 내부 테스트에서 가장 사랑받은 기능 중 하나라고 밝혔습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-09",
+      "title": "Anthropic: Anthropic Cyber Mission 출범",
+      "url": "https://x.com/AnthropicAI/status/2108302539498414208",
+      "summary": "Anthropic이 핵심 인프라와 오픈소스 소프트웨어 보안을 강화하기 위한 새 프로그램 ‘Anthropic Cyber Mission’을 시작한다고 발표했습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-09",
+      "title": "OpenAI Developers: GPT-6.1 Sol Ultrafast 배포",
+      "url": "https://x.com/OpenAIDevs/status/2108262812489531498",
+      "summary": "GPT-6.1 Sol의 Ultrafast 모드가 API·Codex·ChatGPT Work에 배포되기 시작했습니다. Astra에 가까운 지능을 Sol Standard보다 최대 8배 빠른 속도로 제공한다고 소개했습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-09",
+      "title": "Sundar Pichai: Gemini at Work에서 Gemini agent 공개",
+      "url": "https://x.com/sundarpichai/status/2108257472553386059",
+      "summary": "순다르 피차이가 NASA Hangar One에서 열린 Gemini at Work에 700여 Google Cloud 고객과 함께했다며, 비즈니스 맥락을 모두 갖추고 질문 응답·지식 업무·콘텐츠 생성까지 처리하는 단일 범용 업무 에이전트 ‘Gemini agent’를 소개했습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-09",
+      "title": "Techmeme: OpenAI, 안전 연구원 3명 해고 정당성 주장 (CNBC)",
+      "url": "https://x.com/Techmeme/status/2108480367867109783",
+      "summary": "OpenAI가 안전 연구원 3명을 해고한 결정에 대해, 내부 조사 결과 이들이 민감 정보 취급에 관한 명확한 정책을 위반했다고 해명했다는 CNBC 보도를 Techmeme이 전했습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-09",
+      "title": "Techmeme: 저커버그, 안전 우려에도 Muse 출시 결정 (NYT)",
+      "url": "https://x.com/Techmeme/status/2108514245302419748",
+      "summary": "뉴욕타임스는 마크 저커버그가 AI 스타트업 Instinct의 유사 에이전트 제품이 인기를 얻는 것을 보고 내부 안전 우려에도 불구하고 Muse 출시를 결정했다고 보도했습니다."
+    },
+    {
+      "platform": "X",
+      "date": "2026-10-09",
+      "title": "Techmeme: 한국 은행 해킹에 쓰인 ARTEX 에이전트, 폐쇄형 전환 (Reuters)",
+      "url": "https://x.com/Techmeme/status/2108526848091308434",
+      "summary": "CrowdStrike가 한국 은행 해킹에 쓰였다고 지목한 AI 에이전트 ARTEX의 중국 개발자가 프로젝트를 클로즈드 소스로 전환했다고 로이터가 보도했습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-10",
+      "title": "클로드 코드 브라우저 자동화, 어사이드(Aside) CLI로 쿠팡 보조배터리 5개를 표로 받았어요",
+      "url": "https://blog.naver.com/autowanseong/224435966529",
+      "summary": "클로드 코드에 어사이드 CLI를 설치해 두면 어사이드 창을 띄우지 않고도 쿠팡 검색을 맡겨 조건에 맞는 보조배터리 5개를 표로 받을 수 있다는 실습 후기입니다. 설정의 Developers 메뉴에서 CLI를 설치하는 위치와 요청문, 결과 표를 캡처로 보여 줍니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-10",
+      "title": "제미나이 AI 에이전트(Gemini agent) 공개, 클로드도 골라 써요",
+      "url": "https://blog.naver.com/bsu98089/224436696684",
+      "summary": "구글 클라우드의 기업용 Gemini agent 안에서 클로드 오퍼스 5·소네트 5.5를 골라 쓸 수 있게 된 점을 정리합니다. 기본값은 AI가 작업별 최적 모델을 자동 선택하고, 지출 상한은 모델이 아니라 프로젝트 단위로 걸린다는 점을 짚습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-10",
+      "title": "오픈AI, 수학 난제 논문 722편 동시 공개… 수학계 \"검증 부실·생태계 파괴\" 반발",
+      "url": "https://blog.naver.com/dong_019/224435970035",
+      "summary": "OpenAI가 깃허브에 372개 그룹, 722편의 수학 연구 보고서를 한꺼번에 공개한 내용을 정리합니다. 문제당 평균 약 3시간 연산이 들었고 100년 넘은 난제도 포함됐지만, 수학계에서는 검증 부실과 연구 생태계 훼손을 우려하는 반발이 나왔습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-10",
+      "title": "오픈AI AI 에이전트 100여개 기관 통보, 저는 ‘자동화 권한’부터 다시 보게 됐습니다",
+      "url": "https://blog.naver.com/urban_dreamer/224436026189",
+      "summary": "1인 사업자 관점에서 AI 에이전트에 대한 기대와, 10월 2일 OpenAI가 자사 AI 에이전트 활동과 관련해 100여 개 기관에 통보한 뉴스를 계기로 에이전트에 주는 ‘자동화 권한’을 다시 점검하게 된 이유를 적은 글입니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-09",
+      "title": "[Aside 에이전트] 어사이드(Aside)로 쿠팡 쇼핑하기",
+      "url": "https://blog.naver.com/barbie44444/224436601923",
+      "summary": "설치편에 이어 쿠팡에 로그인한 뒤 어사이드에 ‘초등학생 간식 72,000원어치를 1~2종류로 장바구니에 담아 달라’고 명령해 본 과정을 단계별로 보여 주는 활용 후기입니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-09",
+      "title": "홈택스 폐업사실증명원 발급, 로그인만 직접 하고 AI 브라우저 어사이드에 맡겨 PDF까지 받았어요",
+      "url": "https://blog.naver.com/autowanseong/224435965219",
+      "summary": "공동인증서 로그인만 직접 하고 나머지 메뉴 탐색·신청은 어사이드에 말로 맡겨 ‘처리완료 1건’과 PDF 발급까지 받은 과정을 사람이 한 일과 AI가 한 일로 나눠 정리했습니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-09",
+      "title": "\"한국 은행 해킹\" 이후 중국 개발자, ARTEX AI 에이전트를 폐쇄형 소스로 전환",
+      "url": "https://blog.naver.com/invest_eyes/224436286862",
+      "summary": "로이터 보도를 바탕으로 9월 말부터 최소 9곳의 국내 은행을 겨냥한 사이버 공격, CrowdStrike가 지목한 AI 에이전트 ARTEX, 개발자의 폐쇄형 전환까지 사건의 전말과 배경을 정리합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-09",
+      "title": "윈도우11 MXC 정식 출시, AI 에이전트의 파일 접근 권한은 어떻게 제한할까?",
+      "url": "https://blog.naver.com/toruin84/224436313981",
+      "summary": "마이크로소프트가 정식 발표한 윈도우11용 MXC(Execution Containers)가 AI 에이전트의 파일 수정·네트워크 접근을 어떻게 제한하는지, 기존 샌드박스와의 차이와 실제 적용 범위를 설명합니다."
+    },
+    {
+      "platform": "Naver Blog",
+      "date": "2026-10-08",
+      "title": "AI 브라우저, 어사이드 무료 유료 차이 - aside 요금제 비교",
+      "url": "https://blog.naver.com/polarisians/224435643617",
+      "summary": "사람이 직접 클릭하는 기존 브라우저와 달리 로그인된 사이트를 오가며 페이지 읽기·폼 입력·파일 처리를 대신하는 한국산 AI 브라우저 어사이드를 소개하고, 무료·유료 요금제 차이를 비교합니다."
+    }
+  ]
+}
