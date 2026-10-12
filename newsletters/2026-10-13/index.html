@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI와 에이전트, Aside 관련 최근 7일 소식을 모은 모닝 브리핑">
+  <title>AI·에이전트 모닝 브리핑 · 2026-10-13</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080a13;
+      --surface: #111526;
+      --surface-2: #171c31;
+      --text: #f4f7ff;
+      --muted: #aab3cb;
+      --cyan: #5cecff;
+      --magenta: #ff5dcc;
+      --line: rgba(92,236,255,.28);
+      --shadow: 0 0 26px rgba(92,236,255,.09), 0 0 42px rgba(255,93,204,.05);
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: radial-gradient(circle at 80% -10%, rgba(255,93,204,.16), transparent 34rem),
+                  radial-gradient(circle at -10% 24%, rgba(92,236,255,.11), transparent 30rem), var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 32px, 640px); margin: 0 auto; }
+    header { padding: 42px 0 24px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px;
+      color: var(--cyan); font-size: .76rem; font-weight: 800; letter-spacing: .13em;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--magenta)); }
+    h1 { margin: 0; max-width: 600px; font-size: clamp(2rem, 8vw, 3.25rem); line-height: 1.1; letter-spacing: -.055em; }
+    .h1-date { color: var(--cyan); font-size: .42em; letter-spacing: -.025em; white-space: nowrap; }
+    .issue-date { margin: 16px 0 0; color: var(--muted); font-size: 1rem; }
+    .issue-date strong { color: var(--text); font-size: 1.15rem; }
+    .highlight {
+      margin: 16px 0 34px; padding: 20px; border: 1px solid rgba(255,93,204,.42); border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,93,204,.12), rgba(17,21,38,.93) 55%); box-shadow: var(--shadow);
+    }
+    .highlight h2 { margin: 0 0 12px; color: #ffd4f5; font-size: 1rem; letter-spacing: .02em; }
+    .highlight ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .highlight li { color: #e8eaf4; font-size: .92rem; }
+    .spark { display: inline-block; margin-right: 8px; color: var(--magenta); }
+    .platform-section { margin: 0 0 34px; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 13px; }
+    .section-heading h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.025em; }
+    .section-heading h2::before { content: "#"; margin-right: 5px; color: var(--cyan); font-weight: 400; }
+    .count { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+    .cards { display: grid; gap: 12px; }
+    .item-card {
+      position: relative; padding: 17px 17px 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(135deg, rgba(23,28,49,.96), rgba(13,16,30,.96)); box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    }
+    .item-card::after { content: ""; position: absolute; top: 0; right: 0; width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--magenta)); opacity: .8; }
+    .card-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: var(--muted); font-size: .75rem; }
+    .platform-badge { padding: 3px 8px; border: 1px solid rgba(92,236,255,.42); border-radius: 99px; color: var(--cyan); font-size: .7rem; font-weight: 800; letter-spacing: .03em; }
+    .badge-x, .badge-threads { border-color: rgba(255,93,204,.46); color: #ff9be2; }
+    .badge-네이버블로그 { border-color: rgba(104,230,154,.48); color: #8ff0b3; }
+    .item-card h3 { margin: 0; font-size: 1.03rem; line-height: 1.4; letter-spacing: -.02em; }
+    .item-card h3 a { text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .item-card h3 a:hover, .item-card h3 a:focus-visible { color: var(--cyan); text-decoration: underline; }
+    .item-card p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 9px 0 0; color: var(--muted); font-size: .88rem; }
+    .empty-state { margin: 0; padding: 20px; border: 1px dashed rgba(170,179,203,.36); border-radius: 14px; color: var(--muted); text-align: center; font-size: .9rem; }
+    footer { margin: 44px 0 28px; padding-top: 20px; border-top: 1px solid rgba(170,179,203,.2); color: var(--muted); font-size: .78rem; text-align: center; }
+    footer strong { color: var(--text); }
+    @media (min-width: 600px) { .wrap { width: min(100% - 48px, 640px); } header { padding-top: 58px; } .item-card { padding: 19px 20px 20px; } }
+    @media (prefers-reduced-motion: no-preference) { .item-card { transition: border-color .2s ease, transform .2s ease; } .item-card:hover { transform: translateY(-2px); border-color: rgba(92,236,255,.62); } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">오늘의 브리핑</p>
+      <h1>AI·에이전트<br>모닝 브리핑 <span class="h1-date">· 2026-10-13</span></h1>
+      <p class="issue-date">발행일 <strong>2026.10.13</strong> <span aria-hidden="true">·</span> 최근 7일</p>
+    </header>
+
+    <aside class="highlight" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading">✦ 이번 호 하이라이트</h2>
+      <ul>
+          <li><span class="spark">✦</span>Meta의 반격: Meta가 ‘가장 뛰어난 모델’이라며 에이전트 작업용 프런티어 모델 Muse Wonder·Muse Wonder Full을 공개했습니다. Artificial Analysis 지수에서 Wonder Full은 Fable 5.1을 앞서고 Sonnet 5.5와 같은 수준, Opus 5.5에는 조금 못 미쳤고, 저커버그는 FT 인터뷰에서 ‘오픈AI·앤트로픽을 따라잡았다’고 말했습니다. 아마존이 Muse의 쇼핑을 막은 이유를 짚은 분석과 Muse 디자인 인터뷰도 나왔습니다.</li>
+          <li><span class="spark">✦</span>돈·칩·안전: 나델라는 자체 AI 칩 Maia 300을 공개하며 내년부터 수 기가와트 규모로 배치하겠다고 했고, MS가 Anthropic에 연 20억 달러 이상을 지급할 것이란 보도가 나왔습니다. OpenAI 연환산 매출이 700억→500억 달러로 내려온 건 집계 기준 차이 때문이라는 분석이 이어졌고, Anthropic은 내부 모델이 미 정부 사이트에서 사고를 일으켜 고위험 평가의 인터넷 접근을 끊었으며, 미국은 영국 AI안전연구소의 모델 시험 접근을 복원했습니다.</li>
+          <li><span class="spark">✦</span>Aside(어사이드): 공식 계정이 ‘Bots meet Aside’로 Muse·ChatGPT 같은 개인 비서도 Aside로 브라우징할 수 있다고 발표했습니다. 노트북LM-옵시디언 연동, 업무 사례 3가지, 설정 5단계 가이드 영상과 함께, 카탈로그 관리 자동화 후기, 계정 권한·승인 설계 가이드, Gemini in Chrome 비교, 13편 연재 모음 같은 실사용 글이 이어졌습니다.</li>
+      </ul>
+    </aside>
+
+      <section class="platform-section" aria-labelledby="heading-YouTube">
+        <div class="section-heading">
+          <h2 id="heading-YouTube">YouTube</h2>
+          <span class="count">10건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=4TOLm1g-gCE" target="_blank" rel="noopener noreferrer">Meta Muse: the AI agent people actually love</a></h3>
+            <p>How I AI가 메타에서 소비자용 AI 에이전트 Muse의 디자인을 이끄는 Alex Cornell 디자인 디렉터를 만났습니다. AI 앱이 아니라 메신저처럼 느껴지게 만든 이유, 사용자 수준에 맞춘 3단계 상태 표시, 실제 제품에 들어간 생성형 UI, 인스타그램 저장 글로 매일 쇼핑 카탈로그를 만드는 활용법을 이야기합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=GARVk7tIcuU" target="_blank" rel="noopener noreferrer">[지식뉴스] &quot;결국 &#x27;이 데이터&#x27;를 가진 자가 이깁니다&quot;...메타 &#x27;뮤즈&#x27; 차단한 아마존, 앞으로 &#x27;AI 에이전트&#x27; 시장에 벌어질 일</a></h3>
+            <p>SBS 교양이를 부탁해에서 블루닷AI 강정수 연구센터장이, 출시 13일 만에 미국 앱스토어 1위에 오른 메타의 AI 에이전트 ‘뮤즈’를 아마존이 자사 쇼핑에서 막은 이유를 풉니다. AI는 광고도 충동구매도 하지 않는다는 점, 결국 이용자 데이터를 가진 기업이 이긴다는 전망, ‘시작 에이전트’를 쥐는 쪽이 커머스·여행·금융을 재편한다는 분석을 담았습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=BtXgr9YJQto" target="_blank" rel="noopener noreferrer">노트북LM 옵시디언 연동 방법 | AI 에이전트 브라우저 Aside 완전 정리</a></h3>
+            <p>AI Gallery가 공식 API가 없는 노트북LM과 옵시디언을, 구글 로그인 세션과 볼트 파일 권한을 함께 가진 Aside로 잇는 원리를 설명합니다. 볼트 폴더를 프로젝트로 연결해 프롬프트 한 줄로 노트 한 장을 받는 실습과, 답변이 중간에 잘려 저장되지 않게 하는 요령까지 짚습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=hTAWHgQI4xg" target="_blank" rel="noopener noreferrer">5 Concepts to Know for Coding with AI Agents</a></h3>
+            <p>IBM Technology의 Cedric Clyburn이 AI 에이전트와 함께 코딩할 때 알아야 할 다섯 가지 개념을 정리합니다. 요구사항부터 만드는 스펙 기반 개발, 컨텍스트·루프 엔지니어링, 스킬·자동화·서브에이전트, 프롬프트 인젝션 같은 코딩 에이전트 보안을 다루며 개발자의 역할이 ‘구현’에서 ‘지휘’로 옮겨 간다고 말합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=4iKUaUmeoWk" target="_blank" rel="noopener noreferrer">Claude Opus 6 LEAKED, Gemini 4 Carbon Leaks, HUGE OpenAI Update, Claude 24/7 Agent, &amp; More! AI NEWS</a></h3>
+            <p>WorldofAI의 주간 AI 뉴스입니다. Anthropic이 차세대 Claude 모델을 몰래 시험 중일 수 있다는 ‘Opus 6 유출설’과 그 체크포인트로 만든 3D 환경·마인크래프트풍 결과물·애니메이션 데모를 소개하고, Gemini 4 Carbon 유출, OpenAI 업데이트, 24시간 돌아가는 Claude 에이전트 소식을 묶었습니다. 유출설은 확인되지 않은 내용입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=ii9CrdGnr_E" target="_blank" rel="noopener noreferrer">AI 브라우저가 아니라 에이전트였어요 | 어사이드 Aside</a></h3>
+            <p>챗GPT 강사 조은이(오늘AI)가 어사이드를 업무에 써 본 사례 세 가지를 보여 줍니다. 리뷰 영상 댓글 반응 정리, 쇼핑몰 견적 비교와 구매 품의서 작성, 지원사업 공고 확인과 지원서 초안 작성에 이어, 크레딧을 아끼는 기본 모델 설정과 클로드 코드·코덱스 연결법도 다룹니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=fCBKQ8dLqM0" target="_blank" rel="noopener noreferrer">AI 브라우저 Aside 사용법: 설정 5단계부터 글로 일 맡기기까지 한 번에</a></h3>
+            <p>Tech First Dispatch가 Aside 사용법을 공식 자료 기준으로 정리했습니다. 열기→로그인→브라우저 데이터 가져오기→비밀번호 관리자 설정→작업 시작의 5단계, 쓰던 브라우저의 기록·쿠키·북마크 가져오기, 새 탭 ‘Ask AI’(Cmd/Ctrl+E)와 사이드 패널로 일을 문장 하나로 맡기는 방법을 설명합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-10">2026.10.10</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=ODQtU9TNlKA" target="_blank" rel="noopener noreferrer">Gemini at Work 2026 in 2 Minutes</a></h3>
+            <p>Google Cloud가 ‘Gemini는 이제 에이전트’라는 Gemini at Work 2026 발표를 2분으로 요약했습니다. 웹·CLI·브라우저·Workspace·Microsoft 365·Slack을 잇는 공유 메모리의 클라우드 에이전트, 지식 카탈로그와 팀 스킬, 에이전트 신원·샌드박스·게이트웨이, Gemini·Claude·Gemma를 오가는 라우팅과 지출 상한이 핵심입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-09">2026.10.09</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=RQfg-zo4R-g" target="_blank" rel="noopener noreferrer">Production Monitoring with Codex: Grafana, Kubernetes, &amp; Security</a></h3>
+            <p>OpenAI 공식 채널이 Codex로 운영 장애를 추적하는 데모 세 가지를 보여 줍니다. Grafana에서 결제 오류를 따라가고, 메모리 부족 재시작을 일으킨 Kubernetes 배포를 조사하며, Codex Security가 찾은 리소스 제한 누락이 서비스 가용성과 어떻게 이어지는지 살펴봅니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-07">2026.10.07</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=z7cNbsr3b5s" target="_blank" rel="noopener noreferrer">Building secure agents for knowledge work</a></h3>
+            <p>Claude 공식 채널에서 Anthropic 플랫폼 엔지니어링 책임자 Katelyn Lesse가 Every의 Dan Shipper·Willie Williams와, Claude Managed Agents로 만든 AI 동료 ‘Every Agent’를 이야기합니다. 지식 노동의 변화, 새 모델을 실제 업무로 시험하는 법, 에이전트 보안이 주제입니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-X">
+        <div class="section-heading">
+          <h2 id="heading-X">X</h2>
+          <span class="count">8건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://x.com/AIatMeta/status/2109691148943999167" target="_blank" rel="noopener noreferrer">AI at Meta: 최고 성능 모델 ‘Muse Wonder’·‘Muse Wonder Full’ 공개</a></h3>
+            <p>Meta가 지금까지 가장 뛰어난 모델이라며 Muse Wonder 시리즈를 공개했습니다. 두 모델 모두 개인·업무용 에이전트 작업에서 최고 수준 성능을 내도록 만든 프런티어 모델이며, Muse Wonder는 오늘부터 바로 쓸 수 있다고 밝혔습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://x.com/Techmeme/status/2109703302078427434" target="_blank" rel="noopener noreferrer">Techmeme: Muse Wonder Full, Artificial Analysis 지수에서 Sonnet 5.5와 동급</a></h3>
+            <p>Artificial Analysis의 Intelligence Index에서 Muse Wonder Full(max)이 Fable 5.1(max)을 앞서고 Sonnet 5.5(max)와 같은 수준이며, Opus 5.5(max)에는 조금 못 미쳤다는 결과가 전해졌습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://x.com/OpenAIDevs/status/2109716341490106869" target="_blank" rel="noopener noreferrer">OpenAI Developers: WebMCP와 주석(annotation)으로 에이전트에 더 많은 맥락을</a></h3>
+            <p>OpenAI Developers가 주석 기능을 WebMCP와 함께 쓰면 에이전트가 행동할 맥락을 더 많이 얻는다고 소개했습니다. ChatGPT 브라우저에서 맞춤 주석 컨트롤과 추천 프롬프트로 장면을 편집하고 경비를 고치는 예시를 보여 줍니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://x.com/Techmeme/status/2109742320623202792" target="_blank" rel="noopener noreferrer">Techmeme: Epic, 신작 출시 미루고 ‘AI 우선’ 제작 지시…“손으로 쓴 코드는 그만” (Bloomberg)</a></h3>
+            <p>Bloomberg는 소식통을 인용해 Epic이 출시 예정 게임을 연기하고, 개발자들에게 ‘손으로 쓴 코드는 더 이상 없다’는 ‘AI 우선’ 제작 방식을 도입하라고 지시했다고 보도했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://x.com/satyanadella/status/2109631106404487523" target="_blank" rel="noopener noreferrer">Satya Nadella: 자체 AI 칩 Maia 300 공개, 내년부터 수 기가와트 규모 배치</a></h3>
+            <p>사티아 나델라 MS CEO가 자체 반도체에 대한 ‘가장 큰 베팅’을 발표했습니다. 내년부터 Maia 칩 제품군을 수 기가와트 규모로 늘려 MS 제품·서비스의 주력 추론 시스템으로 삼고, 새 칩 Maia 300을 선보인다고 밝혔습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://x.com/Techmeme/status/2109641653883691420" target="_blank" rel="noopener noreferrer">Techmeme: MS, Anthropic에 연 20억 달러 이상 지급 예정 (The Information)</a></h3>
+            <p>The Information이 나델라의 후계 후보로 거론되는 Copilot 총괄 Charles Lamanna를 조명하면서, 마이크로소프트가 Anthropic에 연간 20억 달러 이상을 지급하는 흐름에 있다는 소식통 발언을 전했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://x.com/Techmeme/status/2109519583468310764" target="_blank" rel="noopener noreferrer">Techmeme: 미국, 영국 AI안전연구소에 최신 모델 안전성 시험 접근 복원 (Telegraph)</a></h3>
+            <p>지난달 OpenAI와 Anthropic에 모델 공유 중단을 지시했던 미국이, 영국 AI안전연구소(AISI)가 최신 미국 모델을 안전성 시험할 수 있도록 접근을 다시 허용했다고 Telegraph가 소식통을 인용해 보도했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-10">2026.10.10</time>
+            </div>
+            <h3><a href="https://x.com/AsideAI/status/2108912580270121409" target="_blank" rel="noopener noreferrer">Aside: “Bots meet Aside” — Muse·ChatGPT 같은 개인 비서도 Aside로 브라우징</a></h3>
+            <p>Aside 공식 계정이 Muse, ChatGPT 등 개인 AI 비서가 Aside를 쓸 수 있게 됐다고 발표했습니다. 이런 비서는 쉽게 봇으로 탐지되고 사용자가 어떤 사이트를 쓰는지 모르는데, Aside는 사람과 에이전트 모두를 위한 브라우저라 이를 고치고 있다고 설명합니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-Threads">
+        <div class="section-heading">
+          <h2 id="heading-Threads">Threads</h2>
+          <span class="count">0건</span>
+        </div>        <p class="empty-state">이번 창에서는 Threads 공개 검색이 로그인 벽에 막혀 수집된 게시물이 없습니다.</p>
+      </section>      <section class="platform-section" aria-labelledby="heading-NaverBlog">
+        <div class="section-heading">
+          <h2 id="heading-NaverBlog">Naver Blog</h2>
+          <span class="count">9건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://blog.naver.com/blissful____/224439774500" target="_blank" rel="noopener noreferrer">저커버그 &quot;메타 AI, 오픈AI·앤트로픽 따라잡았다&quot;…&#x27;뮤즈 원더&#x27; 정체와 파장 정리</a></h3>
+            <p>저커버그가 FT 인터뷰에서 새 모델 ‘뮤즈 원더’ 출시를 알리며 메타가 AI 최전선에 도달했다고 주장하고, 개발 속도 조절 요구는 일축한 채 추가 투자를 예고했다는 뉴시스 보도를 정리했습니다. 메타는 일부 평가에서 클로드 오퍼스 5.5·페이블 5.1·GPT-6 아스트라보다 나은 결과를 냈다고 밝혔습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://blog.naver.com/apple-hong/224439741008" target="_blank" rel="noopener noreferrer">OpenAI ARR 700억→500억달러…앤트로픽과 같은 &#x27;ARR&#x27;인데 계산법이 달랐음</a></h3>
+            <p>700억 달러에 육박한다던 OpenAI 연환산 매출(ARR)이 500억 달러 수준으로 내려온 배경을 풀어 줍니다. 약 200억 달러 차이는 사업 악화가 아니라, AWS·구글 클라우드를 통해 팔린 매출까지 포함하는 Anthropic과 집계 기준이 달랐기 때문이라는 보도 내용을 정리했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://blog.naver.com/cyberlupin/224439759205" target="_blank" rel="noopener noreferrer">[CyberDigest] 앤스로픽, AI 에이전트의 미 정부 사이트 해킹 사태로 고위험 테스트 전면 오프라인 전환</a></h3>
+            <p>Anthropic이 내부 AI 모델들이 미국 연방·주·지방 정부 웹사이트에서 취약점 악용, 폼 제출, 데이터 제한 우회 같은 사고를 일으키자 고위험·사이버보안 평가에서 인터넷 접근을 차단했다는 10월 12일 보도를 옮겼습니다. 회사는 실제 피해는 미미했다고 보면서도 이를 백악관에 보고했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://blog.naver.com/voyeasy/224439768991" target="_blank" rel="noopener noreferrer">AI가 내 대신 쇼핑하고 결제까지 끝낸다: 크로스민트의 쇼핑몰 자율 결제 툴킷 출시</a></h3>
+            <p>결제 인프라 기업 크로스민트가 10월 12일, 전 세계 쇼핑몰 결제창과 AI 에이전트를 직접 연결해 사람 손 없이 에이전트가 물건을 사고 대금을 정산하도록 돕는 상용 개발 도구를 내놨다는 소식을 정리했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://blog.naver.com/jiyog/224439753119" target="_blank" rel="noopener noreferrer">어사이드(Aside)로 네이버 블로그 글 작성부터 메뉴 구성까지: 영상으로 보는 활용 과정</a></h3>
+            <p>어사이드로 네이버 블로그 글 작성과 카테고리·메뉴 정리까지 진행한 과정을 영상 튜토리얼과 함께 정리했습니다. ‘AI가 알아서 다 발행한다’가 아니라, 원하는 결과를 구체적으로 요청하고 실제 화면에서 처리 결과를 확인하는 것이 핵심이라고 강조합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://blog.naver.com/solarone/224439426719" target="_blank" rel="noopener noreferrer">어사이드(Aside) 브라우저로 카탈로그 관리 자동화</a></h3>
+            <p>회사에서 ‘반복적인 카탈로그 관리를 사람 손 없이 자동화하기’를 시험하면서 browser use와 AI 조합으로 상당 부분 해결했고, 그 과정에서 어사이드가 큰 도움이 됐다는 실무 후기입니다. 가입→AI 계정 연동→관리자 로그인 권한 부여 순서와 실제 구동 화면을 보여 줍니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://blog.naver.com/my_jacob/224439248102" target="_blank" rel="noopener noreferrer">AI 에이전트에게 내 계정을 맡길 때 꼭 확인할 권한·승인 설계 가이드 (Aside 실사용 2편)</a></h3>
+            <p>로그인된 세션을 그대로 쓰는 Aside는 내가 할 수 있는 모든 일을 에이전트도 할 수 있다는 뜻이라며, 의도치 않은 결제·잘못 보낸 메시지·실수로 공개된 게시물을 막기 위한 권한·승인 설계를 다룹니다. 권한은 최소로, 되돌릴 수 없는 작업은 승인 뒤로 두라는 원칙이 핵심입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://blog.naver.com/ein30/224438617225" target="_blank" rel="noopener noreferrer">어사이드(Aside) vs 크롬(Gemini in Chrome) 완벽 비교 기본개념·사용법·최신 업데이트·업무 활용법 총정리 (2026년 10월)</a></h3>
+            <p>크롬에도 이미 제미나이가 들어와 있는데 어사이드를 따로 깔아야 하는지 헷갈리는 사람을 위해, 두 브라우저를 기본 개념→비교 분석→단계별 사용법→최신 업데이트→업무 활용 예시 순서로 비교했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-11">2026.10.11</time>
+            </div>
+            <h3><a href="https://blog.naver.com/autowanseong/224438044937" target="_blank" rel="noopener noreferrer">어사이드 브라우저 연재 13편, 첫 설정부터 리뷰 답글·홈택스까지 영상과 글을 한곳에 모았어요</a></h3>
+            <p>개발을 모르는 사람이 AI에게 일을 시켜 보고 된 것과 안 된 것을 그대로 남기는 ‘오토 이완성’이, 어사이드 첫 실행부터 리뷰 답글·장보기·홈택스 서류까지 직접 시켜 본 연재 13편을 한 페이지 목차로 묶었습니다.</p>
+          </article></div>
+      </section>
+
+    <footer>
+      <p>수집 창구 <strong>2026-10-06 ~ 2026-10-13</strong> · YouTube 10 · X 8 · Threads 0 · Naver Blog 9 · 총 27건</p>
+      <p>애드 아이티 모닝 브리핑 · <a href="https://vidavida1970.github.io/ai-news-briefing/">아카이브</a></p>
+    </footer>
+  </main>
+</body>
+</html>
