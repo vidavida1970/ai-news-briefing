@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI와 에이전트, Aside 관련 최근 7일 소식을 모은 모닝 브리핑">
+  <title>AI·에이전트 모닝 브리핑 · 2026-10-14</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080a13;
+      --surface: #111526;
+      --surface-2: #171c31;
+      --text: #f4f7ff;
+      --muted: #aab3cb;
+      --cyan: #5cecff;
+      --magenta: #ff5dcc;
+      --line: rgba(92,236,255,.28);
+      --shadow: 0 0 26px rgba(92,236,255,.09), 0 0 42px rgba(255,93,204,.05);
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: radial-gradient(circle at 80% -10%, rgba(255,93,204,.16), transparent 34rem),
+                  radial-gradient(circle at -10% 24%, rgba(92,236,255,.11), transparent 30rem), var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 32px, 640px); margin: 0 auto; }
+    header { padding: 42px 0 24px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px;
+      color: var(--cyan); font-size: .76rem; font-weight: 800; letter-spacing: .13em;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--magenta)); }
+    h1 { margin: 0; max-width: 600px; font-size: clamp(2rem, 8vw, 3.25rem); line-height: 1.1; letter-spacing: -.055em; }
+    .h1-date { color: var(--cyan); font-size: .42em; letter-spacing: -.025em; white-space: nowrap; }
+    .issue-date { margin: 16px 0 0; color: var(--muted); font-size: 1rem; }
+    .issue-date strong { color: var(--text); font-size: 1.15rem; }
+    .highlight {
+      margin: 16px 0 34px; padding: 20px; border: 1px solid rgba(255,93,204,.42); border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,93,204,.12), rgba(17,21,38,.93) 55%); box-shadow: var(--shadow);
+    }
+    .highlight h2 { margin: 0 0 12px; color: #ffd4f5; font-size: 1rem; letter-spacing: .02em; }
+    .highlight ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .highlight li { color: #e8eaf4; font-size: .92rem; }
+    .spark { display: inline-block; margin-right: 8px; color: var(--magenta); }
+    .platform-section { margin: 0 0 34px; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 13px; }
+    .section-heading h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.025em; }
+    .section-heading h2::before { content: "#"; margin-right: 5px; color: var(--cyan); font-weight: 400; }
+    .count { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+    .cards { display: grid; gap: 12px; }
+    .item-card {
+      position: relative; padding: 17px 17px 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(135deg, rgba(23,28,49,.96), rgba(13,16,30,.96)); box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    }
+    .item-card::after { content: ""; position: absolute; top: 0; right: 0; width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--magenta)); opacity: .8; }
+    .card-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: var(--muted); font-size: .75rem; }
+    .platform-badge { padding: 3px 8px; border: 1px solid rgba(92,236,255,.42); border-radius: 99px; color: var(--cyan); font-size: .7rem; font-weight: 800; letter-spacing: .03em; }
+    .badge-x, .badge-threads { border-color: rgba(255,93,204,.46); color: #ff9be2; }
+    .badge-네이버블로그 { border-color: rgba(104,230,154,.48); color: #8ff0b3; }
+    .item-card h3 { margin: 0; font-size: 1.03rem; line-height: 1.4; letter-spacing: -.02em; }
+    .item-card h3 a { text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .item-card h3 a:hover, .item-card h3 a:focus-visible { color: var(--cyan); text-decoration: underline; }
+    .item-card p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 9px 0 0; color: var(--muted); font-size: .88rem; }
+    .empty-state { margin: 0; padding: 20px; border: 1px dashed rgba(170,179,203,.36); border-radius: 14px; color: var(--muted); text-align: center; font-size: .9rem; }
+    footer { margin: 44px 0 28px; padding-top: 20px; border-top: 1px solid rgba(170,179,203,.2); color: var(--muted); font-size: .78rem; text-align: center; }
+    footer strong { color: var(--text); }
+    @media (min-width: 600px) { .wrap { width: min(100% - 48px, 640px); } header { padding-top: 58px; } .item-card { padding: 19px 20px 20px; } }
+    @media (prefers-reduced-motion: no-preference) { .item-card { transition: border-color .2s ease, transform .2s ease; } .item-card:hover { transform: translateY(-2px); border-color: rgba(92,236,255,.62); } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">오늘의 브리핑</p>
+      <h1>AI·에이전트<br>모닝 브리핑 <span class="h1-date">· 2026-10-14</span></h1>
+      <p class="issue-date">발행일 <strong>2026.10.14</strong> <span aria-hidden="true">·</span> 최근 7일</p>
+    </header>
+
+    <aside class="highlight" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading">✦ 이번 호 하이라이트</h2>
+      <ul>
+          <li><span class="spark">✦</span>구글의 반격: 구글이 새 프런티어 모델 Gemini 4 Argon을 API·Gemini 앱(Pro·Ultra)·Antigravity로 전 세계에 출시했습니다. 이선 몰릭은 OpenAI·Anthropic 밖에서 처음으로 프런티어 기준을 넘은 모델이라고 평가했고, DeepMind는 Argon이 영상만 보고 휴머노이드에게 콘홀을 가르쳤다고 밝혔습니다. API 도입 가격은 11월 30일까지이며, 기업용 Gemini 에이전트는 Claude도 골라 쓰는 구조입니다.</li>
+          <li><span class="spark">✦</span>보안·신뢰가 화두: OpenAI는 사무실에 숨겨진 녹음 장치를 찾아내 자사 모델로 설치한 직원을 특정해 FBI에 넘겼고, Anthropic은 하루 머지가 2,500건에서 3만 건 이상으로 늘어 사내 소스 관리 시스템을 직접 만들었으며 Claude 증류 공격도 크게 줄였다고 했습니다. JP모건은 외부 AI 에이전트의 계좌 접근을 막았고, 아멕스는 에이전트 구매 의도 인증을 도입하며, 카카오는 카톡 AI 비서 ‘카나나 스페이스’를 공개했습니다.</li>
+          <li><span class="spark">✦</span>Aside(어사이드): ‘되돌리기 어려운 버튼 누르기 전에 멈춰 줘’ 한 줄로 쿠팡 판매자센터 작업을 맡기는 법, 클로드 Opus 5.5와 함께 편집 없이 모션그래픽 쇼츠 만들기, 구글폼 31명 명단 정리와 문자 발송 영상이 나왔습니다. 블로그에는 출근룩 장바구니 쇼핑, 카드 내역 가계부, 역삼역 음식점 396개 조사, 통계 기간 오류 잡기 같은 실사용 후기가 이어졌고, X에서는 봇 연결 업그레이드(Pro 필요) 소식이 공유됐습니다.</li>
+      </ul>
+    </aside>
+
+      <section class="platform-section" aria-labelledby="heading-YouTube">
+        <div class="section-heading">
+          <h2 id="heading-YouTube">YouTube</h2>
+          <span class="count">10건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=JocjKnl4lBs" target="_blank" rel="noopener noreferrer">Gemini 4 Argon Is Out, Fable 5.5 This Week? GPT-6.1 Astra, Nano Banana 3 &amp; AI Self-Creating! AI NEWS</a></h3>
+            <p>WorldofAI가 구글이 Gemini 4 Argon을 Gemini API, Gemini Pro·Ultra 구독자, Antigravity에 전 세계 출시한 소식을 다룹니다. 직접 만든 벤치마크 도구로 Claude Opus 5.5·GPT-6 Astra와 나란히 코딩, 3D 생성, SVG 애니메이션, 멀티모달 추론을 실제로 시험해 봅니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=N6K_pxaAh0w" target="_blank" rel="noopener noreferrer">Block on Finding and Fixing Security Risks with OpenAI</a></h3>
+            <p>OpenAI 공식 채널 영상입니다. Block의 최고정보보안책임자 James Nettesheim이 OpenAI의 사이버 역량으로 소프트웨어 취약점을 찾아내고, 이를 하나의 침투 경로로 엮어 보여 줌으로써 방어자가 어디부터 손써야 할지 판단하게 돕는 과정을 설명합니다. “이제 알았으니, 남이 알기 전에 조치할 수 있다”는 말이 핵심입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=C4Sq3Rot8FU" target="_blank" rel="noopener noreferrer">AI Labs Warn Race Makes Breach ‘Inevitable’</a></h3>
+            <p>AI Explained가 샘 올트먼이 GPT-6.1 Astra를 두고 ‘유출(breach) 위험 쪽으로 기울었다’고 경고하고, Muse Wonder 출시로 경쟁이 늦춰지지 않음이 드러난 한 주를 정리합니다. ‘다가오는 사고’, ‘연구소들이 경주를 멈추지 않는 이유’, ‘앞으로 18개월이 예측하기 어려운 이유’ 3부로 구성됐고 OpenAI 수학 성과 공개와 Opus 5.5 시스템 카드 등을 근거로 듭니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=pTh4IJ-Mi3Y" target="_blank" rel="noopener noreferrer">OpenAI&#x27;s AI Wrote 700 Math Papers. Engineers Still Won&#x27;t Trust AI With Their Code.</a></h3>
+            <p>Nate B Jones가 OpenAI가 아직 공개하지 않은 모델로 쓴 수학 연구 논문 700여 편을 내놓은 일을 ‘좁은 초지능’이라 부르며 분석합니다. 그런데도 많은 엔지니어가 코딩 에이전트를 프로덕션에서 떼어 놓는 이유가 논문보다 내 일자리에 대해 더 많은 것을 알려 준다고 말합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=HdI_aYzgJIg" target="_blank" rel="noopener noreferrer">Personal Agents, Clearly Explained</a></h3>
+            <p>Jeff Su가 챗봇, 직접 꾸리는 DIY 에이전트, Muse·Dots·Grok Bot 같은 개인 에이전트의 차이를 정리합니다. 핵심은 AI가 얼마나 기억하고 내가 얼마나 손을 써야 하느냐이며, 개인 에이전트는 시작이 쉽고 자기 AI 워크스페이스는 통제권과 옮길 수 있는 메모리 파일을 준다고 설명합니다. 개인정보와 생태계 종속 문제도 따져 봅니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=h8QI6ZmZpcI" target="_blank" rel="noopener noreferrer">카톡 화면 쓸면 라이언이 일한다…카카오, AI 에이전트 경쟁 합류 [MBN 뉴스7]</a></h3>
+            <p>MBN이 카카오의 AI 에이전트를 보도했습니다. 카카오톡 화면을 쓸어올리면 라이언이 나타나 어린이집 하원 일정을 요약하고 출발 시간을 알려 주며, 말 한마디로 답장도 보냅니다. 카카오는 메시지 전송·결제 같은 중요한 행동은 사용자가 최종 승인하는 구조라고 밝혔고, 테스트를 거쳐 내년 상반기 무료 제공을 계획하고 있습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=ueMFZ52R0qA" target="_blank" rel="noopener noreferrer">Introducing Google&#x27;s Gemini Agent</a></h3>
+            <p>Tool Finder가 Gemini at Work 2026에서 발표된 구글의 Gemini 에이전트를 풀어 봅니다. 목표를 받으면 계획을 세우고 하위 에이전트를 직접 고용해 Gmail·Docs·Slack·Microsoft 365·명령줄을 넘나들며 결과물을 가져오는 구조로, 클라우드 실행·하위 에이전트·메모리·도구와 MCP·Claude를 포함한 모델 선택이라는 다섯 가지 아이디어와 통제·지출 한도를 설명합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=RpY-KKZ7QTg" target="_blank" rel="noopener noreferrer">편집 프로그램 없이 클로드로 모션그래픽 쇼츠 만드는 법 (Opus 5.5 + Aside)</a></h3>
+            <p>유튜브신쌤이 클로드 Opus 5.5와 AI 브라우저 Aside로, 1분 녹음과 말 몇 마디만으로 모션그래픽 쇼츠를 만든 과정을 보여 줍니다. 편집 프로그램은 한 번도 열지 않았고, 녹음→참고 영상 고르기→Aside에 부탁하기→사람 눈으로 확인하기 4단계로 진행합니다. 남의 영상은 스타일만 참고하고 그림·문구는 새로 만들게 하라고 강조합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=p1FiwVY-sP4" target="_blank" rel="noopener noreferrer">쿠팡 판매자센터 클릭, AI 브라우저에 맡기는 법 (+입력 문장 공개) | 어사이드 Aside</a></h3>
+            <p>이루가 해봤어요가 쿠팡 판매자센터(윙)에서 매주 하던 판매가 변경, 돈만 쓰는 광고 골라내기, 경쟁 상품 가격·불만 표 만들기를 어사이드에 말로 맡겨 봤습니다. ‘저장·끄기·결제처럼 되돌리기 어려운 버튼 누르기 전에 멈춰 줘’ 한 줄을 붙여 마지막 버튼은 사람이 누르는 방식이며, 실제 입력 문장을 공개합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-12">2026.10.12</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=pR2FGB55_dg" target="_blank" rel="noopener noreferrer">어사이드 사용법, 이렇게 쓰는 겁니다. AI가 문자까지 보내네요</a></h3>
+            <p>마케팅대장 찐대표가 어사이드 AI 브라우저로 웹사이트를 직접 조작해 구글폼 신청자 31명의 명단을 정리하고, 휴대전화 번호로 안내 문자까지 보내는 업무 자동화 과정을 보여 줍니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-X">
+        <div class="section-heading">
+          <h2 id="heading-X">X</h2>
+          <span class="count">8건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://x.com/sundarpichai/status/2110038898009407584" target="_blank" rel="noopener noreferrer">Sundar Pichai: “Gemini 4 Argon is here” — 전 세계 동시 출시</a></h3>
+            <p>순다르 피차이 구글 CEO가 Gemini 4 Argon 출시를 알렸습니다. 개발자·기업은 Gemini API와 Gemini 플랫폼 유료 티어에서, Ultra 구독자는 Google Antigravity에서, Ultra·Pro 구독자는 Gemini 앱과 검색에서 오늘부터 전 세계에서 쓸 수 있습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://x.com/GoogleDeepMind/status/2110078384617464201" target="_blank" rel="noopener noreferrer">Google DeepMind: 영상만 보고 휴머노이드에게 콘홀 가르친 Gemini 4 Argon</a></h3>
+            <p>Google DeepMind는 Gemini 4 Argon이 영상 하나만 보고 물리를 파악한 뒤 스스로 시뮬레이션 코드를 짜서, Apptronik의 휴머노이드 Apollo가 콘홀(주머니 던지기)을 7번 연속 성공하도록 가르쳤다고 밝혔습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://x.com/emollick/status/2110052331702124894" target="_blank" rel="noopener noreferrer">Ethan Mollick: “Gemini 4, OpenAI·Anthropic 외 첫 ‘프런티어 기준’ 통과”</a></h3>
+            <p>출시 전부터 Gemini 4를 써 본 이선 몰릭 와튼스쿨 교수는 이전 Gemini 모델보다 크게 도약했고, OpenAI·Anthropic이 아닌 곳의 모델로는 처음으로 Fable/Mythos/Astra 수준의 기준을 넘었다고 평가했습니다. 이전 Gemini보다 대화가 훨씬 편하고 더 에이전트답다고도 했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://x.com/AnthropicAI/status/2110047081414987957" target="_blank" rel="noopener noreferrer">Anthropic: 하루 머지 2,500건→3만 건, 사내 소스 관리 시스템을 직접 만든 이유</a></h3>
+            <p>Anthropic이 엔지니어링 블로그에 사내 소스 관리 시스템 구축기를 올렸습니다. 5월 하루 약 2,500건이던 코드 변경 머지가 9월에는 하루 3만 건을 넘었고, 그 결과 사람(에이전트가 아니라) 규모에 맞춰 만든 개발 인프라가 병목이 됐다고 설명합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://x.com/OpenAINewsroom/status/2110095403198849132" target="_blank" rel="noopener noreferrer">OpenAI Newsroom: 사무실에 숨겨진 녹음 장치 발견, 자사 모델로 설치 직원 특정해 FBI에 넘겨</a></h3>
+            <p>OpenAI는 사무실 한 곳에 숨겨진 정교한 녹음 장치를 발견했고, 자사 모델로 장치의 정체와 출처를 분석해 며칠 전 이를 설치한 특정 직원을 찾아냈다고 밝혔습니다. 이 사안은 FBI에 회부됐습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://x.com/Techmeme/status/2110067268239663402" target="_blank" rel="noopener noreferrer">Techmeme: AI 고객상담 에이전트 Decagon, 은행 고용하고 ServiceNow 등과 매각 초기 협의 (Business Insider)</a></h3>
+            <p>Business Insider 보도를 인용해, AI 고객 서비스 에이전트를 만드는 Decagon(최근 기업가치 45억 달러)이 투자은행을 고용하고 ServiceNow를 포함한 인수 후보들과 초기 협의 중이라고 전했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://x.com/AnthropicAI/status/2109795898909950247" target="_blank" rel="noopener noreferrer">Anthropic: Claude 상대 ‘증류 공격’ 효과를 크게 줄였다</a></h3>
+            <p>Anthropic은 지난 몇 달 동안 Claude를 겨냥한 증류(distillation) 공격의 효과를 줄이는 데 상당한 진전을 이뤘다며, 그 방법을 설명한 글을 공개했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-10-11">2026.10.11</time>
+            </div>
+            <h3><a href="https://x.com/UNICONTSLA/status/2109227629329166757" target="_blank" rel="noopener noreferrer">UNICON: “어사이드, 이제 봇들도 연결된다… 단 Pro 계정 필요”</a></h3>
+            <p>국내 사용자 UNICON은 어사이드(ASIDE)가 봇들도 연결되도록 업그레이드돼 ‘나의 유능한 일꾼들이 내 브라우저에서 경제활동을 할 수 있게 됐다’며, 다만 어사이드 Pro 계정으로 업그레이드해야 쓸 수 있다고 전했습니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-Threads">
+        <div class="section-heading">
+          <h2 id="heading-Threads">Threads</h2>
+          <span class="count">0건</span>
+        </div>        <p class="empty-state">이번 창에서는 Threads 공개 검색이 로그인 벽에 막혀 수집된 게시물이 없습니다.</p>
+      </section>      <section class="platform-section" aria-labelledby="heading-NaverBlog">
+        <div class="section-heading">
+          <h2 id="heading-NaverBlog">Naver Blog</h2>
+          <span class="count">9건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://blog.naver.com/monocle-ai/224440878033" target="_blank" rel="noopener noreferrer">제미나이 4 아르곤(Gemini 4 Argon) 출시, 도입 가격 2달러는 11월 30일까지</a></h3>
+            <p>구글이 현지시각 10월 13일 Gemini 4 아르곤을 정식 출시했습니다. 9월 30일 사이버 방어 전문가(페어윈드 프로그램)에게 먼저 열었던 모델을 2주 만에 일반 공개한 것으로, 앱의 AI 프로·울트라 구독자와 API 유료 고객이 쓸 수 있고 입력·출력을 합쳐 100만 토큰까지 다룹니다. API 도입 가격은 11월 30일까지이고 12월 1일부터 두 배가 됩니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://blog.naver.com/minbog70/224440968489" target="_blank" rel="noopener noreferrer">구글 기업용 &#x27;제미나이 에이전트&#x27; 출시 &#x27;아르곤&#x27;·&#x27;클로드&#x27; 동시 탑재</a></h3>
+            <p>구글이 10월 8일 공개한 기업용 Gemini Agent의 핵심을 ‘모델 선택 능력’으로 짚었습니다. 업무 목표를 받으면 계획을 세우고 Gemini 자체 모델이나 연결된 Claude 같은 외부 모델 중 적합한 것을 골라 문서 작성·데이터 분석·코드 실행을 마치는 구조이며, 두 모델이 항상 동시에 돌아가는 것은 아니라고 설명합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://blog.naver.com/sompiler/224440907608" target="_blank" rel="noopener noreferrer">카톡이 비서가 된다? 카카오 &#x27;카나나 스페이스&#x27; 한눈에 정리 (if kakao 26)</a></h3>
+            <p>카카오가 10월 13일 개발자 콘퍼런스 ‘이프 카카오(if(kakao)26)’에서 카카오톡 통합 AI 어시스턴트 ‘카나나 스페이스’를 공개했습니다. 별도 탭 대신 화면 어디서나 열리는 ‘AI 레이어’로 설계됐고, 지금 바로 쓸 수는 없으며 사전 신청을 받아 12월 중 비공개 베타를 시작한다고 정리했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-14">2026.10.14</time>
+            </div>
+            <h3><a href="https://blog.naver.com/seahappy26/224440940679" target="_blank" rel="noopener noreferrer">JP모건 체이스 외부 AI 에이전트 계좌 접근 차단 발표와 스마트 캐시 전략 분석</a></h3>
+            <p>JP모건 체이스가 외부 AI 에이전트의 고객 계좌 접근을 금지했다는 소식입니다. 제이미 다이먼 회장은 3분기 실적 콘퍼런스콜에서 뮤즈 같은 외부 대리인이 내부 시스템에 들어오는 것을 허용하지 않겠다며 “외부 AI 에이전트의 내부 접근은 고객에게 너무 위험하다”고 밝혔습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://blog.naver.com/bsu98089/224440723729" target="_blank" rel="noopener noreferrer">아멕스 AI 에이전트 구매 의도 인증 도입, 실제 카드번호 안 써요</a></h3>
+            <p>아멕스가 AI 에이전트 결제용 ‘Intent Intelligence Framework’를 도입한다는 내용입니다. 흰색 나이키 운동화를 부탁받은 에이전트가 아디다스를 사려는 식의 엉뚱한 거래를 막고, 결제 때는 실제 카드번호 대신 별도의 디지털 결제 자격증명을 쓰게 하는 구조를 설명합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://blog.naver.com/everydaysitcom/224440684515" target="_blank" rel="noopener noreferrer">AI 에게 출근룩 쇼핑을 맡겨봤어요 (결제 빼고 장바구니까지)_AI 어디까지 해봤니?</a></h3>
+            <p>AI 브라우저 Aside에게 W컨셉 쇼핑을 통째로 맡겨 본 후기입니다. 장바구니에 넣어 둔 옷을 분석해 40대 직장인 여성 출퇴근룩에 맞는 옷을 더 담게 하되, 결제는 빼고 장바구니까지만 하도록 지시한 프롬프트와 결과를 보여 줍니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://blog.naver.com/dragon4566/224440177697" target="_blank" rel="noopener noreferrer">카드 내역 복붙은 이제 그만, AI 브라우저 Aside로 가계부 쓰기 (비개발자 버전)</a></h3>
+            <p>카드사 로그인만 사람이 하면, 이용 내역을 보고 구글 시트로 옮기는 일까지 Aside가 해 준다는 비개발자의 가계부 자동화 후기입니다. 예전엔 카드사마다 명세서를 모아 클로드에 넘기느라 손이 많이 갔던 과정과 비교합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://blog.naver.com/cmore_dev/224440037269" target="_blank" rel="noopener noreferrer">네이버 블로그 통계 분석을 Aside에 맡겼더니, 기간부터 고쳤습니다</a></h3>
+            <p>블로그 관리통계의 상위글과 검색유입어 분석을 Aside에 맡겨 본 글입니다. 가장 쓸모 있었던 결과는 인기 주제 목록이 아니라, 이전 기록에 ‘최근 30일’로 적힌 숫자가 실제 화면에선 ‘2026년 9월 월간’이었다는 점을 다시 확인한 일이었다고 말합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-10-13">2026.10.13</time>
+            </div>
+            <h3><a href="https://blog.naver.com/ybid1004_/224439810910" target="_blank" rel="noopener noreferrer">AI 브라우저 Aside, 검색을 업무 자료로 바꾸다 | 역삼역 음식점 396개 조사 사례</a></h3>
+            <p>네이버 지도에서 역삼역 반경 300m 매장의 이름·층수·출구 도보거리 등을 Aside에 조사시켜 396개 음식점을 같은 기준으로 비교할 수 있는 자료로 만든 사례입니다. 지금 보고 있는 웹페이지를 출발점으로 업무용 자료를 만드는 방법을 소개합니다.</p>
+          </article></div>
+      </section>
+
+    <footer>
+      <p>수집 창구 <strong>2026-10-07 ~ 2026-10-14</strong> · YouTube 10 · X 8 · Threads 0 · Naver Blog 9 · 총 27건</p>
+      <p>애드 아이티 모닝 브리핑 · <a href="https://vidavida1970.github.io/ai-news-briefing/">아카이브</a></p>
+    </footer>
+  </main>
+</body>
+</html>
