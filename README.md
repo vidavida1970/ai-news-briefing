@@ -4,6 +4,7 @@
 
 ## Latest
 
+- **[2026-10-15](./newsletters/2026-10-15/)** — YouTube 10 · X 8 · Threads 0 · Naver Blog 9
 - **[2026-10-14](./newsletters/2026-10-14/)** — YouTube 10 · X 8 · Threads 0 · Naver Blog 9
 - **[2026-10-13](./newsletters/2026-10-13/)** — YouTube 10 · X 8 · Threads 0 · Naver Blog 9
 - **[2026-10-12](./newsletters/2026-10-12/)** — YouTube 10 · X 8 · Threads 0 · Naver Blog 9
@@ -37,4 +38,4 @@ newsletters/YYYY-MM-DD/index.html
 
 ## Live
 
-GitHub Pages: `https://vidavida1970.github.io/ai-news-briefing/`
+https://vidavida1970.github.io/ai-news-briefing/
