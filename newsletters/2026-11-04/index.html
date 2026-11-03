@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI와 에이전트, Aside 관련 최근 7일 소식을 모은 모닝 브리핑">
+  <title>AI·에이전트 모닝 브리핑 · 2026-11-04</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080a13;
+      --surface: #111526;
+      --surface-2: #171c31;
+      --text: #f4f7ff;
+      --muted: #aab3cb;
+      --cyan: #5cecff;
+      --magenta: #ff5dcc;
+      --line: rgba(92,236,255,.28);
+      --shadow: 0 0 26px rgba(92,236,255,.09), 0 0 42px rgba(255,93,204,.05);
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: radial-gradient(circle at 80% -10%, rgba(255,93,204,.16), transparent 34rem),
+                  radial-gradient(circle at -10% 24%, rgba(92,236,255,.11), transparent 30rem), var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 32px, 640px); margin: 0 auto; }
+    header { padding: 42px 0 24px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px;
+      color: var(--cyan); font-size: .76rem; font-weight: 800; letter-spacing: .13em;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--magenta)); }
+    h1 { margin: 0; max-width: 600px; font-size: clamp(2rem, 8vw, 3.25rem); line-height: 1.1; letter-spacing: -.055em; }
+    .h1-date { color: var(--cyan); font-size: .42em; letter-spacing: -.025em; white-space: nowrap; }
+    .issue-date { margin: 16px 0 0; color: var(--muted); font-size: 1rem; }
+    .issue-date strong { color: var(--text); font-size: 1.15rem; }
+    .highlight {
+      margin: 16px 0 34px; padding: 20px; border: 1px solid rgba(255,93,204,.42); border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,93,204,.12), rgba(17,21,38,.93) 55%); box-shadow: var(--shadow);
+    }
+    .highlight h2 { margin: 0 0 12px; color: #ffd4f5; font-size: 1rem; letter-spacing: .02em; }
+    .highlight ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .highlight li { color: #e8eaf4; font-size: .92rem; }
+    .spark { display: inline-block; margin-right: 8px; color: var(--magenta); }
+    .platform-section { margin: 0 0 34px; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 13px; }
+    .section-heading h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.025em; }
+    .section-heading h2::before { content: "#"; margin-right: 5px; color: var(--cyan); font-weight: 400; }
+    .count { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+    .cards { display: grid; gap: 12px; }
+    .item-card {
+      position: relative; padding: 17px 17px 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(135deg, rgba(23,28,49,.96), rgba(13,16,30,.96)); box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    }
+    .item-card::after { content: ""; position: absolute; top: 0; right: 0; width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--magenta)); opacity: .8; }
+    .card-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: var(--muted); font-size: .75rem; }
+    .platform-badge { padding: 3px 8px; border: 1px solid rgba(92,236,255,.42); border-radius: 99px; color: var(--cyan); font-size: .7rem; font-weight: 800; letter-spacing: .03em; }
+    .badge-x, .badge-threads { border-color: rgba(255,93,204,.46); color: #ff9be2; }
+    .badge-네이버블로그 { border-color: rgba(104,230,154,.48); color: #8ff0b3; }
+    .item-card h3 { margin: 0; font-size: 1.03rem; line-height: 1.4; letter-spacing: -.02em; }
+    .item-card h3 a { text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .item-card h3 a:hover, .item-card h3 a:focus-visible { color: var(--cyan); text-decoration: underline; }
+    .item-card p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 9px 0 0; color: var(--muted); font-size: .88rem; }
+    .empty-state { margin: 0; padding: 20px; border: 1px dashed rgba(170,179,203,.36); border-radius: 14px; color: var(--muted); text-align: center; font-size: .9rem; }
+    footer { margin: 44px 0 28px; padding-top: 20px; border-top: 1px solid rgba(170,179,203,.2); color: var(--muted); font-size: .78rem; text-align: center; }
+    footer strong { color: var(--text); }
+    @media (min-width: 600px) { .wrap { width: min(100% - 48px, 640px); } header { padding-top: 58px; } .item-card { padding: 19px 20px 20px; } }
+    @media (prefers-reduced-motion: no-preference) { .item-card { transition: border-color .2s ease, transform .2s ease; } .item-card:hover { transform: translateY(-2px); border-color: rgba(92,236,255,.62); } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">오늘의 브리핑</p>
+      <h1>AI·에이전트<br>모닝 브리핑 <span class="h1-date">· 2026-11-04</span></h1>
+      <p class="issue-date">발행일 <strong>2026.11.04</strong> <span aria-hidden="true">·</span> 최근 7일</p>
+    </header>
+
+    <aside class="highlight" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading">✦ 이번 호 하이라이트</h2>
+      <ul>
+          <li><span class="spark">✦</span>Aside(어사이드)는 ‘얼마나 맡길 수 있나’가 화두였습니다. 휴대폰까지 연결해 인스타 자료 수집·시트 정리를 맡기는 실습, Codex 안에서 부르는 상세페이지 제작, 쿠팡 비교에 서브 에이전트 3개를 띄운 라이브 사례, ReplitBot을 몰고 Codex·Claude Code 세션을 여는 활용이 나왔고, 기기 찾기 사이트에 스스로 로그인해 아이폰을 찾은 후기도 화제였습니다. 한편 무료 요금제 한도(월 500크레딧·루틴 3개) 점검과 설정이 복잡해 ChatGPT Work로 옮겼다는 솔직한 후기도 이어졌습니다.</li>
+          <li><span class="spark">✦</span>에이전트 인프라와 검증이 한 단계 올라갔습니다. Anthropic은 응답이 어느 모델에서 나왔는지 검증하는 FlashProve를, OpenAI는 에이전트 사용량을 감당할 Git 백엔드 Pando(푸시 지연 약 80%↓)를 공개했고, 크라우드스트라이크는 Claude Cowork에 팰컨 가디언을 기본 탑재합니다. 실제 버그 1,396개로 잰 QA Bench에선 최고 재현율도 19.3%였습니다.</li>
+          <li><span class="spark">✦</span>요금과 모델 구성도 바뀝니다. ChatGPT는 채팅·Work 탭 통합 실험과 함께 12월부터 ChatGPT·Codex 사용량을 한 한도로 묶고, Google Antigravity 무료 계정의 Claude는 11월 18일 빠집니다. 국내에선 SKT가 사내 에이전트 5,000여 개 중 우수작을 뽑았고, 카카오는 카톡 어디서든 부르는 Kanana 어시스턴트 개발기를 공유했습니다.</li>
+      </ul>
+    </aside>
+
+      <section class="platform-section" aria-labelledby="heading-YouTube">
+        <div class="section-heading">
+          <h2 id="heading-YouTube">YouTube</h2>
+          <span class="count">10건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=NdCjNzbrSeY" target="_blank" rel="noopener noreferrer">[무료 자료 배포] 댓글 자동으로 달고 자료 수집, 엑셀 정리까지! AI 브라우저 어사이드가 다 합니다</a></h3>
+            <p>AI 돈버는 기술, 마브사끼가 매번 게시물을 찾고 링크를 복사해 정리하던 반복 작업을 Aside에 맡겨 봤습니다. 설치와 GPT·클로드 연결부터 인스타그램 자료 배포 게시물·댓글·DM 확인, 갤럭시 S20을 개발자 모드·USB 디버깅으로 연결해 휴대폰 조작을 맡기는 과정, 수집 결과를 구글 시트로 정리하는 장면까지 실제 화면으로 보여 줍니다. 자료 화면이 열리는 것과 다운로드 완료는 다르다고 짚었습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=Mhre95RutLo" target="_blank" rel="noopener noreferrer">어사이드를 코덱스에서 쓰면 상세페이지 제작이 이렇게 바뀝니다 | 코덱스와 어사이드 비교</a></h3>
+            <p>AI+상세페이지=리디드로우가 Codex 안에서 Aside를 불러 상세페이지를 만드는 방법을 예시로 보여 주며 두 도구를 비교합니다. 반응이 많으면 더 자세한 후속 영상을 올리겠다고 밝혔습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=UO2mTQMlB-8" target="_blank" rel="noopener noreferrer">New Updates in Google Antigravity | Episode 9</a></h3>
+            <p>Google Antigravity 공식 채널의 업데이트 9회차로, Gemini 4 Argon으로 블렌더 3D 파고다 만들기, 멀티 에이전트 웹사이트 현지화, 40년 된 포트란 코드 현대화, 바닐라 자바스크립트 실시간 애니메이션 같은 시연과 변경 로그를 묶어 소개합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=p7M6BrwGWq8" target="_blank" rel="noopener noreferrer">Anthropic 엔지니어는 Claude Code를 이렇게 씁니다 — 상위 1%의 3가지 방법</a></h3>
+            <p>단테가 Claude.ai·Cowork·Claude Code Desktop 개발을 이끈 Felix Rieseberg의 글 「How to be more ambitious」 속 세 가지 방법(고도·깊이·범위)을 오픈소스 3D 가구 배치 편집기 ComfySims에 적용해 봅니다. 할 일에 목표 한 줄 붙이기, 깊이 프롬프트로 요청을 다시 쓰게 한 뒤 Codex CLI를 바깥 심판으로 붙여 지적 7개를 고치기, 분야별 서브에이전트 검토를 시연합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-29">2026.10.29</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=CY6mTn6ftA0" target="_blank" rel="noopener noreferrer">Agentic AI를 경험하는 새로운 공간, 카카오톡 어디서든 부르는 어시스턴트 Kanana | if(kakao)26</a></h3>
+            <p>if(kakao)26 세션으로, 카카오 유현우·이정현 님이 ‘라이언, 해줘!’ 한마디로 카카오톡의 다양한 기능을 직접 실행하고 요청 결과에 맞는 화면까지 보여 주는 Kanana 어시스턴트를 만들며 겪은 고민과 개발 과정을 소개합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=lOxpkdpX72s" target="_blank" rel="noopener noreferrer">감동주의! 클로드 에이전트 3번 퇴근요청! 4시간 만에 결국 해냈다</a></h3>
+            <p>오후다섯씨가 2018년에 산 라즈베리 파이와 메이커 키트를 Claude Code로 움직이는 AI 에이전트와 함께 ‘노란 버튼을 누르고 말하면 AI 비서가 대답하는 상자’로 되살린 4시간을 10분으로 담았습니다. 설치·설정·오류 찾기는 에이전트가 해 주지만 와이파이 끊김 같은 하드웨어 문제 앞에서는 사람과 AI가 같이 헤맸고, AI는 세 번이나 ‘오늘은 여기까지 할까요?’라고 제안했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=nf4AWqLMME0" target="_blank" rel="noopener noreferrer">클로드 코드의 책임 설계자가 CLAUDE.md를 더이상 사용하지 않는 이유</a></h3>
+            <p>마일드코드가 Anthropic Claude Code 팀 엔지니어 Daisy Hollman의 강연·워크숍을 바탕으로, CLAUDE.md는 대화마다 전부 컨텍스트에 올라가고 강제 장치가 아니라 참고 문서라 규칙을 적을수록 덜 지켜진다고 설명합니다. 꼭 지킬 규칙은 훅(비밀 키 노출·복구 불가 삭제 차단), 절차는 스킬, 결과만 받을 일은 서브에이전트로 빼고 CLAUDE.md엔 공통 몇 줄만 남기라고 권합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-02">2026.11.02</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=-7GMVAQPgrM" target="_blank" rel="noopener noreferrer">AI 에이전트 관리가 중요한 이유 | 따라 만들기는 이제 그만</a></h3>
+            <p>김효율의 AI 개발단이 Claude Code 세션 25개를 에이전트로 쓰며 세션 관리 앱으로 컨텍스트 사용량·압축 횟수를 보고, 압축이 3번이면 교체한다는 기준과 명령어 한 번으로 세션 12개를 저장·보관·새로 여는 ‘팀 리부트’를 실제 화면으로 보여 줍니다. 오래 쓴 에이전트가 느려지고 헛소리가 늘면 관리 방법을 봐야 한다고 강조합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=6KU-_0ZbhRU" target="_blank" rel="noopener noreferrer">코덱스 앱 실전 7가지｜클로드 세션 불러오기부터 검증 게이트까지</a></h3>
+            <p>코난쌤이 Claude Code에서 세운 계획을 Codex 앱으로 넘겨 이어 구현하는 흐름을 작은 웹앱으로 시연합니다. 세션 가져오기, 사이드 채팅, 캐시 유지 설정, 스킬 녹화, Stop 훅 검증, 워크트리, 대화 참조 등 일곱 가지 기능을 다루고, 세션 ID와 핸드오프 글을 복사해 주는 플러그인 ide-mod 설치법도 안내합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-10-30">2026.10.30</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=6DNKqWRQlcQ" target="_blank" rel="noopener noreferrer">클로드에 손발을 달았더니 | 귀찮은 컴퓨터 일 다 맡겨봤습니다</a></h3>
+            <p>AI 크리에이터 밤띠가 Claude 유료 구독(머리)과 무료 AI 브라우저 ego lite(손발)를 연결해 10월 29일 직접 해 본 일을 보여 줍니다. 정부24 혜택알리미 78개 중 후보 6개 추리기, 배송비 포함 최저가 비교, 식당 예약 확정 직전에서 멈추기, 김포→제주 항공권 고르기, 유튜브·인스타·블로그 업로드 준비까지 맡기고 게시·공유 버튼만 직접 눌렀다고 합니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-X">
+        <div class="section-heading">
+          <h2 id="heading-X">X</h2>
+          <span class="count">8건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://x.com/AnthropicAI/status/2117710942826123294" target="_blank" rel="noopener noreferrer">Anthropic, AI 응답 출처를 검증하는 FlashProve 연구 공개 (@AnthropicAI)</a></h3>
+            <p>Anthropic이 대규모 언어 모델의 ‘증명 가능한 추론’ 연구 성과로 FlashProve를 소개했습니다. 확립된 암호 기법을 바탕으로, 개발자가 특정 응답이 특정 AI 모델에서 나온 것인지 검증할 수 있게 해 준다고 설명했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://x.com/OpenAI/status/2117692475775258785" target="_blank" rel="noopener noreferrer">OpenAI, ChatGPT·Codex로 기계·전기·시뮬레이션 엔지니어링 지원 (@OpenAI)</a></h3>
+            <p>OpenAI가 ChatGPT와 Codex가 물리 세계를 위한 엔지니어링을 돕고 있다며 기계 설계·전기 공학·시뮬레이션 분야의 진행 상황을 공유했습니다. 자사 하드웨어 팀의 반복 속도를 높이는 일부터 업계 협력사와 새 워크플로를 시험하는 일까지 담았습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://x.com/OpenAIDevs/status/2117408792346509663" target="_blank" rel="noopener noreferrer">OpenAI, 에이전트 시대용 Git 백엔드 ‘Pando’ 공개 (@OpenAIDevs)</a></h3>
+            <p>OpenAI가 모노레포의 늘어나는 push·fetch를 감당하려고 엔지니어와 에이전트의 Git 사용 방식은 그대로 둔 채 새 Git 백엔드 Pando를 만들었다고 밝혔습니다. push 지연이 약 80% 줄었고 하루 거의 1페타바이트의 Git 데이터를 처리하며, 에이전트 사용량에 맞춰 Git 용량을 늘릴 수 있다고 합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://x.com/AQS_kr/status/2117527211150327932" target="_blank" rel="noopener noreferrer">런웨이, 클로드 코드·코덱스·커서용 Runway Dev 플러그인 출시 (@AQS_kr)</a></h3>
+            <p>영상 AI 런웨이가 코딩 에이전트용 Runway Dev 플러그인을 내놨다는 소식입니다. 한 번 설치하면 에이전트가 런웨이 계정과 연결되고, ‘이런 영상 기능 만들어줘’라고 말하면 런웨이 API 연동 코드를 알아서 짜 준다며 커서에서는 에이전트 채팅의 /add-plugin으로 설치한다고 전했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://x.com/what_going_on_X/status/2117707636321992779" target="_blank" rel="noopener noreferrer">크라우드스트라이크, 팰컨 가디언을 Claude Cowork에 기본 탑재 (@what_going_on_X)</a></h3>
+            <p>크라우드스트라이크가 팰컨 유럽 2026에서 팰컨 가디언을 Anthropic Claude Cowork에 기본 탑재한다고 발표했다는 정리입니다. 에이전트 생성부터 작업 실행까지 활동을 감시해 악성 행위·데이터 유출을 탐지하고 아마존 베드록 에이전트코어 가드레일과 연동하며, 정식 출시된 AI 게이트웨이로 Claude Code·Codex·Copilot·Cursor까지 제어한다고 합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://x.com/gammamukja/status/2117382998157058514" target="_blank" rel="noopener noreferrer">“아이폰 어디 있지?” Aside에게 물었더니 (@gammamukja)</a></h3>
+            <p>휴대폰을 어디 뒀는지 잊은 사용자가 Aside 브라우저에 ‘내 아이폰 어디 있어?’라고 묻자, Aside가 스스로 기기 찾기 사이트에 로그인해 소리를 울리게 했고 휴대폰은 집 지하실에 있었다는 후기입니다. AI로 문제를 푸는 새로운 방식이지만 무섭기도 하다고 덧붙였습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://x.com/msdkim/status/2117481951766651013" target="_blank" rel="noopener noreferrer">Aside가 ReplitBot을 몰고, Codex·Claude Code 세션까지 시작 (@msdkim)</a></h3>
+            <p>Replit 봇을 쓰는 사용자가 최근 Cloud agents 업데이트로 ReplitBot이 클라우드 에이전트를 불러낼 수 있게 됐고, ChatGPT 대신 Aside가 메인 ReplitBot을 완전히 조종하며 Replit 안에서 Codex와 Claude Code 세션도 시작할 수 있다고 소개했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://x.com/reviewman12817/status/2117581705569849455" target="_blank" rel="noopener noreferrer">Aside 활용사례: 카카오 비즈니스 채널 이름 변경 맡기기 (@reviewman12817)</a></h3>
+            <p>한 사용자가 Aside에 카카오비즈니스 아이디와 비밀번호를 주고 채널 이름 변경을 맡긴 사례입니다. 처음엔 안 된다고 했지만 다시 요청하자 Aside가 직접 방법을 찾겠다며 고객센터에 문의를 넣고 관련 자료를 첨부했다고 전했습니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-Threads">
+        <div class="section-heading">
+          <h2 id="heading-Threads">Threads</h2>
+          <span class="count">0건</span>
+        </div>        <p class="empty-state">이번 창에서는 Threads 공개 검색이 로그인 벽에 막혀 수집된 게시물이 없습니다.</p>
+      </section>      <section class="platform-section" aria-labelledby="heading-NaverBlog">
+        <div class="section-heading">
+          <h2 id="heading-NaverBlog">Naver Blog</h2>
+          <span class="count">9건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://blog.naver.com/tms0620/224463200022" target="_blank" rel="noopener noreferrer">Aside 브라우저, 무료로 어디까지 되나 (무료 요금제·크레딧·루틴 한도, 2026년 11월 기준)</a></h3>
+            <p>itemMania가 11월 3일 공식 가격 페이지와 자기 설정 화면을 근거로 정리했습니다. 무료는 0원에 내 AI 구독 연결, 월 500크레딧, 루틴 3개, 비밀번호 관리자를 주고, 월 20달러 Pro는 사용량 3배·루틴 무제한, 월 200달러 Max는 가격 페이지엔 40배·도움말엔 30배로 숫자가 다르다고 짚었습니다. 자기 구독을 연결해 쓰니 크레딧이 줄지 않았지만 공식 근거는 못 찾은 추측이라고 밝혔습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://blog.naver.com/mnileemia/224463409113" target="_blank" rel="noopener noreferrer">AI 브라우저 어사이드(Aside) 쓰려다 손수발만 들고 ChatGPT Work로 갈아탄 후기</a></h3>
+            <p>네이버 블로그처럼 AI 접근을 막은 페이지를 읽으려고 Aside를 설치한 사용자가, 크롬의 ChatGPT에서 필요할 때만 Aside를 부르려면 MCP 같은 개발자 수준 설정이 필요하고 제대로 쓰려면 Max 요금제(월 200달러)가 필요하다는 안내에 막혀 결국 ChatGPT Work로 옮겼다는 솔직한 후기입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-02">2026.11.02</time>
+            </div>
+            <h3><a href="https://blog.naver.com/qkfkekdl/224462739768" target="_blank" rel="noopener noreferrer">[Aside 정복] 브라우저에 시킨 일 6가지, 쇼핑 비교부터 이체확인증까지</a></h3>
+            <p>구두방장선생이 윤자동 님의 3시간 넘는 라이브에서 Aside에 시킨 사례 6가지를 정리했습니다. 쿠팡 카메라 3사 비교에 서브 에이전트 3개를 띄운 장면, 리뷰 대기 목록 처리, 유튜브 라이브 확인 후 Threads 게시, 플랫폼별 글 나눠 쓰기, 이체확인증 내려받아 드라이브에 올리기, 홈택스 로그인 시도까지 담았고 ‘어디서 멈출지’를 잘 설명해 줘야 한다고 강조합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://blog.naver.com/aceyun88/224464054881" target="_blank" rel="noopener noreferrer">어사이드(Aside) 활용법: 블로그 글 1편을 콘텐츠 5종 초안으로 바꾸는 순서</a></h3>
+            <p>AI소셜멘토 윤성임이 블로그 글 한 편을 원문으로 정한 뒤 Aside로 카드뉴스 구성·숏폼 시나리오·인스타그램 캡션·스레드 글·페이스북 안내 글 등 초안 5종을 만드는 순서를 정리했습니다. 날짜·장소·비용처럼 틀리면 곤란한 정보는 원문과 대조하고 ‘원문에 없는 사실은 만들지 마’ 조건을 넣으며, 초안 만들기와 실제 게시는 구분해 검토 후 발행하라고 당부합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://blog.naver.com/temk5102/224464195800" target="_blank" rel="noopener noreferrer">ChatGPT ‘채팅’·‘Work’ 탭 하나로 합친다, 12월부터 ChatGPT·Codex 사용량도 한 통으로</a></h3>
+            <p>정성욱 강사가 OpenAI가 유료 구독자에게 보낸 이메일과 공식 도움말을 근거로 정리했습니다. 몇 주 안에 채팅 탭과 Work 탭을 합치는 실험을 소수 사용자부터 시작하고, 12월부터 Plus·Pro·Business는 ChatGPT와 Codex 사용량을 ‘토큰’ 하나의 한도로 함께 쓰며(가벼운 Instant 채팅은 제외), 옛 데스크톱 앱 ChatGPT Classic은 2027년 1월 30일 종료된다는 보도도 전했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://blog.naver.com/homein_house/224464116405" target="_blank" rel="noopener noreferrer">구글 안티그래비티 무료 클로드 11월 18일 종료 | 제미나이 플래시만 남는다</a></h3>
+            <p>디지털 손맛이 11월 3일 Google Antigravity 공식 ‘모델’ 문서를 확인해, 무료·Pro 체험판에서 Claude Sonnet·Opus 4.6과 GPT-OSS가 빠지는 날짜가 11월 2일에서 11월 18일로 밀렸고 그 뒤 무료 계정엔 Gemini 3.8 Flash 하나만 남는다고 정리했습니다. 무료 계정은 개인 API 키 연결(BYOK)과 AI 크레딧 초과 사용이 안 되며, 정식 Pro·Ultra에는 이미 Claude 5.5가 들어와 있다고 합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://blog.naver.com/012403/224464199907" target="_blank" rel="noopener noreferrer">QA Bench — 1,396개 실제 버그로 측정한 QA 에이전트 벤치마크, 최고 재현율 19.3%</a></h3>
+            <p>Momentic이 Gitea·Metabase·Twenty·Saleor 4개 오픈소스 웹 앱의 실제 버그 1,396개로 60분 동안 에이전트 QA 능력을 잰 QA Bench를 정리한 글입니다. 자사 Mo가 재현율 19.3%(버그당 2.67달러)로 1위, Codex 6.2%(0.80달러), Claude Code 4.2%(4.09달러), Devin 1.9% 순이었고, 자체 측정이라 독립 검증이 아직 없다는 한계도 짚었습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://blog.naver.com/ittimesnews/224464053655" target="_blank" rel="noopener noreferrer">SKT, 사내 AI 에이전트 5000개 개발…AX 우수작 5건 선정</a></h3>
+            <p>IT타임스에 따르면 SK텔레콤이 올해 사내에서 만든 업무용 AI 에이전트 5,000개 이상 가운데 8~10월 경연대회 ‘AX 스파크’(173건 출품)로 우수작을 골랐습니다. 악성 앱을 분석하고 공격 서버를 추적하는 보안 에이전트 ‘M-TripleA’가 대상을 받았고, 기획부터 개발·운영을 자동 수행하는 ‘ATLAS’, 통신설비 18만여 개의 전력 사용량을 분석하는 ‘PYLON’ 등이 최종 후보에 올랐습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://blog.naver.com/thelenskorea/224464127745" target="_blank" rel="noopener noreferrer">앤트로픽, 클로드로 자체 AI칩 설계 가속…IPO 앞두고 투자자에 성과 강조</a></h3>
+            <p>더렌즈가 디인포메이션 보도를 인용해, Anthropic이 최근 투자자 회의에서 15명 규모의 자체 반도체 설계팀에 Claude를 활용해 맞춤형 AI칩 개발 시간을 줄이고 있다고 밝혔다고 전했습니다. 다만 실제 단축 폭과 비교 기준은 공개되지 않았고, 엔비디아·칩에이전츠 벤치마크에서 1위를 한 Claude 기반 에이전트도 16.6%에 그쳤다고 덧붙였습니다.</p>
+          </article></div>
+      </section>
+
+    <footer>
+      <p>수집 창구 <strong>2026-10-28 ~ 2026-11-04</strong> · YouTube 10 · X 8 · Threads 0 · Naver Blog 9 · 총 27건</p>
+      <p>애드 아이티 모닝 브리핑 · <a href="https://vidavida1970.github.io/ai-news-briefing/">아카이브</a></p>
+    </footer>
+  </main>
+</body>
+</html>
