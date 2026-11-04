@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI와 에이전트, Aside 관련 최근 7일 소식을 모은 모닝 브리핑">
+  <title>AI·에이전트 모닝 브리핑 · 2026-11-05</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080a13;
+      --surface: #111526;
+      --surface-2: #171c31;
+      --text: #f4f7ff;
+      --muted: #aab3cb;
+      --cyan: #5cecff;
+      --magenta: #ff5dcc;
+      --line: rgba(92,236,255,.28);
+      --shadow: 0 0 26px rgba(92,236,255,.09), 0 0 42px rgba(255,93,204,.05);
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: radial-gradient(circle at 80% -10%, rgba(255,93,204,.16), transparent 34rem),
+                  radial-gradient(circle at -10% 24%, rgba(92,236,255,.11), transparent 30rem), var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 32px, 640px); margin: 0 auto; }
+    header { padding: 42px 0 24px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px;
+      color: var(--cyan); font-size: .76rem; font-weight: 800; letter-spacing: .13em;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--magenta)); }
+    h1 { margin: 0; max-width: 600px; font-size: clamp(2rem, 8vw, 3.25rem); line-height: 1.1; letter-spacing: -.055em; }
+    .h1-date { color: var(--cyan); font-size: .42em; letter-spacing: -.025em; white-space: nowrap; }
+    .issue-date { margin: 16px 0 0; color: var(--muted); font-size: 1rem; }
+    .issue-date strong { color: var(--text); font-size: 1.15rem; }
+    .highlight {
+      margin: 16px 0 34px; padding: 20px; border: 1px solid rgba(255,93,204,.42); border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,93,204,.12), rgba(17,21,38,.93) 55%); box-shadow: var(--shadow);
+    }
+    .highlight h2 { margin: 0 0 12px; color: #ffd4f5; font-size: 1rem; letter-spacing: .02em; }
+    .highlight ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .highlight li { color: #e8eaf4; font-size: .92rem; }
+    .spark { display: inline-block; margin-right: 8px; color: var(--magenta); }
+    .platform-section { margin: 0 0 34px; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 13px; }
+    .section-heading h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.025em; }
+    .section-heading h2::before { content: "#"; margin-right: 5px; color: var(--cyan); font-weight: 400; }
+    .count { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+    .cards { display: grid; gap: 12px; }
+    .item-card {
+      position: relative; padding: 17px 17px 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(135deg, rgba(23,28,49,.96), rgba(13,16,30,.96)); box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    }
+    .item-card::after { content: ""; position: absolute; top: 0; right: 0; width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--magenta)); opacity: .8; }
+    .card-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: var(--muted); font-size: .75rem; }
+    .platform-badge { padding: 3px 8px; border: 1px solid rgba(92,236,255,.42); border-radius: 99px; color: var(--cyan); font-size: .7rem; font-weight: 800; letter-spacing: .03em; }
+    .badge-x, .badge-threads { border-color: rgba(255,93,204,.46); color: #ff9be2; }
+    .badge-네이버블로그 { border-color: rgba(104,230,154,.48); color: #8ff0b3; }
+    .item-card h3 { margin: 0; font-size: 1.03rem; line-height: 1.4; letter-spacing: -.02em; }
+    .item-card h3 a { text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .item-card h3 a:hover, .item-card h3 a:focus-visible { color: var(--cyan); text-decoration: underline; }
+    .item-card p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 9px 0 0; color: var(--muted); font-size: .88rem; }
+    .empty-state { margin: 0; padding: 20px; border: 1px dashed rgba(170,179,203,.36); border-radius: 14px; color: var(--muted); text-align: center; font-size: .9rem; }
+    footer { margin: 44px 0 28px; padding-top: 20px; border-top: 1px solid rgba(170,179,203,.2); color: var(--muted); font-size: .78rem; text-align: center; }
+    footer strong { color: var(--text); }
+    @media (min-width: 600px) { .wrap { width: min(100% - 48px, 640px); } header { padding-top: 58px; } .item-card { padding: 19px 20px 20px; } }
+    @media (prefers-reduced-motion: no-preference) { .item-card { transition: border-color .2s ease, transform .2s ease; } .item-card:hover { transform: translateY(-2px); border-color: rgba(92,236,255,.62); } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">오늘의 브리핑</p>
+      <h1>AI·에이전트<br>모닝 브리핑 <span class="h1-date">· 2026-11-05</span></h1>
+      <p class="issue-date">발행일 <strong>2026.11.05</strong> <span aria-hidden="true">·</span> 최근 7일</p>
+    </header>
+
+    <aside class="highlight" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading">✦ 이번 호 하이라이트</h2>
+      <ul>
+          <li><span class="spark">✦</span>Aside(어사이드)와 ego lite를 고르는 기준이 분명해졌습니다. 브라우저 안에 AI가 있는 Aside와, 쓰던 Claude Code·Codex에 손발을 붙이는 ego lite를 속도와 토큰·메모리로 비교한 실측, 에이전트 브라우저 분류 가이드, 초보용 Aside 설치·심부름 영상이 나왔고, Claude Code에 Aside CLI를 붙여 옵션 선택 후 최저가를 찾은 시연도 있었습니다. 한편 OpenAI Atlas는 출시 292일 만에 접혀 ‘갈아타기보다 쓰던 브라우저에 기능을 넣는’ 쪽으로 기운 흐름이 다시 조명됐습니다.</li>
+          <li><span class="spark">✦</span>코딩 에이전트 스택을 빅테크가 사들이고 있습니다. OpenAI는 Codex에 이미 쓰이던 Pierre Computer 인수를 발표해 코드 저장·검토까지 넓히려 하고, Meta는 여러 코딩 에이전트를 병렬로 돌리는 Conductor를 인수했습니다. 같은 날 Postman이 Claude Code·Codex에 플러그인을 동의 없이 심었다는 GitHub 이슈가 Hacker News 1,300점을 넘기며, 도구가 에이전트 설정을 조용히 바꾸는 관행에 경종을 울렸습니다.</li>
+          <li><span class="spark">✦</span>에이전트가 ‘먼저 움직이는’ 쪽과 검증·감독도 함께 커졌습니다. Claude Duet은 클라우드에서 자리를 비워도 일하지만 한국은 아직 대기, Herdr 데스크톱은 Hermes·Codex·Claude Code를 한 화면에서 오케스트레이션합니다. Anthropic은 Claude로 세균 vault 입자 구조를 매핑한 연구와 모델 출처 증명 흐름을 이어 갔고, 미국 OCC는 은행의 생성형·자율 에이전트에 대한 첫 감독 체계를, Sentra는 에이전트 데이터 접근 통제로 대규모 투자를 받았습니다.</li>
+      </ul>
+    </aside>
+
+      <section class="platform-section" aria-labelledby="heading-YouTube">
+        <div class="section-heading">
+          <h2 id="heading-YouTube">YouTube</h2>
+          <span class="count">10건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=1KszxGPedF4" target="_blank" rel="noopener noreferrer">클로드로 안 되던 브라우저 작업, 어사이드·에고라이트로 해결했습니다:</a></h3>
+            <p>바이브리치가 Claude·Chrome만으로는 막히던 브라우저 작업을 Aside와 ego lite로 푸는 방법을 정리했습니다. Aside는 AI가 들어 있는 브라우저, ego lite는 Claude Code 같은 에이전트가 조작하는 브라우저로 구분하고, 쿠팡·11번가·G마켓에서 무선 마우스를 비교하되 장바구니·구매는 금지하는 공통 연습 프롬프트와 안전하게 쓰는 법까지 한 영상에 담았습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=8WBrXaWGUy0" target="_blank" rel="noopener noreferrer">블로그 자동화, 후기 자동 수집?! 인터넷 노가다를 줄여준다고?! AI 브라우저 어사이드 vs 클로드, 같은 일을 시켜봤습니다</a></h3>
+            <p>안똔AI가 핫한 AI 브라우저 Aside를 설치해 직접 써 보고, 같은 일을 Claude에도 시켜 비교합니다. 블로그 자동화·후기 수집처럼 인터넷을 오가야 하는 반복 작업을 어디까지 줄일 수 있는지 실제 화면으로 확인합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=8wC2Sjg1L1o" target="_blank" rel="noopener noreferrer">40대도 바로 쓰는 AI 비서 브라우저, 어사이드(Aside) 사용법</a></h3>
+            <p>뉴럴서랍이 한국인 세 명이 만든 Aside를 처음 쓰는 분도 따라 할 수 있게 쉬운 말로 정리했습니다. 무엇인지·설치·첫 심부름·엑셀·문의·예약 활용, 안전하게 쓰는 법과 요금까지 다루며, 결제·글쓰기·메시지 보내기는 사람이 확인한 뒤에만 진행된다고 강조합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=j7Ax_pUnSq8" target="_blank" rel="noopener noreferrer">포스트맨 업데이트했을 뿐인데… 내 Codex·Claude Code에 몰래 깔린 플러그인? | AI 24시 핫클립 11.04</a></h3>
+            <p>AI=IWAN이 11월 4일 이슈로, Postman 데스크톱이 동의 없이 Codex·Claude Code에 플러그인을 깔고 시작 훅을 ‘스스로 승인’했다는 GitHub 이슈를 전합니다. 데이터 유출은 입증되지 않았고 공식 성명은 아직 없으며, Anthropic 3분기 매출 급증과 ‘가중치 읽기’ 실험 반박, GitBook 보안 침해 소식도 함께 정리했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=BQ8ptkZ4kdg" target="_blank" rel="noopener noreferrer">Herdr 데스크톱으로 멀티 에이전트 오케스트레이션 | Hermes·Codex·Claude Code 한 화면에서</a></h3>
+            <p>단테랩스가 새로 나온 Herdr 데스크톱에서 Hermes가 일을 나누고 Codex가 구현·Claude Code가 검토하도록 세 에이전트를 한 화면에 연결해 봤습니다. 워크숍 안내 페이지 예제로 요청·보고가 오가는 장면, herdr-core 구조, 모바일 Collie·Tailscale 승인까지 다루며 명령 승인과 프로젝트 신뢰는 사람이 했다고 밝혔습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=cIGRF-acSzs" target="_blank" rel="noopener noreferrer">멀티 에이전트 쓰지 마세요.. (실제 테스트 결과)</a></h3>
+            <p>챗대리가 Claude 단독·5인 에이전트 팀·코드 리뷰어를 추가한 2인 체제에 같은 개발 과제를 맡겨 시간과 토큰을 비교했습니다. 미니 칸반보드·입지톡 MCP 서버 과제 14개로 검증하고, Sonnet·Opus를 바꿔 본 뒤 코드 리뷰와 병렬 작업이 필요할 때만 에이전트를 쓰라고 정리합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=ZdXXv-0aPfI" target="_blank" rel="noopener noreferrer">Claude Duet Is Here: The End of Prompting?</a></h3>
+            <p>Skill Leap AI가 Anthropic의 능동형 에이전트 Claude Duet을 소개합니다. 기존 Claude 앱과 별개로 클라우드에서 먼저 메시지를 보내고, 앱을 닫아도 돌아가며 아침 브리핑·Canva 캠페인·영상 아이디어까지 제안하는 장면을 계정에서 보여 줍니다. 대기자 명단과 메인·채널·작업·제작 탭도 안내합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=avF1j6HOKzI" target="_blank" rel="noopener noreferrer">CLAUDE.md에 적었는데 왜 안 지킬까 — 규칙 파일이 AI한테 전달되는 진짜 방법 | 바이브 코더를 위한 AI 기본기</a></h3>
+            <p>알면 만들다가 규칙 3줄 파일에선 새 대화 다섯 번 모두 지켰는데 223줄 한가운데에 같은 문장을 두자 열 번 다 안 지킨 실험을 공개합니다. Claude Code가 서버로 보내는 요청을 열어 보니 파일 글이 첫 메시지 맨 앞에 붙는 구조였고, 짧게·확인할 수 있게·꼭 막을 일은 훅으로 쓰라고 정리합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-02">2026.11.02</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=VYZ9iElkYCs" target="_blank" rel="noopener noreferrer">Cursor 컴퓨터 유즈｜Slack 화면을 영상으로 재현한 에이전트의 작업 방식</a></h3>
+            <p>평범한 사업가가 Boris Cherny의 ‘루프 엔지니어링’ 발언 이후 헷갈리던 루프를, Cursor 클라우드 에이전트가 원격 리눅스에서 Slack 화면을 보고 움직임·이징을 코드 기반 영상으로 재현한 사례로 설명합니다. 역컴파일 없이 화면을 보고 만든 점과, 사람이 목표·방향을 잡고 에이전트가 스스로 고치게 하는 구조를 강조합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-01">2026.11.01</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=DAGlET9vC_4" target="_blank" rel="noopener noreferrer">클로드 쓰는 법이 바뀌었습니다 (한 달 업데이트, 큰 변화 4가지로 정리)</a></h3>
+            <p>Ai-Con Lab이 9월 중순부터 한 달 사이 Claude 업데이트를 ‘쓰는 법이 어떻게 바뀌었나’ 네 가지로 묶었습니다. 채팅 하나가 아니라 여러 채팅이 같이 일하고, 대화창에서 문서·발표·대시보드까지 만들며, 컴퓨터를 꺼도 도는 클라우드·프로젝트, 모드·말투로 앱을 맞추는 변화와 Claude Duet 소식까지 공식 자료만으로 정리했습니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-X">
+        <div class="section-heading">
+          <h2 id="heading-X">X</h2>
+          <span class="count">8건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-05">2026.11.05</time>
+            </div>
+            <h3><a href="https://x.com/AnthropicAI/status/2118073665296228863" target="_blank" rel="noopener noreferrer">Anthropic, Claude로 세균 생명체 vault 입자 첫 3D 구조 매핑 (@AnthropicAI)</a></h3>
+            <p>Anthropic 생물학 연구팀이 Claude와 함께 세균·바이러스 쪽 vault 입자의 첫 3D 구조를 매핑했다고 밝혔습니다. 지금까지는 동물·식물 세포에서만 알려졌던 vault와 비슷한 단백질이 더 단순한 생명체에서도 조립된다는 결과로, 수작업이면 수주~수개월 걸릴 구조 결정을 며칠로 줄였지만 Claude가 단순한 실수도 했다고 한계를 함께 적었습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-05">2026.11.05</time>
+            </div>
+            <h3><a href="https://x.com/OpenAIDevs/status/2118083933233357132" target="_blank" rel="noopener noreferrer">OpenAI 개발자 October 정리: Decisions API·12시간 캐시·팀 태스크 등 (@OpenAIDevs)</a></h3>
+            <p>OpenAI Developers가 10월 빌더용 업데이트를 아티클로 묶었습니다. Decisions API, 12시간 프롬프트 캐시, Codex의 Sol Ultrafast(표준 대비 최대 8배), composer predictions, Build·Launch·Grow 티어, Windows용 Codex 샌드박스, ChatGPT 팀 태스크, GPT-6.1 Terra 컴퓨터 사용 등 에이전트·개발 도구 변화를 한곳에 정리했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-05">2026.11.05</time>
+            </div>
+            <h3><a href="https://x.com/jjanjjan050705/status/2118026736608903617" target="_blank" rel="noopener noreferrer">OpenAI, 개발 도구 스타트업 Pierre Computer 인수 발표 (@jjanjjan050705)</a></h3>
+            <p>OpenAI가 Pierre Computer 인수를 공식 발표했다는 정리입니다. Codex에 이미 들어간 파일 탐색·코드 비교 기술의 주인공이며, 코드 저장까지 Codex 안으로 들어오면 GitHub와 경쟁이 본격화될 수 있다고 봤습니다. 금액은 비공개이고 규제 승인 후 마무리된다고 전했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-05">2026.11.05</time>
+            </div>
+            <h3><a href="https://x.com/wsyoo16/status/2118080879566401990" target="_blank" rel="noopener noreferrer">Postman, Claude Code·Codex에 자기 플러그인 몰래 심어 (@wsyoo16)</a></h3>
+            <p>Postman 데스크톱이 실행 중 AI 코딩 도구 설정을 고쳐 플러그인을 자동 설치하고, Codex 설정에는 자기 훅을 ‘신뢰함’으로 적어 승인 창을 우회했다는 요약입니다. Postman 측은 설치 편의 목적이라며 동의 절차를 보완하겠다고 했고, 최신판에서도 재현됐으며 토큰 유출 증거는 아직 없다고 적었습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://x.com/bookiroad1/status/2117899688753897495" target="_blank" rel="noopener noreferrer">에이전트 브라우저, 고르는 기준 두 가지 (@bookiroad1)</a></h3>
+            <p>부키로드가 에이전트 브라우저를 ‘브라우저 안에 AI가 있는지’와 ‘내가 쓰는 AI에 브라우저를 연결하는지’로 나눴습니다. 전자는 Aside·Comet·Genspark·Opera Neon·Claude in Chrome, 후자는 ego(lite)·BrowserOS·Playwright MCP·Vercel agent-browser로 정리하고, 로그인 필요 여부와 이미 쓰는 AI가 있는지로 고르라고 권합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-02">2026.11.02</time>
+            </div>
+            <h3><a href="https://x.com/Toby_AgwaB/status/2117081915518009457" target="_blank" rel="noopener noreferrer">Aside vs Ego Lite, 속도·토큰·메모리 실측 (@Toby_AgwaB)</a></h3>
+            <p>Mac mini M1에서 Aside와 ego lite를 비교한 글입니다. 클릭 한 번은 ego 0.05초·Aside 0.5초로 ego가 빠르지만 연타하면 Aside가 역전하고, 같은 목록 페이지를 읽을 때 ego가 토큰을 1.8~3.7배 더 쓰며 메모리는 Aside가 2배 넘게 썼다고 했습니다. ego는 에이전트별 place로 사람 탭과 분리되는 점이 UX 차이라고 덧붙였습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-05">2026.11.05</time>
+            </div>
+            <h3><a href="https://x.com/what_going_on_X/status/2118039321513013447" target="_blank" rel="noopener noreferrer">센트라, AI 에이전트 데이터 보안으로 시리즈 C 1.5억 달러 (@what_going_on_X)</a></h3>
+            <p>AI 에이전트가 접근하는 데이터를 제한·감시하는 Sentra가 Capital One Ventures 주도로 시리즈 C 1억 5,000만 달러를 유치해 누적 2억 5,000만 달러를 넘겼다는 소식입니다. 에이전트가 늘수록 커지는 보안 시장으로 해석했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-05">2026.11.05</time>
+            </div>
+            <h3><a href="https://x.com/econographs/status/2118085912244400418" target="_blank" rel="noopener noreferrer">Meta, 코딩 에이전트 병렬 실행 앱 Conductor 인수 (@econographs)</a></h3>
+            <p>Axios 보도를 인용해 Meta가 2024년 설립된 Conductor를 인수했다고 전했습니다. Mac 앱으로 여러 AI 코딩 에이전트를 병렬 실행하게 해 주며, CEO Charlie Holtz가 팀(공동창업자 CTO 포함)이 Meta에 합류한다고 확인했다고 합니다. 같은 날 OpenAI의 Pierre 인수와 맞물려 코딩 에이전트 스택 쟁탈전으로 읽힙니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-Threads">
+        <div class="section-heading">
+          <h2 id="heading-Threads">Threads</h2>
+          <span class="count">0건</span>
+        </div>        <p class="empty-state">이번 창에서는 Threads 공개 검색이 로그인 벽에 막혀 수집된 게시물이 없습니다.</p>
+      </section>      <section class="platform-section" aria-labelledby="heading-NaverBlog">
+        <div class="section-heading">
+          <h2 id="heading-NaverBlog">Naver Blog</h2>
+          <span class="count">9건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://blog.naver.com/haeniv_v/224464818086" target="_blank" rel="noopener noreferrer">[AI 정보] AI가 인터넷을 직접 돌아다니며 일한다? 업무 자동화 브라우저 Aside와 ego(lite) 비교</a></h3>
+            <p>해가 Aside와 ego lite를 ‘로그인된 웹사이트에서 대신 일하는 AI 브라우저’로 소개하며 차이를 정리했습니다. Aside는 YC 2025 가을 기수 한국인 창업 서비스로 브라우저 안 에이전트·루틴·CLI를 갖추고, 무료는 월 500크레딧·루틴 3개·BYO AI 연결이라고 공식 가격 기준으로 적었습니다. ChatGPT·Claude 연결법과 계정 안전도 짚었습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://blog.naver.com/side80/224465160388" target="_blank" rel="noopener noreferrer">AI 브라우저 비교 (왜 아틀라스는 292일 만에 문을 닫았을까?)</a></h3>
+            <p>WHY가 한국 IE·액티브X 시대부터 시작해 OpenAI Atlas가 출시 292일 만인 2026년 8월 종료된 이유를 풀어씁니다. 브라우저 책임자가 ‘갈아타게 하기보다 쓰던 브라우저에 기능을 넣는 일’이 쉽다고 봤다는 보도를 인용하고, Aside·ego lite·Comet 등 에이전트형 브라우저와 ‘갈아타지 않고 AI를 쓰는 순서’를 함께 정리했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-03">2026.11.03</time>
+            </div>
+            <h3><a href="https://blog.naver.com/kdevelop/224462961681" target="_blank" rel="noopener noreferrer">Aside vs ego(lite) 브라우저 비교, AI 에이전트 브라우저 선택 기준 정리</a></h3>
+            <p>탐객이 2026년 11월 3일 공개 자료로 두 브라우저를 비교했습니다. Claude Code·Codex를 이미 쓰면 ego(lite), 브라우저 안에서 업무를 통째로 맡기면 Aside가 맞다고 결론내고, ego의 Space 병렬(개발사 측정 6작업 0.9GB)과 Aside의 에이전트·메모리·비밀번호·루틴 올인원 구조를 ‘손발 vs 두뇌까지’로 비유했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://blog.naver.com/lov2iu/224465106739" target="_blank" rel="noopener noreferrer">Postman이 AI 플러그인을 몰래 깔았다? Codex·Claude 연동 논란과 Hacker News 1,300점</a></h3>
+            <p>스태틱 블루가 Postman 12.33.4 실행 뒤 Codex·Claude Code에 플러그인이 자동 설치된 GitHub 이슈 #14370과 Hacker News 1,314점 반응을 정리했습니다. auto-existing-upgrade·신뢰 훅·원격 MCP 추가가 로그에 남았고 데이터 유출 주장은 없으며, 한국 Mac 사용자는 ~/.codex·~/.claude 설정을 점검하라고 권합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-05">2026.11.05</time>
+            </div>
+            <h3><a href="https://blog.naver.com/cronoss00/224465404816" target="_blank" rel="noopener noreferrer">OpenAI, GitHub까지 넘본다! Pierre Computer 인수로 시작된 AI 코딩 플랫폼 전쟁</a></h3>
+            <p>CRONOSS가 11월 4일 OpenAI의 Pierre Computer 인수 계획을 공식 발표 기준으로 풀어썼습니다. Trees·Diffs·Code Storage가 이미 Codex에 쓰이고 있으며, AI 에이전트 시대에는 코드 생성뿐 아니라 저장·이력·검토·배포 인프라가 병목이 된다고 설명합니다. GitHub 대체 선언은 없다고 선을 그었습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-05">2026.11.05</time>
+            </div>
+            <h3><a href="https://blog.naver.com/thelenskorea/224465390475" target="_blank" rel="noopener noreferrer">美 OCC, 은행 AI 감독 지침 첫 마련…오류 위험·인간 통제 중점</a></h3>
+            <p>더렌즈에 따르면 미국 OCC가 생성형 AI·자율형 에이전트를 포함한 은행 AI 활용을 평가하는 첫 감독 체계를 발표했습니다. AI를 별도 위험 범주로 두지 않고 업무 중요성·오류 피해·자율 권한·인간 감독 수준으로 강도를 달리하며, 단순 에이전트라도 거래 실행 권한이 있으면 더 위험할 수 있다고 봤습니다. 법적 의무를 새로 부과하는 규정은 아니라고 명시했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://blog.naver.com/jigulabs/224464725371" target="_blank" rel="noopener noreferrer">herdr(허더) 앱이 뭐길래?｜AI 코딩 에이전트 여러 개 관리하는 법, 오르카·cmux 비교</a></h3>
+            <p>오늘도커밋이 herdr를 Claude Code·Codex 여러 개를 한 화면에서 돌보는 작업실로 소개합니다. AI가 아니라 터미널 관리 도구이며, 사이드바에 Working·Blocked·Done·Idle을 색으로 표시하고 창을 닫아도 herdr-core가 일을 이어 갑니다. TUI(별 약 4.8만)와 데스크톱 앱은 세션을 공유하지 않으며 Orca·cmux와 비교표도 실었습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-04">2026.11.04</time>
+            </div>
+            <h3><a href="https://blog.naver.com/aedu84/224461809328" target="_blank" rel="noopener noreferrer">클로드 듀엣(Claude Duet), 자리를 비워도 일하는 AI 비서 — 한국 출시 전 1인 사업자가 알아 둘 것</a></h3>
+            <p>엠베이스가 Anthropic이 10월 21일 공개한 Claude Duet을 1인 사업자 관점에서 정리했습니다. 앱을 닫아도 클라우드에서 메일·메신저를 확인하고 실행 전 승인을 받으며, 지금은 미국 Pro·Max·Ultra부터 대기 명단이고 한국·카카오톡 연동 시기는 미정입니다. 별도 요금 없이 기존 한도를 쓰고, 문의·미수금·답장 문구를 한곳에 모아 두라고 조언합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-02">2026.11.02</time>
+            </div>
+            <h3><a href="https://blog.naver.com/dosuser/224462335958" target="_blank" rel="noopener noreferrer">Claude Code에 Aside 브라우저 붙여서 인터넷 최저가 찾기 (설정 파일과 시연 영상)</a></h3>
+            <p>신대용이 Claude Code에 Aside CLI를 붙여 파나소닉 에네루프 AA 8개입 최저가를 찾게 한 시연을 남겼습니다. CLAUDE.md·aside-browser 스킬·Bash(aside:*) 허용으로 5분 13초 만에 판매처 5곳의 옵션 선택 후 총액을 표로 받았고, 검색 1위처럼 보이던 가격이 AAA 옵션가여서 실제로는 더 비쌌던 함정을 에이전트가 걸러냈다고 합니다.</p>
+          </article></div>
+      </section>
+
+    <footer>
+      <p>수집 창구 <strong>2026-10-29 ~ 2026-11-05</strong> · YouTube 10 · X 8 · Threads 0 · Naver Blog 9 · 총 27건</p>
+      <p>애드 아이티 모닝 브리핑 · <a href="https://vidavida1970.github.io/ai-news-briefing/">아카이브</a></p>
+    </footer>
+  </main>
+</body>
+</html>
