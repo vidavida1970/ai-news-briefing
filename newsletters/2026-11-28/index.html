@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI와 에이전트, Aside 관련 최근 7일 소식을 모은 모닝 브리핑">
+  <title>AI·에이전트 모닝 브리핑 · 2026-11-28</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080a13;
+      --surface: #111526;
+      --surface-2: #171c31;
+      --text: #f4f7ff;
+      --muted: #aab3cb;
+      --cyan: #5cecff;
+      --magenta: #ff5dcc;
+      --line: rgba(92,236,255,.28);
+      --shadow: 0 0 26px rgba(92,236,255,.09), 0 0 42px rgba(255,93,204,.05);
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: radial-gradient(circle at 80% -10%, rgba(255,93,204,.16), transparent 34rem),
+                  radial-gradient(circle at -10% 24%, rgba(92,236,255,.11), transparent 30rem), var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 32px, 640px); margin: 0 auto; }
+    header { padding: 42px 0 24px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px;
+      color: var(--cyan); font-size: .76rem; font-weight: 800; letter-spacing: .13em;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--magenta)); }
+    h1 { margin: 0; max-width: 600px; font-size: clamp(2rem, 8vw, 3.25rem); line-height: 1.1; letter-spacing: -.055em; }
+    .h1-date { color: var(--cyan); font-size: .42em; letter-spacing: -.025em; white-space: nowrap; }
+    .issue-date { margin: 16px 0 0; color: var(--muted); font-size: 1rem; }
+    .issue-date strong { color: var(--text); font-size: 1.15rem; }
+    .highlight {
+      margin: 16px 0 34px; padding: 20px; border: 1px solid rgba(255,93,204,.42); border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,93,204,.12), rgba(17,21,38,.93) 55%); box-shadow: var(--shadow);
+    }
+    .highlight h2 { margin: 0 0 12px; color: #ffd4f5; font-size: 1rem; letter-spacing: .02em; }
+    .highlight ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .highlight li { color: #e8eaf4; font-size: .92rem; }
+    .spark { display: inline-block; margin-right: 8px; color: var(--magenta); }
+    .platform-section { margin: 0 0 34px; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 13px; }
+    .section-heading h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.025em; }
+    .section-heading h2::before { content: "#"; margin-right: 5px; color: var(--cyan); font-weight: 400; }
+    .count { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+    .cards { display: grid; gap: 12px; }
+    .item-card {
+      position: relative; padding: 17px 17px 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(135deg, rgba(23,28,49,.96), rgba(13,16,30,.96)); box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    }
+    .item-card::after { content: ""; position: absolute; top: 0; right: 0; width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--magenta)); opacity: .8; }
+    .card-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: var(--muted); font-size: .75rem; }
+    .platform-badge { padding: 3px 8px; border: 1px solid rgba(92,236,255,.42); border-radius: 99px; color: var(--cyan); font-size: .7rem; font-weight: 800; letter-spacing: .03em; }
+    .badge-x, .badge-threads { border-color: rgba(255,93,204,.46); color: #ff9be2; }
+    .badge-네이버블로그 { border-color: rgba(104,230,154,.48); color: #8ff0b3; }
+    .item-card h3 { margin: 0; font-size: 1.03rem; line-height: 1.4; letter-spacing: -.02em; }
+    .item-card h3 a { text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .item-card h3 a:hover, .item-card h3 a:focus-visible { color: var(--cyan); text-decoration: underline; }
+    .item-card p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 9px 0 0; color: var(--muted); font-size: .88rem; }
+    .empty-state { margin: 0; padding: 20px; border: 1px dashed rgba(170,179,203,.36); border-radius: 14px; color: var(--muted); text-align: center; font-size: .9rem; }
+    footer { margin: 44px 0 28px; padding-top: 20px; border-top: 1px solid rgba(170,179,203,.2); color: var(--muted); font-size: .78rem; text-align: center; }
+    footer strong { color: var(--text); }
+    @media (min-width: 600px) { .wrap { width: min(100% - 48px, 640px); } header { padding-top: 58px; } .item-card { padding: 19px 20px 20px; } }
+    @media (prefers-reduced-motion: no-preference) { .item-card { transition: border-color .2s ease, transform .2s ease; } .item-card:hover { transform: translateY(-2px); border-color: rgba(92,236,255,.62); } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">오늘의 브리핑</p>
+      <h1>AI·에이전트<br>모닝 브리핑 <span class="h1-date">· 2026-11-28</span></h1>
+      <p class="issue-date">발행일 <strong>2026.11.28</strong> <span aria-hidden="true">·</span> 최근 7일</p>
+    </header>
+
+    <aside class="highlight" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading">✦ 이번 호 하이라이트</h2>
+      <ul>
+          <li><span class="spark">✦</span>어사이드(Aside) 실측 비교가 쏟아졌습니다. 같은 클로드로 어사이드·에고라이트·핸들러스를 돌린 토큰 비교(어사이드 채팅창 64만 vs 핸들러스 223만), 어사이드 vs 에고 라이트 55회 비교가 나왔고, 이커머스·마케팅 대시보드·대학 특강·Suno 음악 에이전트까지 실사용 사례가 이어졌습니다.</li>
+          <li><span class="spark">✦</span>에이전트 표준이 ‘MCP·WebMCP’로 모이고 있습니다. 구글은 워크스페이스 데이터 접근에 공식 MCP 서버/CLI를 의무화하고 요금 등급을 나눴고, MCP 2주년에 Skills over MCP가 공개 베타로 나왔으며, Antigravity와 OpenAI Devs는 WebMCP로 웹앱·스토어를 에이전트가 직접 부를 수 있게 하는 사례를 보였습니다.</li>
+          <li><span class="spark">✦</span>개인 AI 에이전트의 확산과 마찰이 동시에 커집니다. Link Agent Wallet 결제액이 9월 초 대비 약 80배 늘었고, 아마존은 차단했던 메타 ‘뮤즈’와 화해 협상에 들어갔으며, SBS는 피클·뮤즈의 ‘돌발 행동’을 짚었습니다.</li>
+      </ul>
+    </aside>
+
+      <section class="platform-section" aria-labelledby="heading-YouTube">
+        <div class="section-heading">
+          <h2 id="heading-YouTube">YouTube</h2>
+          <span class="count">10건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-27">2026.11.27</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=JKPyaC9oEmQ" target="_blank" rel="noopener noreferrer">어사이드·에고라이트·핸들러스 다 깔아봤는데, 하나만 남긴다면 이겁니다 (방구석컴퍼니)</a></h3>
+            <p>같은 클로드 모델·같은 구독으로 어사이드·에고라이트·핸들러스에 같은 일 세 가지(네이버 블로그·카페 글 모으기, 레딧·X 글 모으기, 쿠팡·네이버·11번가 가격 비교)를 두 번씩 시켜 토큰을 쟀습니다. 어사이드 채팅창 64만 토큰으로 가장 적었고 핸들러스는 223만으로 약 3.5배 차이. 결론은 ‘기본은 어사이드 채팅창, 쿠팡 가격 확인이 많으면 에고라이트, 브라우저를 안 바꾸려면 핸들러스’입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-24">2026.11.24</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=NQeh5xiybHI" target="_blank" rel="noopener noreferrer">어사이드 vs 에고 라이트, 뭐가 더 뛰어날까? 55번 돌려 봤습니다 (안루카의 AI결재함)</a></h3>
+            <p>같은 클로드·같은 부탁으로 속도·토큰과 비용·정확도·혼자 일하기·보안 함정·뒷정리 6개 항목을 55번 돌려 비교했습니다(협찬 아님). 유튜브 스튜디오 상위 5편 읽기 과제에선 어사이드 3분 59초, 에고 라이트 1분 42초였고, 55번 합계 비용은 약 2만 7천 원이었습니다. 그대로 쓸 수 있는 부탁 문장 4줄도 공유합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-27">2026.11.27</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=XkosjDyW3sA" target="_blank" rel="noopener noreferrer">어사이드(Aside) 실전 활용 예시 10편 (어사이드랩)</a></h3>
+            <p>AI 브라우저 Aside를 직접 실험하는 비공식 채널 ‘어사이드랩’의 실전 시리즈 10편입니다. 환불 요청·예약·서류 처리·이메일 정리·스프레드시트 작업까지 에이전트가 브라우저에서 어디까지 해내는지 성공과 실패를 가리지 않고 검증합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-22">2026.11.22</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=7XlG5kmwaYw" target="_blank" rel="noopener noreferrer">네이버가 막은 AI, 어사이드는 된다 (AI 겸임교수 이종범)</a></h3>
+            <p>네이버는 스마트스토어·블로그에 AI 접근을 막아 두었고 예전의 API·워드 문서 업로드 방법도 막혔지만, 어사이드는 사람이 보듯 브라우저를 직접 움직이기 때문에 네이버 블로그 글쓰기도 AI가 대신할 수 있다고 설명합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-24">2026.11.24</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=zZqSn8rrLUk" target="_blank" rel="noopener noreferrer">어사이드 사용법 1분 정리 | 왕초보 AI 브라우저 Aside 세팅법 (주데이터)</a></h3>
+            <p>릴스 조회수·저장 수 확인 같은 반복 업무를 맡기기 위해 어사이드를 처음부터 세팅합니다. ① 설치·로그인 ② Models에서 클로드나 챗GPT 연결 ③ 반복할 업무 정리 ④ Routines로 시간 예약 ⑤ Ask로 바로 묻기 다섯 단계를 1분에 정리했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-24">2026.11.24</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=EuOg5f_Egns" target="_blank" rel="noopener noreferrer">Everything new in Claude this month (Claude 공식)</a></h3>
+            <p>Anthropic 공식 채널의 월간 업데이트 정리입니다. Claude Fable 5.2, 능동형 에이전트 Claude Duet, 개인 재정 관리 기능을 비롯해 Claude Meetings, Whiteboards·Sheets·Data, 인터랙티브 커넥터, Claude Code 데스크톱 등 소규모 업데이트까지 모았습니다. 조회수 50만 회를 넘겼습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-26">2026.11.26</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=_0z693vbajs" target="_blank" rel="noopener noreferrer">MCP 서버랑 스킬 따로 관리하던 분, 이제 그럴 필요 없습니다 (메이커 에반)</a></h3>
+            <p>Anthropic이 MCP 2주년(2026.11.24)에 발표한 Skills over MCP(공개 베타)와 Tasks·Elicitation(정식 출시)이 무엇을 바꾸는지, Claude Code에서 어떻게 쓰는지 공식 문서 기준으로 정리했습니다. MCP 서버가 이제 자기 스킬을 함께 배포하며, 보안 검사 범위 등 주의사항도 담았습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-26">2026.11.26</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=IoRV8nEj-2A" target="_blank" rel="noopener noreferrer">클로드, 코덱스, 안티그래비티 한 팀으로 굴리는 법 (달비의 작업실)</a></h3>
+            <p>Claude Code·Codex·Antigravity를 오르카(Orca) 하나에 모아 한 팀으로 일하게 하는 법을 설치부터 보여 줍니다. 오케스트레이션 스킬로 AI끼리 일을 주고받게 하는 법, 프로젝트를 만드는 시점, 휴대폰·다른 컴퓨터에서 이어 쓰는 법까지 다룹니다. 조회수 10만 회를 넘겼습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-26">2026.11.26</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=1Jj5gKyXqNA" target="_blank" rel="noopener noreferrer">구글의 무료 AI 직원 등장! Gemini Tasks 업무 자동화 4가지 실전 활용법 (AI튜터랩)</a></h3>
+            <p>구글의 AI 에이전트 Gemini Tasks로 메일 검색→캘린더 일정 등록, 손글씨 메모→PDF 보고서, PDF→구글 슬라이드, 브라우저를 직접 조작한 네이버 블로그 발행까지 4가지를 실습합니다. 유료 구독 없이 쓰는 법과 작업 중 추가 지시·승인 방법도 다룹니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-youtube">YouTube</span>
+              <time datetime="2026-11-23">2026.11.23</time>
+            </div>
+            <h3><a href="https://www.youtube.com/watch?v=glgq9TeHUFI" target="_blank" rel="noopener noreferrer">멋대로 전화 걸고, 이력서 내고..AI 비서 ‘돌발’ 어찌하나 (SBS 자막뉴스)</a></h3>
+            <p>AI 에이전트 활용이 늘며 부작용도 잇따른다는 SBS 보도입니다. 피클이 가족 이름·생일을 추론하거나 요청 없이 식당에 전화를 걸고, 특정 기업에 취업 서류를 여러 차례 보낸 사례, 메타 ‘뮤즈’의 동의 없는 메시지 발송 사례를 전하며 약관을 충분히 숙지하라고 조언합니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-X">
+        <div class="section-heading">
+          <h2 id="heading-X">X</h2>
+          <span class="count">8건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-28">2026.11.28</time>
+            </div>
+            <h3><a href="https://x.com/antigravity/status/2126360403022069908" target="_blank" rel="noopener noreferrer">Google Antigravity, 채팅에 GitHub PR ‘인라인 알약’ 도입 (@antigravity)</a></h3>
+            <p>Antigravity 채팅에 PR 링크를 붙여 넣으면 인라인으로 참조되고, 마우스를 올리면 상태·브랜치·댓글을 확인할 수 있으며, 연결된 모든 PR을 Overview 메뉴에서 볼 수 있게 됐다는 공식 발표입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-28">2026.11.28</time>
+            </div>
+            <h3><a href="https://x.com/OpenAIDevs/status/2126372238853112227" target="_blank" rel="noopener noreferrer">OpenAI Devs: 말로 주문하는 굿즈 스토어를 이렇게 만들었다 (@OpenAIDevs)</a></h3>
+            <p>‘웰컴 키트 40개를 샌프란시스코로 더 빨리 보낼 수 있나요?’라는 질문에 답하는 대화형 스토어 제작기입니다. GPT-Live-1.1이 급행 요금과 배송 예정일을 읽어 주고, Decisions API가 반품된 머그의 파손을 채점하며, WebMCP로 어떤 에이전트든 스토어의 장바구니를 호출할 수 있게 했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-25">2026.11.25</time>
+            </div>
+            <h3><a href="https://x.com/antigravity/status/2125378937156944146" target="_blank" rel="noopener noreferrer">Antigravity ‘Modern Web Guidance’ 스킬로 웹앱을 에이전트 친화적으로 (@antigravity)</a></h3>
+            <p>프런트엔드를 다시 짜지 않고도 기존 HTML 폼에 선언형 WebMCP 도구를 붙여, 사람에게는 같은 화면을 유지하면서 AI 에이전트에게는 구조화된 접근을 주는 방법을 소개했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-27">2026.11.27</time>
+            </div>
+            <h3><a href="https://x.com/haep_jelly/status/2126124444490051915" target="_blank" rel="noopener noreferrer">구글 리서치 ‘코젠틱’, 제미나이 4로 수학 논문 여섯 편 (@haep_jelly)</a></h3>
+            <p>구글 리서치가 11월 25일 공개한 에이전트 ‘코젠틱’이 제미나이 4에 프롬프트를 한 번씩만 주고 사람이 손대지 않은 채 수학 논문 여섯 편을 썼고, 소인수분해 알고리즘 논문까지 나왔다는 소개입니다. 당장 RSA를 위협할 수준은 아니라고 덧붙였습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-25">2026.11.25</time>
+            </div>
+            <h3><a href="https://x.com/USAnt_IDEA/status/2125525734332801156" target="_blank" rel="noopener noreferrer">아마존이 막았던 메타 쇼핑 에이전트 ‘뮤즈’, 블랙프라이데이 앞 화해 협상 (@USAnt_IDEA)</a></h3>
+            <p>지난 9월 메타가 개인용 AI 에이전트 ‘뮤즈(Muse)’를 내놓자 아마존이 출시 12일 만에 이용약관 위반을 이유로 쇼핑몰 접근을 차단했는데, 블랙프라이데이를 앞두고 화해 협상에 들어갔다는 소식입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-22">2026.11.22</time>
+            </div>
+            <h3><a href="https://x.com/Trader_Jesse_/status/2124318094726492203" target="_blank" rel="noopener noreferrer">연말 쇼핑 시즌 앞 AI 에이전트 커머스 동향 (@Trader_Jesse_)</a></h3>
+            <p>Muse·Instinct·Grok 등 개인용 AI 에이전트의 결제를 지원하는 Link Agent Wallet의 일일 결제액이 9월 초 대비 11월 중순 약 80배(7일 이동평균 기준) 늘었다며 에이전트 결제 규모가 빠르게 커지고 있다고 정리했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-22">2026.11.22</time>
+            </div>
+            <h3><a href="https://x.com/aiwonpick/status/2124458007266464214" target="_blank" rel="noopener noreferrer">챗GPT·클로드 앱 전면 개편 (@aiwonpick)</a></h3>
+            <p>챗GPT는 개인 AI 에이전트 ‘닷츠’ 전용 탭을 하단에 배치하고 플러스 테스트를 확대(한국 등은 초기 제외)했고, 클로드는 ‘클로드 코드’를 하단 메뉴에 배치해 모바일에서 PC 코딩 세션을 관리할 수 있게(iOS 우선) 했다는 요약입니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-x">X</span>
+              <time datetime="2026-11-28">2026.11.28</time>
+            </div>
+            <h3><a href="https://x.com/htmleverything/status/2126421378131964188" target="_blank" rel="noopener noreferrer">호스팅형 봇보다 ‘내 브라우저를 쓰는’ 도구가 낫다 — Aside 브라우저 (@htmleverything)</a></h3>
+            <p>Muse 같은 호스팅형 봇은 제3자에게 쉽게 차단돼 점점 덜 유용해진다며, 로컬 봇이나 Claude Code·Codex를 쓰고, 사람이 쓰는 방식 그대로 브라우저를 움직이는 Aside 브라우저 같은 도구가 봇 차단을 피하는 데 좋다는 사용자 의견입니다.</p>
+          </article></div>
+      </section>      <section class="platform-section" aria-labelledby="heading-Threads">
+        <div class="section-heading">
+          <h2 id="heading-Threads">Threads</h2>
+          <span class="count">0건</span>
+        </div>        <p class="empty-state">이번 창에서는 Threads 공개 검색이 로그인 벽에 막혀 수집된 게시물이 없습니다.</p>
+      </section>      <section class="platform-section" aria-labelledby="heading-NaverBlog">
+        <div class="section-heading">
+          <h2 id="heading-NaverBlog">Naver Blog</h2>
+          <span class="count">9건</span>
+        </div>        <div class="cards">          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-27">2026.11.27</time>
+            </div>
+            <h3><a href="https://blog.naver.com/ckdtn4425/224495123526" target="_blank" rel="noopener noreferrer">이커머스에서 Aside 브라우저로 업무 자동화 사용법 (쿼카의 AI 자동화)</a></h3>
+            <p>쇼핑몰 셀러 입장에서 어사이드를 쓴 방법입니다. 정리하지 않은 상품 정보를 던져 주면 웹에서 직접 클릭하며 대량 등록하고, 네이버 브랜드 커넥트 공동구매용 인플루언서 50명을 조건만 주면 10분 만에 골라 주며, 같은 방식으로 상품 소싱까지 맡길 수 있다고 소개합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-27">2026.11.27</time>
+            </div>
+            <h3><a href="https://blog.naver.com/dekilab/224494661473" target="_blank" rel="noopener noreferrer">AI로 마케팅 분석 대시보드 만들기, 어사이드로 채널 지표 한 화면에 모으기 (데키랩)</a></h3>
+            <p>어사이드가 매일 새벽 5시에 블로그를 돌며 방문 수·유입 검색어·검색 순위·댓글·다음 글감을 리포트하게 한 데서 출발해, 유튜브·인스타·카페·오픈채팅·블로그 지표를 한 화면에 모은 대시보드를 AI에게 맡겨 만들었습니다. 매일 1시간 넘던 지표 확인이 아침 10분으로 줄었다고 합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-27">2026.11.27</time>
+            </div>
+            <h3><a href="https://blog.naver.com/never_sleep/224494466667" target="_blank" rel="noopener noreferrer">어사이드·노트북LM으로 지식학습관리, 대학생활 대시보드 바이브코딩 (충남대 특강, AI네버슬립)</a></h3>
+            <p>충남대 교수학습지원센터 특강 후기입니다. 오전엔 내 맥락을 마크다운 파일로 남기고 노트북LM으로 근거를 확인하는 법을, 오후엔 어사이드로 과제·대외활동·인턴 화면을 한곳에 모으고 휴대폰에서도 여는 주소를 만드는 실습을 진행했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-27">2026.11.27</time>
+            </div>
+            <h3><a href="https://blog.naver.com/40saimaster/224495007952" target="_blank" rel="noopener noreferrer">클로드 코드로 Suno 음악 자동 제작 에이전트 만들기 | Aside 브라우저 연동 (사직인생)</a></h3>
+            <p>클로드 데스크톱의 ‘코드’ 기능과 Aside 브라우저로 Suno 곡 제작을 원격으로 맡기는 에이전트를 만드는 과정입니다. 클로드 자체 브라우저는 로그인 에러가 잦아 프롬프트에 ‘Aside 웹 브라우저로만 작업해줘’라고 적기를 추천합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-27">2026.11.27</time>
+            </div>
+            <h3><a href="https://blog.naver.com/yangnol/224493943313" target="_blank" rel="noopener noreferrer">어사이드(Aside) AI 브라우저 사용법, 자영업자가 써보고 정리한 장단점 (녹형)</a></h3>
+            <p>가게 마감 후 리뷰·식자재 가격·블로그 업무에 어사이드를 써 본 자영업자 후기입니다. 블로그 키우는 법을 묻자 실제 글 7개를 읽고 제목의 모호한 표현까지 짚어 줬다는 경험과, 구독 연결 시 예전 대화는 모르는 이유 등 장단점을 정리했습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-28">2026.11.28</time>
+            </div>
+            <h3><a href="https://blog.naver.com/ant_tooth_lab/224495375204" target="_blank" rel="noopener noreferrer">구글, AI 에이전트의 지메일·드라이브 접근에 ‘MCP’ 의무화·요금제 분리 (개미이빨)</a></h3>
+            <p>구글이 11월 24일(현지시간) 에이전트가 워크스페이스 데이터에 접근할 때 공식 MCP 서버나 공식 CLI를 쓰도록 의무화하고, 무료 ‘표준’과 유료 ‘확장’ 등급으로 나눈다고 발표했다는 정리입니다. 기존 REST API 직접 호출은 2027년 2월 1일부터 제한되고, 대량 요청 과금은 4월 1일부터 시작됩니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-28">2026.11.28</time>
+            </div>
+            <h3><a href="https://blog.naver.com/wwssmm/224495350874" target="_blank" rel="noopener noreferrer">n8n 팀이 만든 AI 에이전트 Nod, 설치부터 활용까지 총정리 (레드보헤미)</a></h3>
+            <p>워크플로 자동화 도구 n8n 팀이 만든 오픈소스(Apache 2.0) 개인 AI 에이전트 Nod를 소개합니다. 내 컴퓨터에서 전용 브라우저로 구독 해지·환불 확인 같은 반복 작업을 처리하며, 현재 연구용 프리뷰이고 깃허브 스타는 4,231개(11월 28일 기준)라고 합니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-28">2026.11.28</time>
+            </div>
+            <h3><a href="https://blog.naver.com/tjdgns5068/224495375019" target="_blank" rel="noopener noreferrer">Claude Code Projects 베타 사용 후기 (성훈의 IT 블로그)</a></h3>
+            <p>새로 바뀐 Claude Code Projects 베타 후기입니다. 할 일을 말하면 작업마다 클라우드 Claude Code 세션인 ‘스레드’가 생겨 동시에 일하고 노트북을 닫아도 계속 진행되며, Pro·Max 사용자에게 순차 공개 중입니다. 가계부 정리에 ‘Data’ 아티팩트 대시보드를 써 본 경험도 담았습니다.</p>
+          </article>          <article class="item-card">
+            <div class="card-topline">
+              <span class="platform-badge badge-네이버블로그">Naver Blog</span>
+              <time datetime="2026-11-28">2026.11.28</time>
+            </div>
+            <h3><a href="https://blog.naver.com/coutts52/224495356451" target="_blank" rel="noopener noreferrer">AI가 AI의 두뇌를 직접 고치기 시작했다… 가중치 0.016% 수정으로 수학 실력 6배 (영감탱이)</a></h3>
+            <p>‘가중치 공간 프로그래밍(WSP)’ 연구 소개입니다. GPT-6 아스트라가 Qwen3.5-0.8B의 가중치 0.016%만 고쳐 MATH-500 정답률을 7.9%에서 48.1%로(약 6.1배) 올렸고, IFEval도 약 3배 향상됐다고 합니다. 특정 평가의 성과이지 지능 전체가 6배가 된 것은 아니라는 단서도 붙였습니다.</p>
+          </article></div>
+      </section>
+
+    <footer>
+      <p>수집 창구 <strong>2026-11-21 ~ 2026-11-28</strong> · YouTube 10 · X 8 · Threads 0 · Naver Blog 9 · 총 27건</p>
+      <p>애드 아이티 모닝 브리핑 · <a href="https://vidavida1970.github.io/ai-news-briefing/">아카이브</a></p>
+    </footer>
+  </main>
+</body>
+</html>

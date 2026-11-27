@@ -4,6 +4,7 @@
 
 ## Latest
 
+- **[2026-11-28](./newsletters/2026-11-28/)** — YouTube 10 · X 8 · Threads 0 · Naver Blog 9
 - **[2026-11-27](./newsletters/2026-11-27/)** — YouTube 10 · X 8 · Threads 0 · Naver Blog 9
 - **[2026-11-26](./newsletters/2026-11-26/)** — YouTube 10 · X 8 · Threads 0 · Naver Blog 9
 - **[2026-11-25](./newsletters/2026-11-25/)** — YouTube 10 · X 8 · Threads 0 · Naver Blog 9
